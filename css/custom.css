@@ -56,7 +56,7 @@
 }
 
 html {
-    font-family: "Albert Sans", "Barlow", sans-serif;
+    font-family: "Albert Sans", sans-serif;
     font-size: 16.5px;
     line-height: 1.6;
     font-weight: 400;
@@ -74,7 +74,7 @@ blockquote footer {
 }
 
 h1, h2, h3 {
-    font-family: "Inconsolata", "Crimson Pro", serif;
+    font-family: "Inconsolata", serif;
 }
 
 h1 {
