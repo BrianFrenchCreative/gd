@@ -151,6 +151,12 @@ h3 a:hover {
 .uk-padding {
   padding: 24px;
 }
+
+
+.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
+    box-shadow: 2px 8px 14px rgba(0, 0, 0, 0.10);
+}
+
 /* Desktop and bigger */
 @media (min-width: 1200px) {
   .uk-padding {
