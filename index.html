@@ -10,9 +10,10 @@
         <link rel="stylesheet" href="css/custom.css" />
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/eab0f1bdfe.js" crossorigin="anonymous"></script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                                                               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -30,7 +31,7 @@
 
         <!-- Header start -->
         <header>
-            <div class="uk-inline uk-background-muted uk-width-1-1 " >
+            <div class="uk-inline uk-background-muted uk-width-1-1">
                 <div uk-sticky="show-on-up: true">
                     <nav class="uk-navbar-container uk-navbar-default no-border uk-box-shadow-small" uk-dropnav="align:center">
                         <div class="uk-container uk-container-xlarge" uk-navbar>
@@ -38,18 +39,28 @@
                                 <a href="/gd/">Brian French</a>
                             </div>
 
-                            <div class="uk-navbar-item uk-navbar-right uk-visible@s">
-                                <ul class="uk-subnav uk-flex-center">
-                                    <li>
-                                        <a href>My Work<span uk-drop-parent-icon></span></a>
-                                        <div class="uk-dropdown">
-                                            <ul class="uk-nav uk-dropdown-nav">
-                                                <li><a href="mack.html">Mack Trucks</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn</a></li>
-                                </ul>
+                            <div class="uk-navbar-item uk-navbar-center uk-visible@s">
+                                    <ul class="uk-subnav uk-flex-center ">
+                                        <li>
+                                            <a href>Current Projects<span uk-drop-parent-icon></span></a>
+                                            <div class="uk-dropdown">
+                                                <ul class="uk-nav uk-dropdown-nav">
+                                                    <li><a href="mack.html">Mack Trucks</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href>Past Work<span uk-drop-parent-icon></span></a>
+                                            <div class="uk-dropdown">
+                                                <ul class="uk-nav uk-dropdown-nav uk-list uk-list-large">
+                                                    <li class="">Coming Soon</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </div>
+                            <div class="uk-navbar-item uk-navbar-right uk-link-reset  uk-visible@s">
+                                <a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn</a>
                             </div>
 
                             <!-- mobile nav -->
@@ -58,180 +69,256 @@
                                     <li>
                                         <a class="uk-navbar-toggle uk-navbar-toggle-animate" href uk-navbar-toggle-icon></a>
                                         <div class="uk-dropbar uk-dropbar-top uk-width-expand uk-padding" uk-drop="stretch: y; animation:reveal-top; animate-out:true">
-
                                             <ul class="uk-nav uk-list uk-list-large uk-nav-default fs-16">
                                                 <li class="uk-nav-header fw-500">Current Projects</li>
                                                 <li><a href="mack.html">Mack Trucks</a></li>
-                                                
-                                                <li class="uk-nav-header fw-500 uk-margin-large-top">Past Work (Coming soon)</li>
+
+                                                <li class="uk-nav-header fw-500 uk-margin-large-top">
+                                                    Past Work (Coming soon)
+                                                </li>
                                                 <li class="">5W Insights</li>
                                                 <li class="">American Addiction Centers</li>
                                                 <li class="">Boy Scouts of America</li>
                                                 <li class="">Mack Trucks</li>
                                                 <li class="">RateGenius</li>
-                                                
+
                                                 <li class="uk-nav-header fw-500 uk-margin-large-top">Contact Me</li>
-                                                <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn <span uk-icon="link-external"></span></a></li></ul>
+                                                <li>
+                                                    <a
+                                                       href="https://www.linkedin.com/in/brianfrenchcreative/"
+                                                       class=""
+                                                       target="_blank"
+                                                       >LinkedIn <span uk-icon="link-external"></span
+                                                        ></a>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </nav>
-                </div>
+            </div>
 
-                <div class="uk-container uk-container-large uk-margin-large">
-                    <div class="uk-grid uk-flex uk-flex-top" uk-grid>
-                        <div class="">
-                            <h1>
-                                <p class="fs-20 uk-text-uppercase">Hi, I&rsquo;m Brian</p>
-                                <p class="fs-36 fw-400">I&rsquo;m a senior marketing designer focused on craft, growth and strategy</p>
-                                <p class="fs-20">I apply hands-on skill and strategic thinking to solve complex challenges and deliver measurable results.</p>
-                            </h1>
-                        </div>
-
-                        <div class="uk-width-1-3 uk-width-1-5@s uk-width-1-5@m uk-hidden">
-                            <div class="uk-margin">
-                                <img src="img/headshot.jpg" alt="" class="uk-border-circle uk-box-shadow-large " />
-                            </div>
-                        </div>
+            <div class="uk-container uk-container-large uk-margin-large">
+                <div class="uk-grid uk-flex uk-flex-top" uk-grid>
+                    <div class="">
+                        <h1>
+                            <p class="fs-20 uk-text-uppercase">Hi, I&rsquo;m Brian</p>
+                            <p class="fs-36 fw-400">
+                                I&rsquo;m a senior marketing designer focused on craft, growth and strategy
+                            </p>
+                            <p class="fs-20">
+                                I apply hands-on skill and strategic thinking to solve complex challenges and
+                                deliver measurable results.
+                            </p>
+                        </h1>
                     </div>
 
+                    <div class="uk-width-1-3 uk-width-1-5@s uk-width-1-5@m uk-hidden">
+                        <div class="uk-margin">
+                            <img src="img/headshot.jpg" alt="" class="uk-border-circle uk-box-shadow-large" />
+                        </div>
+                    </div>
                 </div>
+            </div>
             </div>
         </header>
 
-        <main>
-            <!-- Main Content -->
-            <div class="uk-section uk-background-muted" uk-height-viewport="expand:true">
+    <main>
+        <!-- Main Content -->
+        <div class="uk-section uk-background-muted" uk-height-viewport="expand:true">
+            <div class="uk-container uk-container-large">
+                <div class="uk-text-center">
+                    <h2 class="fs-26">Current Projects</h2>
+                </div>
 
-                <div class="uk-container uk-container-large">
-
-                    <div class="uk-text-center">
-                        <h2 class="fs-26">Current Projects</h2>
-                    </div>
-
-                    <div class="uk-background-primary uk-border-rounded-large uk-padding-large uk-light ">
-                        <div id="mack-survey" uk-grid uk-scrollspy="target:div;delay:75;repeat: true;">
-
-                            <div class="uk-width-expand uk-flex-first@s uk-flex uk-flex-middle">
-                                <div>
-                                    <div uk-scrollspy-class="uk-animation-slide-left-small">
-                                        <img src="img/mack/macktrucks-logo.png" class="uk-width-small uk-width-1-5@s" />
-                                    </div>
-
-                                    <div class="uk-margin-top" uk-scrollspy-class="uk-animation-slide-left-small">
-                                        <p class="fs-40 fw-600">Evolving a digital survey experience</p>
-                                    </div>
-
-                                    <div  uk-scrollspy-class="uk-animation-slide-left-small">
-                                        <p>Reimagining a highly successful project I undertook for Mack Trucks with modern design trends, best practices, and a strengthened brand identity.</p>
-                                    </div>
-
-                                    <a href="mack.html" class="uk-button pulse warm uk-border-pill">See more</a>
+                <div class="uk-background-primary uk-border-rounded-large uk-padding-large uk-light">
+                    <div id="mack-survey" uk-grid uk-scrollspy="target:div;delay:75;repeat: true;">
+                        <div class="uk-width-expand uk-flex-first@s uk-flex uk-flex-middle">
+                            <div>
+                                <div uk-scrollspy-class="uk-animation-slide-left-small">
+                                    <img src="img/mack/macktrucks-logo.png" class="uk-width-small uk-width-1-5@s" />
                                 </div>
-                            </div>
-                            <div class="uk-width-1-2@s uk-flex uk-flex-middle">
-                                <a href="mack.html">
-                                    <div class="uk-overflow-hidden uk-border-rounded-large" uk-scrollspy-class="uk-animation-scale-up">
-                                        <img src="img/mack/login-2025.webp" />
-                                    </div>
-                                </a>
+
+                                <div class="uk-margin-top" uk-scrollspy-class="uk-animation-slide-left-small">
+                                    <p class="fs-40 fw-600">Evolving a digital survey experience</p>
+                                </div>
+
+                                <div uk-scrollspy-class="uk-animation-slide-left-small">
+                                    <p>
+                                        Reimagining a highly successful project I undertook for Mack Trucks with
+                                        modern design trends, best practices, and a strengthened brand identity.
+                                    </p>
+                                </div>
+
+                                <a href="mack.html" class="uk-button pulse warm uk-border-pill">See more</a>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="uk-section uk-background-muted" uk-height-viewport="expand:true">
-
-                <div class="uk-container uk-container-large">
-
-                    <div class="uk-text-center">
-                        <h2 class="fs-26">Past Work <span class=" fs-18 uk-text-italic">(Coming soon)</span></h2>
-                    </div>
-
-                    <div class="uk-background-secondary uk-border-rounded-large uk-padding">
-                        <div class="uk-child-width-1-5 uk-grid-small" uk-grid>
-                            <div><img src="img/5wi.png" class="uk-blend-luminosity uk-border-rounded-large" /></div>
-                            <div><img src="img/aac.png" class="uk-blend-luminosity uk-border-rounded-large" /></div>
-                            <div><img src="img/BSA-SJAC.png" class="uk-blend-luminosity uk-border-rounded-large" /></div>
-                            <div><img src="img/mack.png" class="uk-blend-luminosity uk-border-rounded-large" /></div>
-                            <div><img src="img/rategenius.png" class="uk-blend-luminosity uk-border-rounded-large" /></div>
-
+                        <div class="uk-width-1-2@s uk-flex uk-flex-middle">
+                            <a href="mack.html">
+                                <div
+                                     class="uk-overflow-hidden uk-border-rounded-large"
+                                     uk-scrollspy-class="uk-animation-scale-up">
+                                    <img src="img/mack/login-2025.webp" />
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="uk-section uk-background-muted" uk-height-viewport="expand:true">
+            <div class="uk-container uk-container-large">
+                <div class="uk-text-center">
+                    <h2 class="fs-26">Past Work</h2>
+                </div>
 
-            <div class="uk-section uk-section-muted">
-                <div class="uk-container uk-container-large">
-                    <div class="uk-text-center">
-                        <h2 class="fs-26">How coworkers describe me</h2>
-                    </div>
-
-                    <div class="uk-flex uk-grid">
-                        <div class="uk-grid uk-child-width-1-3@s" uk-grid="masonry: pack">
+                <div class="uk-background-default uk-border-rounded-large uk-padding-large  uk-margin uk-margin-large-bottom">
+                    <div id="mack-survey" uk-grid uk-scrollspy="target:div;delay:75;repeat: true;">
+                        <div class="uk-width-expand uk-flex-first@s uk-flex uk-flex-middle">
                             <div>
-                                <blockquote class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
-                                    <div>
-                                        <p>&ldquo;Brian is truly an outstanding employee in every way including his great attitude, dedication, willingness to do whatever is required to get the job done, his intelligence and his expertise.&rdquo;</p>
-                                    </div>
-                                </blockquote>
+                                <div uk-scrollspy-class="uk-animation-slide-left-small">
+                                    <img src="img/5winsights/5W_logo.png" class="uk-width-small uk-width-1-5@s" />
+                                </div>
+
+                                <div class="uk-margin-top" uk-scrollspy-class="uk-animation-slide-left-small">
+                                    <p class="fs-40 fw-600">
+                                        Applying new brand standards in support of an upcoming conference
+                                    </p>
+                                </div>
+
+                                <div uk-scrollspy-class="uk-animation-slide-left-small">
+                                    <p>Designs for large-scale booth backdrops, brochures and branded swag.</p>
+                                </div>
+
+                                <a
+                                   href="5winsights.html"
+                                   class="uk-button uk-button-default uk-border-pill uk-disabled uk-background-muted-darker uk-light"
+                                   >Coming soon</a
+                                    >
                             </div>
-
-                            <div>
-                                <blockquote class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
-                                    <div>
-                                        <p>&ldquo;He is an outstanding Creative Director and is skilled at all aspects of content development and implementation to include strategy development, graphic design, copywriting, production, campaign management, reporting and project management.&rdquo;</p>
-                                    </div>
-                                </blockquote>
-                            </div>
-
-                            <div>
-                                <blockquote class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
-                                    <div>
-                                        <p>&ldquo;He is the equivalent of a team of skilled professionals that can conceptualize, design, develop, implement, QC and execute complex campaigns across all channels, including Facebook, Instagram, SMS text, search, display, mobile, email, website and direct mail.&rdquo;
-                                    </div>
-                                </blockquote>
-                            </div>
-
-
-                            <div>
-                                <blockquote class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
-                                    <div>
-                                        <p>&ldquo;Brian is a brilliant designer also skilled with trouble shooting production issues quickly and efficiently. His professional manner is greatly appreciated in the work place and he is always considered the &lsquo;Go To&rsquo; man.&rdquo;</p>
-                                    </div>
-                                </blockquote>
-                            </div>
-
-                            <div>
-                                <blockquote class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
-                                    <div>
-                                        <p>&ldquo;Brian&rsquo;s skill at working productively in a high stress, deadline pending situation is unmatched. He is a true ASSET.&rdquo;
-                                        </p>
-                                    </div>
-                                </blockquote>
+                        </div>
+                        <div class="uk-width-1-2@s uk-flex uk-flex-middle">
+                            <div
+                                 class="uk-overflow-hidden uk-border-rounded-large uk-padding uk-background-default"
+                                 uk-scrollspy-class="uk-animation-scale-up">
+                                <img src="img/5winsights/Booth-Mockup_2024.jpg" />
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
 
-        <footer class="uk-background-muted uk-section-small ">
-            <div class="uk-container uk-container-xlarge">
-                <div class="uk-grid">
-                    <div class="uk-width-expand">
-                        <p class="fs-12">&copy; Brian French 2025. All rights reserved. </p>
-                    </div>
-                    <div class="uk-width-auto">
-                        <a href="#" uk-totop uk-scroll class="fs-12"></a>
+                <div class="uk-text-center">
+                    <h2 class="fs-26">More work examples coming soon</h2>
+                </div>
+                <div class="uk-background-secondary uk-border-rounded-large uk-padding">
+                    <div class="uk-grid-small uk-child-width-1-2 uk-child-width-1-4@s uk-width-auto" uk-grid>
+                        <div><img src="img/aac.png" class="uk-blend-luminosity uk-border-rounded-large" /></div>
+                        <div>
+                            <img src="img/BSA-SJAC.png" class="uk-blend-luminosity uk-border-rounded-large" />
+                        </div>
+                        <div><img src="img/mack.png" class="uk-blend-luminosity uk-border-rounded-large" /></div>
+                        <div>
+                            <img src="img/rategenius.png" class="uk-blend-luminosity uk-border-rounded-large" />
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+
+        <div class="uk-section uk-section-muted">
+            <div class="uk-container uk-container-large">
+                <div class="uk-text-center">
+                    <h2 class="fs-26">How coworkers describe me</h2>
+                </div>
+
+                <div class="uk-flex uk-grid">
+                    <div class="uk-grid uk-child-width-1-3@s" uk-grid="masonry: pack">
+                        <div>
+                            <blockquote
+                                        class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
+                                <div>
+                                    <p>
+                                        &ldquo;Brian is truly an outstanding employee in every way including his
+                                        great attitude, dedication, willingness to do whatever is required to get
+                                        the job done, his intelligence and his expertise.&rdquo;
+                                    </p>
+                                </div>
+                            </blockquote>
+                        </div>
+
+                        <div>
+                            <blockquote
+                                        class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
+                                <div>
+                                    <p>
+                                        &ldquo;He is an outstanding Creative Director and is skilled at all aspects
+                                        of content development and implementation to include strategy development,
+                                        graphic design, copywriting, production, campaign management, reporting and
+                                        project management.&rdquo;
+                                    </p>
+                                </div>
+                            </blockquote>
+                        </div>
+
+                        <div>
+                            <blockquote
+                                        class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
+                                <div>
+                                    <p>
+                                        &ldquo;He is the equivalent of a team of skilled professionals that can
+                                        conceptualize, design, develop, implement, QC and execute complex campaigns
+                                        across all channels, including Facebook, Instagram, SMS text, search,
+                                        display, mobile, email, website and direct mail.&rdquo;
+                                    </p>
+                                </div>
+                            </blockquote>
+                        </div>
+
+                        <div>
+                            <blockquote
+                                        class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
+                                <div>
+                                    <p>
+                                        &ldquo;Brian is a brilliant designer also skilled with trouble shooting
+                                        production issues quickly and efficiently. His professional manner is
+                                        greatly appreciated in the work place and he is always considered the
+                                        &lsquo;Go To&rsquo; man.&rdquo;
+                                    </p>
+                                </div>
+                            </blockquote>
+                        </div>
+
+                        <div>
+                            <blockquote
+                                        class="uk-background-default uk-card-hover uk-card-body uk-border-rounded-large fs-16">
+                                <div>
+                                    <p>
+                                        &ldquo;Brian&rsquo;s skill at working productively in a high stress,
+                                        deadline pending situation is unmatched. He is a true ASSET.&rdquo;
+                                    </p>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="uk-background-muted uk-section-small">
+        <div class="uk-container uk-container-xlarge">
+            <div class="uk-grid">
+                <div class="uk-width-expand">
+                    <p class="fs-12">&copy; Brian French 2025. All rights reserved.</p>
+                </div>
+                <div class="uk-width-auto">
+                    <a href="#" uk-totop uk-scroll class="fs-12"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
     </body>
 </html>
