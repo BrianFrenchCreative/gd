@@ -31,30 +31,52 @@
 
         <div class="uk-inline uk-box-shadow-medium uk-background-muted uk-width-1-1 ">
             <div uk-sticky="show-on-up: true">
-                <nav class="uk-navbar-container uk-navbar-default uk-box-shadow-small" uk-dropnav="align:center">
-                    <div class="uk-container uk-container-large" uk-navbar>
-                        <div class="uk-navbar-item uk-navbar-left uk-logo uk-link-reset">
-                            <a href="/gd/">Brian French</a>
-                        </div>
+                <nav class="uk-navbar-container uk-navbar-default no-border uk-box-shadow-small" uk-dropnav="align:center">
+                        <div class="uk-container uk-container-xlarge" uk-navbar>
+                            <div class="uk-navbar-item uk-navbar-left uk-logo uk-link-reset">
+                                <a href="/gd/">Brian French</a>
+                            </div>
 
-                        <div class="uk-navbar-item uk-navbar-right">
-                            <ul class="uk-subnav uk-flex-center">
-                                <li>
-                                    <a href>My Work<span uk-drop-parent-icon></span></a>
-                                    <div class="uk-dropdown">
-                                        <ul class="uk-nav uk-dropdown-nav">
-                                            <li><a href="mack.html">Mack Trucks</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="uk-hidden">
-                                    <a href="about.html">About Me</a>
-                                </li>
-                                <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn</a></li>
-                            </ul>
+                            <div class="uk-navbar-item uk-navbar-right uk-visible@s">
+                                <ul class="uk-subnav uk-flex-center">
+                                    <li>
+                                        <a href>My Work<span uk-drop-parent-icon></span></a>
+                                        <div class="uk-dropdown">
+                                            <ul class="uk-nav uk-dropdown-nav">
+                                                <li><a href="mack.html">Mack Trucks</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn</a></li>
+                                </ul>
+                            </div>
+
+                            <!-- mobile nav -->
+                            <div class="uk-navbar-item uk-navbar-right uk-hidden@s">
+                                <ul class="uk-navbar-nav">
+                                    <li>
+                                        <a class="uk-navbar-toggle uk-navbar-toggle-animate" href uk-navbar-toggle-icon></a>
+                                        <div class="uk-dropbar uk-dropbar-top uk-width-expand uk-padding" uk-drop="stretch: y; animation:slide-left; animate-out:true">
+
+                                            <ul class="uk-nav uk-list uk-list-large uk-nav-default fs-16">
+                                                <li class="uk-nav-header fw-500">Current Projects</li>
+                                                <li><a href="mack.html">Mack Trucks</a></li>
+                                                
+                                                <li class="uk-nav-header fw-500 uk-margin-large-top">Past Work (Coming soon)</li>
+                                                <li class="">5W Insights</li>
+                                                <li class="">American Addiction Centers</li>
+                                                <li class="">Boy Scouts of America</li>
+                                                <li class="">Mack Trucks</li>
+                                                <li class="">RateGenius</li>
+                                                
+                                                <li class="uk-nav-header fw-500 uk-margin-large-top">Contact Me</li>
+                                                <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn <span uk-icon="link-external"></span></a></li></ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
             </div>
 
             <div class="uk-background-secondary">
