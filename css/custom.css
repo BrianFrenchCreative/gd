@@ -73,8 +73,12 @@ blockquote footer {
     font-style: italic;
 }
 
-h1, h2, h3 {
-    font-family: "Inconsolata", serif;
+h1, h3 {
+    font-family: "Albert Sans", sans-serif;
+}
+h2 {
+    font-family: "Inconsolata", sans-serif;
+    letter-spacing: 1.25px
 }
 
 h1 {
@@ -106,10 +110,36 @@ h3 a:hover {
 .uk-navbar-nav > li > a, .uk-button {
     text-transform: none;
 }
+
+.uk-navbar-item > a {
+    padding: 6px 12px;
+    border-radius: 80px;
+    color: #333;
+}
+
+.uk-navbar-item > a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.uk-nav-default > li > a:hover {
+    background-color: var(--muted);
+    color: var(--primary);
+}
+.uk-logo {
+    font-size:1.2rem;
+    line-height:2.5rem;
+}
+
+.uk-logo > a:hover {
+    background-color: transparent
+}
+
+
 .uk-text-small {
-  font-size: 0.75rem;
+    font-size: 0.75rem;
     font-weight: 700;
-  line-height: 1.5;
+    line-height: 1.5;
 }
 
 .uk-background-primary {
@@ -152,9 +182,25 @@ h3 a:hover {
   padding: 24px;
 }
 
-
 .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
     box-shadow: 2px 8px 14px rgba(0, 0, 0, 0.10);
+}
+
+.uk-border-rounded {
+  border-radius: 4px;
+}
+.uk-border-rounded-medium {
+  border-radius: 8px;
+}
+
+.uk-border-rounded-large {
+  border-radius: 16px;
+}
+
+.uk-navbar-nav > li > a,
+.uk-navbar-item,
+.uk-navbar-toggle {
+    min-height:70px
 }
 
 /* Desktop and bigger */
@@ -274,15 +320,18 @@ h3 a:hover {
     }
 }
 
-.uk-border-rounded {
-  border-radius: 4px;
-}
-.uk-border-rounded-medium {
-  border-radius: 8px;
+
+.as {
+    font-family: "Albert Sans", sans-serif;
 }
 
-.uk-border-rounded-large {
-  border-radius: 16px;
+.in {
+    font-family: "Inconsolata", sans-serif;
+    letter-spacing: 1px
+}
+
+p.in {
+    letter-spacing: 0
 }
 
 .border {
