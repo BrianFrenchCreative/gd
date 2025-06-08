@@ -366,8 +366,14 @@ p.in {
     -webkit-backdrop-filter: blur(6px);
 }
 
-@view-transition {
-	navigation: auto;
+
+/* Page View Transitions */
+
+@media (prefers-reduced-motion:
+    no-preference) {
+    @view-transition {
+        navigation: auto;
+    }
 }
 
 main {
@@ -384,22 +390,22 @@ main {
 
 @keyframes slide-out {
 	0% {
-		transform: translateX(0%);
+		transform: translateY(0%);
 	}
 
 	100% {
 		opacity: 0;
-		transform: translateX(calc(50% * var(--direction, 1)));
+		transform: translateY(calc(50% * var(--direction, 1)));
 	}
 }
 
 @keyframes slide-in {
 	0% {
 		opacity: 0;
-		transform: translateX(calc(-50% * var(--direction, 1)));
+		transform: translateY(calc(-50% * var(--direction, 1)));
 	}
 
 	100% {
-		transform: translateX(0%);
+		transform: translateY(0%);
 	}
 }
