@@ -10,9 +10,9 @@
         <link rel="stylesheet" href="css/custom.css" />
         <script src="js/uikit.min.js"></script>
         <script src="js/uikit-icons.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/eab0f1bdfe.js" crossorigin="anonymous"></script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -21,9 +21,9 @@
                     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                                     })(window,document,'script','dataLayer','GTM-WJNPDXXB');</script>
         <!-- End Google Tag Manager -->
-        
+
         <style type="text/css">
-            :root {--direction: 1;}
+            :root {--direction: -1;}
         </style>
     </head>
 
@@ -33,8 +33,9 @@
                           height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
 
-        <div class="uk-inline uk-box-shadow-medium uk-background-muted uk-width-1-1 ">
-            <div uk-sticky="show-on-up: true">
+        <header>
+            <div class="uk-inline uk-box-shadow-medium uk-background-muted uk-width-1-1 ">
+                <div uk-sticky="show-on-up: true">
                     <nav class="uk-navbar-container uk-navbar-default no-border uk-box-shadow-small" uk-dropnav="align:center">
                         <div class="uk-container uk-container-xlarge" uk-navbar>
                             <div class="uk-navbar-item uk-navbar-left uk-logo uk-link-reset">
@@ -45,24 +46,24 @@
                             </div>
 
                             <div class="uk-navbar-item uk-navbar-center uk-visible@s">
-                                    <ul class="uk-subnav uk-flex-center ">
-                                        <li>
-                                            <a href>Current Projects<span uk-drop-parent-icon></span></a>
-                                            <div class="uk-dropdown">
-                                                <ul class="uk-nav uk-dropdown-nav">
-                                                    <li><a href="mack.html">Mack Trucks</a></li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <a href>Past Work<span uk-drop-parent-icon></span></a>
-                                            <div class="uk-dropdown">
-                                                <ul class="uk-nav uk-dropdown-nav uk-list uk-list-large">
-                                                    <li class="">Coming Soon</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <ul class="uk-subnav uk-flex-center ">
+                                    <li>
+                                        <a href>Current Projects<span uk-drop-parent-icon></span></a>
+                                        <div class="uk-dropdown">
+                                            <ul class="uk-nav uk-dropdown-nav">
+                                                <li><a href="mack.html">Mack Trucks</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href>Past Work<span uk-drop-parent-icon></span></a>
+                                        <div class="uk-dropdown">
+                                            <ul class="uk-nav uk-dropdown-nav uk-list uk-list-large">
+                                                <li class="">Coming Soon</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="uk-navbar-item uk-navbar-right uk-link-reset uk-visible@s">
                                 <a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn</a>
@@ -103,8 +104,13 @@
                             </div>
                         </div>
                     </nav>
+                </div>
             </div>
+        </header>
 
+
+        <main class="uk-background-muted">
+            <!-- Main Content -->
             <div class="uk-background-secondary">
                 <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden" >
                     <div class="uk-background-bottom-left uk-background-cover uk-panel uk-flex uk-flex-bottom uk-flex-center " style="background-image: url(img/mack/mack-driver-survey.webp);" uk-height-viewport="offset-top: true; offset-bottom: 40;min:400">
@@ -177,104 +183,105 @@
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
-        <div class="uk-section uk-background-primary uk-light" uk-height-viewport="expand:true">
+            <div class="uk-section uk-background-primary uk-light" uk-height-viewport="expand:true">
 
-            <div class="uk-container uk-container-xlarge" uk-scrollspy="cls: uk-animation-scale-up; repeat: true;target:img">
+                <div class="uk-container uk-container-xlarge" uk-scrollspy="cls: uk-animation-scale-up; repeat: true;target:img">
 
-                <div class="uk-grid uk-grid-large" uk-grid>
+                    <div class="uk-grid uk-grid-large" uk-grid>
 
-                    <div class="uk-width-small@s uk-visible@s">
-                        <div class="uk-margin" uk-sticky="offset:50;media:640">
-                            <ul class="uk-nav uk-list uk-list-hyphen uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
-                                <li><a href="#login">Login </a></li>
-                                <li><a href="#info">Contact Information Form</a></li>
-                                <li><a href="#questions-1">Survey Questions</a></li>
-                                <li><a href="#complete">Survey Complete</a></li>
-                            </ul>
+                        <div class="uk-width-small@s uk-visible@s">
+                            <div class="uk-margin" uk-sticky="offset:50;media:640">
+                                <ul class="uk-nav uk-list uk-list-hyphen uk-nav-default" uk-scrollspy-nav="closest: li; scroll: true">
+                                    <li><a href="#login">Login </a></li>
+                                    <li><a href="#info">Contact Information Form</a></li>
+                                    <li><a href="#questions-1">Survey Questions</a></li>
+                                    <li><a href="#complete">Survey Complete</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="uk-width-expand@s">
+
+                            <div class="uk-section uk-container uk-container-expand" id="login">
+                                <h2 class="fs-18 uk-text-uppercase">// Survey Login</h2>
+                                <hr />
+                                <div class="uk-grid uk-child-width-1-2@s uk-margin" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
+                                    <div>
+                                        <a href="img/mack/login-2015.png" data-caption="Original">
+                                            <img src="img/mack/login-2015.png" alt="Original"  />
+                                        </a>
+                                        <p class="uk-text-bold uk-text-center">Original</p>
+                                    </div>
+                                    <div>
+                                        <a href="img/mack/login-2025.webp" data-caption="Redesign">
+                                            <img src="img/mack/login-2025.webp" alt="Redesign"  />
+                                        </a>
+                                        <p class="uk-text-bold uk-text-center">Redesign</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="uk-section uk-container uk-container-expand" id="info">
+                                <h2 class="fs-18 uk-text-uppercase">// Contact Information Form</h2>
+                                <hr class="uk-margin-remove" />
+                                <div class="uk-grid uk-child-width-1-2@s uk-margin-medium" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
+
+                                    <div>
+                                        <a href="img/mack/info-2015.webp" data-caption="Original">
+                                            <img src="img/mack/info-2015.webp" alt="Original"  />
+                                        </a>
+                                        <p class="uk-text-bold uk-text-center">Original</p>
+                                    </div>
+
+                                    <div>
+                                        <a href="img/mack/info-2025.webp" data-caption="Redesign">
+                                            <img src="img/mack/info-2025.webp" alt="Redesign"  />
+                                        </a>
+                                        <p class="uk-text-bold uk-text-center">Redesign</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="uk-section uk-container uk-container-expand" id="questions-1">
+                                <h2 class="fs-18 uk-text-uppercase">// Survey Questions</h2>
+                                <hr class="uk-margin-remove" />
+                                <div class="uk-grid uk-child-width-1-2@s uk-margin-medium" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
+
+                                    <div>
+                                        <a href="img/mack/questions-2015.webp" data-caption="Original">
+                                            <img src="img/mack/questions-2015.webp" alt="Original"  />
+                                        </a>
+                                        <p class="uk-text-bold uk-text-center">Original</p>
+                                    </div>
+
+                                    <div>
+                                        <a href="img/mack/questions-1-2025.webp" data-caption="Redesign">
+                                            <img src="img/mack/questions-1-2025.webp" alt="Redesign"  />
+                                        </a>
+                                        <p class="uk-text-bold uk-text-center">Redesign</p>
+                                    </div>
+                                </div>
+
+                                <div class="uk-section">
+                                    <hr class="uk-divider-icon" />
+                                    <div class="uk-text-center in">// More examples  <span class="uk-text-bold">coming soon</span> //</div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
-                    <div class="uk-width-expand@s">
-
-                        <div class="uk-section uk-container uk-container-expand" id="login">
-                            <h2 class="fs-18 uk-text-uppercase">// Survey Login</h2>
-                            <hr />
-                            <div class="uk-grid uk-child-width-1-2@s uk-margin" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
-                                <div>
-                                    <a href="img/mack/login-2015.png" data-caption="Original">
-                                        <img src="img/mack/login-2015.png" alt="Original"  />
-                                    </a>
-                                    <p class="uk-text-bold uk-text-center">Original</p>
-                                </div>
-                                <div>
-                                    <a href="img/mack/login-2025.webp" data-caption="Redesign">
-                                        <img src="img/mack/login-2025.webp" alt="Redesign"  />
-                                    </a>
-                                    <p class="uk-text-bold uk-text-center">Redesign</p>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="uk-section uk-container uk-container-expand" id="info">
-                            <h2 class="fs-18 uk-text-uppercase">// Contact Information Form</h2>
-                            <hr class="uk-margin-remove" />
-                            <div class="uk-grid uk-child-width-1-2@s uk-margin-medium" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
-
-                                <div>
-                                    <a href="img/mack/info-2015.webp" data-caption="Original">
-                                        <img src="img/mack/info-2015.webp" alt="Original"  />
-                                    </a>
-                                    <p class="uk-text-bold uk-text-center">Original</p>
-                                </div>
-                                
-                                <div>
-                                    <a href="img/mack/info-2025.webp" data-caption="Redesign">
-                                        <img src="img/mack/info-2025.webp" alt="Redesign"  />
-                                    </a>
-                                    <p class="uk-text-bold uk-text-center">Redesign</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="uk-section uk-container uk-container-expand" id="questions-1">
-                            <h2 class="fs-18 uk-text-uppercase">// Survey Questions</h2>
-                            <hr class="uk-margin-remove" />
-                            <div class="uk-grid uk-child-width-1-2@s uk-margin-medium" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
-
-                                <div>
-                                    <a href="img/mack/questions-2015.webp" data-caption="Original">
-                                        <img src="img/mack/questions-2015.webp" alt="Original"  />
-                                    </a>
-                                    <p class="uk-text-bold uk-text-center">Original</p>
-                                </div>
-                                
-                                <div>
-                                    <a href="img/mack/questions-1-2025.webp" data-caption="Redesign">
-                                        <img src="img/mack/questions-1-2025.webp" alt="Redesign"  />
-                                    </a>
-                                    <p class="uk-text-bold uk-text-center">Redesign</p>
-                                </div>
-                            </div>
-
-                            <div class="uk-section">
-                                <hr class="uk-divider-icon" />
-                                <div class="uk-text-center in">// More examples  <span class="uk-text-bold">coming soon</span> //</div>
-                            </div>
-                            
-                        </div>
-                    </div>
                 </div>
-
             </div>
-        </div>
+
+        </main>
 
         <footer class="uk-background-muted uk-section-small ">
             <div class="uk-container">
