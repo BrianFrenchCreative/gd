@@ -381,31 +381,29 @@ main {
 }
 
 ::view-transition-old(page) {
-	animation: slide-out 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+	animation: fade-out 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
 ::view-transition-new(page) {
-	animation: slide-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+	animation: fade-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
 }
 
-@keyframes slide-out {
+@keyframes fade-out {
 	0% {
-		transform: translateX(0%);
+		opacity: 1;
 	}
 
 	100% {
 		opacity: 0;
-		transform: translateX(calc(50% * var(--direction, 1)));
 	}
 }
 
-@keyframes slide-in {
+@keyframes fade-in {
 	0% {
 		opacity: 0;
-		transform: translateX(calc(-50% * var(--direction, 1)));
 	}
 
 	100% {
-		transform: translateX(0%);
+        opacity: 1;
 	}
 }
