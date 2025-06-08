@@ -376,34 +376,19 @@ p.in {
     }
 }
 
-main {
-	view-transition-name: page;
-}
-
 ::view-transition-old(page) {
-	animation: fade-out 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
-}
+    animation: fade 0.2s linear forwards;
+    }
 
 ::view-transition-new(page) {
-	animation: fade-in 0.5s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+    animation: fade 0.3s linear reverse;
 }
 
-@keyframes fade-out {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-	}
-}
-
-@keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
+@keyframes fade {
+    from {
         opacity: 1;
-	}
+    }
+    to {
+        opacity: 0;
+    }
 }
