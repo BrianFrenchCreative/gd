@@ -142,6 +142,10 @@ h3 a:hover {
     line-height: 1.5;
 }
 
+.uk-text-primary {
+  color: var(--primary) !important;
+}
+
 .uk-background-primary {
   background-color: var(--primary);
     color: #fff
@@ -348,6 +352,10 @@ p.in {
 
 .uk-background-muted-darker {
  background-color: var(--muted-darker);
+}
+
+.uk-padding-xsmall {
+  padding: 8px;
 }
 
 /* From https://css.glass */
