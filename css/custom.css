@@ -19,7 +19,7 @@
 
 .fs-10 {font-size: .66rem !important}
 .fs-12 {font-size: .8rem !important}
-.fs-14 {font-size: .95rem !important}
+.fs-14 {font-size: .95rem !important; line-height:1.5}
 .fs-15 {font-size: 1rem !important}
 .fs-16 {font-size: 1.06rem !important; line-height:1.4}
 .fs-18 {font-size: 1.2rem !important; line-height:24px}
@@ -51,7 +51,7 @@
 :root{
     --primary: rgb(74, 80, 156);
     --secondary: #222;
-    --muted: rgb(248, 248, 248);
+    --muted: rgba(226, 222, 222, 0.33);
     --muted-darker: rgb(102,102,102);
 }
 
@@ -307,8 +307,6 @@ h3 a:hover {
     color: rgba(var(--colorHover) 1) !important;
 }
 
-
-
 @keyframes animation {
     0% {
         box-shadow: 0 0 0 0 rgba(var(--gc2) .85);
@@ -348,6 +346,10 @@ p.in {
 
 .border-muted {
     border: 2px solid var(--muted-darker)
+}
+
+.uk-background-muted {
+ background-color: var(--muted);
 }
 
 .uk-background-muted-darker {
