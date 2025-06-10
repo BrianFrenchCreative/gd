@@ -218,6 +218,10 @@ box-shadow: none
     min-height:70px
 }
 
+.uk-width-medium {
+  width: 275px;
+}
+
 /* Desktop and bigger */
 @media (min-width: 1200px) {
   .uk-padding {
