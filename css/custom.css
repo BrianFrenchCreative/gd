@@ -218,10 +218,6 @@ box-shadow: none
     min-height:70px
 }
 
-.uk-width-medium {
-  width: 275px;
-}
-
 /* Desktop and bigger */
 @media (min-width: 1200px) {
   .uk-padding {
@@ -375,51 +371,7 @@ p.in {
   padding: 8px
 }
 
-.slide-container {
-  scroll-snap-type: x mandatory; /* Snap horizontally */
-    white-space: nowrap;
-    padding-bottom:16px;
-}
 
-.slide {
-  display: inline-block; /* Or flexbox, depending on your layout */
-  scroll-snap-align: start; /* Snap to the start edge */
-  /* Add other styling for your slides */
-    white-space-collapse: collapse;
-    text-wrap-mode:wrap;
-}
-
-.slide-container {
-    --scrollbar-color-thumb: rgb(102,102,102);
-    --scrollbar-color-track: rgba(226, 222, 222, 0.33);
-    --scrollbar-width: thin;
-    --scrollbar-width-legacy: 10px;
-}
-
-/* Modern browsers with `scrollbar-*` support */
-@supports (scrollbar-width: 1rem) {
-    .slide-container {
-        scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
-        scrollbar-width: var(--scrollbar-width);
-    }
-}
-
-/* Legacy browsers with `::-webkit-scrollbar-*` support */
-@supports selector(::-webkit-scrollbar) {
-    .slide-container::-webkit-scrollbar-thumb {
-        background: var(--scrollbar-color-thumb);
-        border-radius: 50px;
-    }
-    .slide-container::-webkit-scrollbar-track {
-        background: var(--scrollbar-color-track);
-        border-radius: 50px;
-    }
-    .slide-container::-webkit-scrollbar {
-        width:1rem;
-        max-width: var(--scrollbar-width-legacy);
-        max-height: var(--scrollbar-width-legacy);
-    }
-}
 
 /* From https://css.glass */
 .frost {
