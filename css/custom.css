@@ -129,6 +129,10 @@ h3 a:hover {
     background-color: var(--muted);
     color: var(--primary)
 }
+.uk-label {
+    text-transform: none;
+    padding:2px 14px;
+}
 .uk-logo {
     font-size:1.2rem;
     line-height:2.5rem
