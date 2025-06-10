@@ -158,6 +158,10 @@ h3 a:hover {
     color: #fff
 }
 
+.uk-box-shadow-remove { 
+box-shadow: none
+}
+
 ::selection {
     background: rgba(74, 80, 156, 1);
     color: #fff;
