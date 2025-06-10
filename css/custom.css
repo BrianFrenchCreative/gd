@@ -375,6 +375,18 @@ p.in {
   padding: 8px
 }
 
+.slide-container {
+  overflow: scroll; /* Enable scrolling */
+  scroll-snap-type: x mandatory; /* Snap horizontally */
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+.slide {
+  display: inline-block; /* Or flexbox, depending on your layout */
+  scroll-snap-align: start; /* Snap to the start edge */
+  /* Add other styling for your slides */
+}
+
 /* From https://css.glass */
 .frost {
     background: rgba(255, 255, 255, 0.2);
