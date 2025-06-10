@@ -30,7 +30,7 @@
 .fs-28 {font-size: 1.86rem !important;}
 .fs-30 {font-size: 2rem !important}
 .fs-32 {font-size: 2.13rem !important; line-height:34px}
-.fs-36 {font-size: 2.4rem !important; line-height: 1.1}
+.fs-36 {font-size: 2.4rem !important; line-height: 1.25}
 .fs-40 {font-size: 2.66rem !important; line-height: 1.25}
 .fs-44 {font-size: 2.93rem !important}
 .fs-48 {font-size: 3.2rem !important}
@@ -57,14 +57,14 @@
 
 html {
     font-family: "Albert Sans", sans-serif;
-    font-size: 17px;
-    line-height: 25px;
+    font-size: 16.5px;
+    line-height: 1.6;
     font-weight: 400;
-    color: #525252;
+    color: #333;
 }
 
 blockquote {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-style: normal;
     font-family: "Inconsolata"
 }
