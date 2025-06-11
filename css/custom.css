@@ -208,7 +208,7 @@ box-shadow: none
   padding: 24px
 }
 
-.uk-slide-active .uk-active > div, .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
+.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
     box-shadow: 2px 8px 14px rgba(0, 0, 0, 0.10)
 }
 
@@ -288,7 +288,7 @@ box-shadow: none
 }
 
 .uk-slide-active.uk-active > div {
-    box-shadow: 2px 8px 14px rgba(0, 0, 0, 0.10)
+    box-shadow: 2px 2px 8px rgba(136, 134, 134, 0.1)
 }
 
 @media (min-width: 960px) {
