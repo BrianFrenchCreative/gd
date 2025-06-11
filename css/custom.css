@@ -132,7 +132,18 @@ h3 a:hover {
 .uk-label {
     text-transform: none;
     padding:2px 14px;
+    letter-spacing: 0.5px;
 }
+
+.uk-label.uk-background-muted-darker {
+    color:rgba(255, 255, 255, 0.8) !important;
+    font-weight: 400;
+}
+.uk-label.uk-background-muted {
+    color:#525252 !important;
+    font-weight: 500
+}
+
 .uk-logo {
     font-size:1.2rem;
     line-height:2.5rem
