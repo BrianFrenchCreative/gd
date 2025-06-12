@@ -107,11 +107,11 @@
         <main class="uk-background-muted">
             <div class="uk-container uk-container-large">
                 <div class="uk-grid uk-flex uk-flex-top uk-margin-large-top" uk-grid>
-                    <div class="uk-margin-auto uk-text-center@s" uk-scrollspy="target:div;repeat: true;">
-                        <div uk-scrollspy-class="uk-animation-slide-bottom-small">
+                    <div class="uk-margin-auto uk-text-center@s" >
+                        <div uk-scrollspy-class="uk-animation-slide-bottom-small uk-animation-fade">
                             <h1 class="fw-600 uk-margin-left uk-margin-right">Senior marketing designer focused on craft, growth and strategy</h1>
                         </div>
-                        <div class="uk-margin-auto" uk-scrollspy-class="uk-animation-slide-bottom-small">
+                        <div class="uk-margin-auto" uk-scrollspy-class="uk-animation-slide-bottom-small uk-animation-fade">
                             <h2 class="fs-17 fw-500 in uk-margin-left uk-margin-right">I solve complex challenges and deliver measurable business results through hands-on skill and strategic thinking</h2>
                         </div>
                     </div>
@@ -126,17 +126,10 @@
                     </div>
 
                     <div class="uk-background-primary uk-border-rounded-large uk-padding-large uk-light">
-                        <div id="mack-survey" uk-grid uk-scrollspy="target:div;repeat: true;">
-                            <div class="uk-width-2-5@s uk-width-1-2@l uk-flex uk-flex-middle uk-flex-center">
-                                <a href="mack.html">
-                                    <div class="uk-overflow-hidden uk-margin-auto" uk-scrollspy-class="uk-animation-slide-right-small">
-                                        <img src="img/mack/login-2025.webp" class="uk-height-max-medium"/>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="uk-width-expand uk-flex-first@s uk-flex uk-flex-middle">
+                        <div id="mack-survey" uk-grid uk-scrollspy="target:div;delay:75;repeat: true;">
+                            <div class="uk-width-expand uk-flex uk-flex-middle uk-flex-first@s">
                                 <div>
-                                    <div uk-scrollspy-class="uk-animation-slide-bottom-small">
+                                    <div uk-scrollspy-class="uk-animation-slide-left-small">
                                         <img src="img/mack/macktrucks-logo.png" class="uk-width-small uk-width-1-2 uk-width-1-4@s uk-width-1-5@m" />
                                     </div>
 
@@ -149,8 +142,17 @@
                                         </p>
                                     </div>
 
-                                    <a href="mack.html" class="uk-button pulse warm uk-border-pill">See more</a>
+                                    <div uk-scrollspy-class="uk-animation-slide-left-small">
+                                        <a href="mack.html" class="uk-button pulse warm uk-border-pill">See more</a>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="uk-width-2-5@s uk-width-1-2@l uk-flex uk-flex-middle uk-flex-center">
+                                <a href="mack.html">
+                                    <div class="uk-overflow-hidden uk-margin-auto" uk-scrollspy-class="uk-animation-fade">
+                                        <img src="img/mack/login-2025.webp" class="uk-height-max-medium"/>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -165,13 +167,8 @@
                     </div>
 
                     <div class="uk-background-default uk-border-rounded-large uk-padding-large uk-margin">
-                        <div id="5w-insights" uk-grid uk-scrollspy="target:div;repeat: true;">
-                            <div class="uk-width-2-5@s uk-width-1-2@l uk-flex uk-flex-middle uk-flex-center">
-                                <div class="uk-overflow-hidden" uk-scrollspy-class="uk-animation-slide-right-small">
-                                    <img src="img/5winsights/Booth-Mockup_2024.jpg" class="uk-height-max-medium" />
-                                </div>
-                            </div>
-                            <div class="uk-width-expand uk-flex-first@s uk-flex uk-flex-middle">
+                        <div id="5w-insights" uk-grid uk-scrollspy="target:div;delay:75;repeat: true;">
+                            <div class="uk-width-expand uk-flex uk-flex-middle uk-flex-first@s ">
                                 <div>
                                     <div uk-scrollspy-class="uk-animation-slide-left-small uk-animation-fade">
                                         <img src="img/5winsights/5W_logo.png" class="uk-width-small uk-width-1-2 uk-width-1-3@s uk-width-1-5@m" />
@@ -186,7 +183,14 @@
                                         <p class="in fs-16 fw-500">Designs for large-scale booth backdrops, brochures and branded swag in support of an upcoming conference.</p>
                                     </div>
 
-                                    <a href="5winsights.html" class="uk-button uk-button-default uk-border-pill uk-disabled uk-background-muted-darker uk-light">Coming soon</a>
+                                    <div uk-scrollspy-class="uk-animation-slide-left-small">
+                                        <a href="5winsights.html" class="uk-button uk-button-default uk-border-pill uk-disabled uk-background-muted-darker uk-light">Coming soon</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-2-5@s uk-width-1-2@l uk-flex uk-flex-middle uk-flex-center">
+                                <div class="uk-overflow-hidden" uk-scrollspy-class="uk-animation-fade">
+                                    <img src="img/5winsights/Booth-Mockup_2024.jpg" class="uk-height-max-medium" />
                                 </div>
                             </div>
                         </div>
@@ -225,7 +229,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div id="mack" class="uk-width-medium uk-width-1-4@m">
                             <div class="uk-background-default uk-card uk-padding-small uk-border-rounded-large uk-margin-small-right">
                                 <div class="uk-width-medium uk-width-4-5@m uk-margin-auto uk-margin-bottom">
