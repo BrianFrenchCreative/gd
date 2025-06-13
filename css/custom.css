@@ -51,12 +51,14 @@
     :root {
         --text: #fafafa;
         --background: #101010;
-        --background-default: #101010;
+        --background-default: #1e1d1d;
         --other: #202020;
+        --muted: rgba(255,255,255, 0.1);
+        --text: #dfdfdf;
     }
 }
-*/
 
+*/
 
 html {
     font-family: "Albert Sans", sans-serif;
@@ -126,6 +128,10 @@ h3 a:hover {
 .uk-navbar-item > a:hover {
     background-color: #ddd;
     color: #333
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: var(--background-default);
 }
 
 .uk-nav-default > li > a:hover {
