@@ -1,19 +1,4 @@
-/* add future support for light/dark preferred 
-:root {
---text: #101010;
---background: #fafafa;
---other: #eeeeee;
-}
 
-@media (prefers-color-scheme: dark) {
-:root {
---text: #fafafa;
---background: #101010;
---other: #202020;
-}
-}
-
-*/
 
 @charset "utf-8";
 
@@ -54,14 +39,32 @@
     --secondary: #222;
     --muted: rgba(226, 222, 222, 0.33);
     --muted-darker: rgb(102,102,102);
+    --text: #525252;
+    --background: #fafafa;
+    --background-default: #fff;
+    --other: #eeeeee;
 }
+
+/* add future support for light/dark preferred 
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: #fafafa;
+        --background: #101010;
+        --background-default: #101010;
+        --other: #202020;
+    }
+}
+*/
+
 
 html {
     font-family: "Albert Sans", sans-serif;
     font-size: 17px;
     line-height: 25px;
     font-weight: 400;
-    color: #525252
+    color: var(--text);
+    background-color: var(--background);
 }
 
 blockquote {
@@ -161,31 +164,36 @@ h3 a:hover {
 }
 
 .uk-text-primary {
-  color: var(--primary) !important;
+    color: var(--primary) !important;
 }
 
 .uk-background-primary {
-  background-color: var(--primary);
+    background-color: var(--primary);
     color: #fff
 }
 
+.uk-background-default, .uk-section-default, .uk-card-default {
+    background-color: var(--background-default);
+}
+
 .uk-box-shadow-remove { 
-box-shadow: none
+    box-shadow: none
 }
 
 .uk-box-shadow-inset {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
 }
 
 .uk-subnav-pill > .uk-active > a {
     background-color: rgba(74, 80, 156,1) 
 }
 
+
 .uk-subnav-pill > * > a:hover:not(.uk-subnav-pill > .uk-active > a) {
     background-color: rgba(74, 80, 156,0.5);
-    color: #fff
+    color: #fff;
 }
-    
+
 ::selection {
     background: rgba(74, 80, 156, 1);
     color: #fff;
@@ -198,17 +206,17 @@ box-shadow: none
 }
 
 .uk-text-bold {
-  font-weight: 600
+    font-weight: 600
 }
 
 /* broken :|
 .uk-nav>li.uk-active>a:before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: -25px;
-    width: 15px;
-    border-top: 1px solid #1e87f0
+content: "";
+position: absolute;
+top: 15px;
+left: -25px;
+width: 15px;
+border-top: 1px solid #1e87f0
 }
 */
 
@@ -218,7 +226,7 @@ box-shadow: none
 
 */
 .uk-padding {
-  padding: 24px
+    padding: 24px
 }
 
 .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
@@ -226,14 +234,14 @@ box-shadow: none
 }
 
 .uk-border-rounded {
-  border-radius: 4px
+    border-radius: 4px
 }
 .uk-border-rounded-medium {
-  border-radius: 8px
+    border-radius: 8px
 }
 
 .uk-border-rounded-large {
-  border-radius: 16px
+    border-radius: 16px
 }
 
 .uk-navbar-nav > li > a,
@@ -244,25 +252,25 @@ box-shadow: none
 
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-padding {
-    padding: 24px
-  }
+    .uk-padding {
+        padding: 24px
+    }
 }
 /* Small
- ========================================================================== */
+========================================================================== */
 .uk-padding-small {
-  padding: 16px
+    padding: 16px
 }
 /* Large
- ========================================================================== */
+========================================================================== */
 .uk-padding-large {
-  padding: 40px
+    padding: 40px
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
-  .uk-padding-large {
-    padding: 70px
-  }
+    .uk-padding-large {
+        padding: 70px
+    }
 }
 
 
@@ -394,15 +402,15 @@ p.in {
 }
 
 .uk-background-muted {
- background-color: var(--muted)
+    background-color: var(--muted)
 }
 
 .uk-background-muted-darker {
- background-color: var(--muted-darker)
+    background-color: var(--muted-darker)
 }
 
 .uk-padding-xsmall {
-  padding: 8px
+    padding: 8px
 }
 
 
@@ -428,14 +436,14 @@ p.in {
 
 @media (prefers-reduced-motion:
     no-preference) {
-    @view-transition {
-        navigation: auto
-    }
+        @view-transition {
+            navigation: auto
+        }
 }
 
 ::view-transition-old(page) {
     animation: fade 0.2s linear forwards
-    }
+}
 
 ::view-transition-new(page) {
     animation: fade 0.3s linear reverse
