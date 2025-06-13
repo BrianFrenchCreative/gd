@@ -173,6 +173,9 @@ h3 a:hover {
 box-shadow: none
 }
 
+.uk-box-shadow-inset {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
+}
 ::selection {
     background: rgba(74, 80, 156, 1);
     color: #fff;
