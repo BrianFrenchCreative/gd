@@ -76,7 +76,7 @@
                                                 <li class="uk-nav-header fw-500">Current Projects</li>
                                                 <li><a href="mack.html">Mack Trucks</a></li>
                                                 <li><hr /></li>
-                                                
+
                                                 <li class="uk-nav-header fw-500 uk-margin-large-top">
                                                     Past Work
                                                 </li>
@@ -86,7 +86,7 @@
                                                 <li class="uk-nav-header fw-500">Coming soon</li>
                                                 <li class="">American Addiction Centers<br />Boy Scouts of America<br />Mack Trucks<br />RateGenius</li>
                                                 <li><hr /></li>
-                                                
+
                                                 <li class="uk-nav-header fw-500 uk-margin-large-top">Contact Me</li>
                                                 <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn <span uk-icon="link-external"></span></a></li>
                                             </ul>
@@ -101,7 +101,7 @@
         </header>
 
 
-        <main class="uk-background-muted">
+        <main>
             <!-- Main Content -->
             <div>
                 <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
@@ -197,9 +197,9 @@
 
 
 
-            <div class="uk-section uk-background-primary uk-light " uk-height-viewport="expand:true">
+            <div class="uk-section uk-background-muted" uk-height-viewport="expand:true">
 
-                <div class="uk-container uk-container-xlarge" uk-scrollspy="cls: uk-animation-slide-bottom-small; repeat: true;target:img">
+                <div class="uk-container uk-container-xlarge">
 
                     <div class="uk-grid uk-grid-large" uk-grid>
 
@@ -219,59 +219,64 @@
                             <div class="uk-section uk-container uk-container-expand" id="login">
                                 <h2 class="fs-18 uk-text-uppercase">// Survey Login</h2>
                                 <hr />
-                                <div class="uk-grid uk-child-width-1-2@s uk-margin-medium" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
 
-                                    <div>
-                                        <a href="img/mack/login-2015.png" data-caption="Original">
-                                            <img src="img/mack/login-2015.png" alt="Original"  />
-                                        </a>
-                                        <p class="uk-text-bold uk-text-center">Original</p>
-                                    </div>
-
-                                    <div>
-                                        <a href="img/mack/login-2025.webp" data-caption="Redesign">
-                                            <img src="img/mack/login-2025.webp" alt="Redesign"  />
-                                        </a>
-                                        <p class="uk-text-bold uk-text-center">Redesign</p>
-                                    </div>
-                                </div>
-                                <!-- <div class="uk-margin uk-position-relative uk-position-z-index-zero" uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
-                                    <div class="uk-text-center" uk-sticky="overflow-flip: true; end: 100%;">
-                                        <a href="img/mack/login-2015.png" data-caption="Original">
-                                            <img src="img/mack/login-2015.png" class="uk-width-4-5@s uk-margin-auto" alt="Original"  />
-                                        </a>
-                                        <div class="uk-background-primary">
-                                        <p class="uk-text-bold uk-text-center uk-dark ">Original</p>
+                                <div class="uk-background-muted uk-padding-xsmall uk-border-rounded-large">
+                                    <!-- Login Switcher Container -->
+                                    <div id="login-screens" class="uk-width-5-6@l uk-switcher uk-flex uk-flex-first uk-margin-auto" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
+                                        <div>
+                                            <a href="img/mack/login-2025.webp" data-caption="Redesign">
+                                                <img src="img/mack/login-2025.webp" alt="Redesign"  />
+                                            </a>
+                                        </div>
+                                        <div>
+                                            <a href="img/mack/login-2015.png" data-caption="Original">
+                                                <img src="img/mack/login-2015.png" alt="Original"  />
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="uk-text-center" uk-sticky="overflow-flip: true;end:true">
-                                        <a href="img/mack/login-2025.webp" data-caption="Redesign">
-                                            <img src="img/mack/login-2025.webp" class="uk-width-4-5@s uk-margin-auto" alt="Redesign"  />
-                                        </a>
-                                        <div class="uk-background-primary">
-                                        <p class="uk-text-bold uk-text-center">Redesign</p>
-</div>
+
+                                    <!-- Login Switcher Controls -->
+                                    <div class="uk-flex-center uk-flex uk-margin-top">
+                                        <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
+                                            <ul class="uk-subnav uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" 
+                                                uk-switcher="connect: #login-screens">
+                                                <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
+                                                <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div> -->
+                                </div>
+                                
                             </div>
 
                             <div class="uk-section uk-container uk-container-expand" id="info">
                                 <h2 class="fs-18 uk-text-uppercase">// Contact Information Form</h2>
                                 <hr class="uk-margin-remove" />
-                                <div class="uk-grid uk-child-width-1-2@s uk-margin-medium" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
-
-                                    <div>
-                                        <a href="img/mack/info-2015.webp" data-caption="Original">
-                                            <img src="img/mack/info-2015.webp" alt="Original"  />
-                                        </a>
-                                        <p class="uk-text-bold uk-text-center">Original</p>
-                                    </div>
-
-                                    <div>
-                                        <a href="img/mack/info-2025.webp" data-caption="Redesign">
+                                
+                                <div class="uk-background-muted uk-padding-xsmall uk-border-rounded-large">
+                                    <!-- Login Switcher Container -->
+                                    <div id="contact-form-screens" class="uk-width-5-6@l uk-switcher uk-flex uk-flex-first uk-margin-auto" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
+                                        <div>
+                                            <a href="img/mack/info-2025.webp" data-caption="Redesign">
                                             <img src="img/mack/info-2025.webp" alt="Redesign"  />
                                         </a>
-                                        <p class="uk-text-bold uk-text-center">Redesign</p>
+                                        </div>
+                                        <div>
+                                            <a href="img/mack/info-2015.webp" data-caption="Original">
+                                            <img src="img/mack/info-2015.webp" alt="Original"  />
+                                        </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Login Switcher Controls -->
+                                    <div class="uk-flex-center uk-flex uk-margin-top">
+                                        <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
+                                            <ul class="uk-subnav uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" 
+                                                uk-switcher="connect: #contact-form-screens">
+                                                <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
+                                                <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -281,26 +286,37 @@
                             <div class="uk-section uk-container uk-container-expand" id="questions-1">
                                 <h2 class="fs-18 uk-text-uppercase">// Survey Questions</h2>
                                 <hr class="uk-margin-remove" />
-                                <div class="uk-grid uk-child-width-1-2@s uk-margin-medium" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
-
-                                    <div>
-                                        <a href="img/mack/questions-2015.webp" data-caption="Original">
-                                            <img src="img/mack/questions-2015.webp" alt="Original"  />
-                                        </a>
-                                        <p class="uk-text-bold uk-text-center">Original</p>
-                                    </div>
-
-                                    <div>
-                                        <a href="img/mack/questions-1-2025.webp" data-caption="Redesign">
+                                
+                                <div class="uk-background-muted uk-padding-xsmall uk-border-rounded-large">
+                                    <!-- Login Switcher Container -->
+                                    <div id="questions-1-screens" class="uk-width-5-6@l uk-switcher uk-flex uk-flex-first uk-margin-auto" uk-grid uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
+                                        <div>
+                                            <a href="img/mack/questions-1-2025.webp" data-caption="Redesign">
                                             <img src="img/mack/questions-1-2025.webp" alt="Redesign"  />
                                         </a>
-                                        <p class="uk-text-bold uk-text-center">Redesign</p>
+                                        </div>
+                                        <div>
+                                            <a href="img/mack/questions-2015.webp" data-caption="Original">
+                                            <img src="img/mack/questions-2015.webp" alt="Original"  />
+                                        </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Login Switcher Controls -->
+                                    <div class="uk-flex-center uk-flex uk-margin-top">
+                                        <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
+                                            <ul class="uk-subnav uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" 
+                                                uk-switcher="connect: #questions-1-screens">
+                                                <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
+                                                <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="uk-section">
                                     <hr class="uk-divider-icon" />
-                                    <div class="uk-text-center in">// More examples  <span class="uk-text-bold">coming soon</span> //</div>
+                                    <div class="uk-text-center in fw-500">// More examples coming soon //</div>
                                 </div>
 
                             </div>
