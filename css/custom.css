@@ -37,7 +37,7 @@
 :root{
     --primary: rgb(74, 80, 156);
     --secondary: #222;
-    --muted: rgba(226, 222, 222, 0.33);
+    --muted: rgba(167, 167, 167, 0.2);
     --muted-darker: rgb(102,102,102);
     --text: #424242;
     --background: #fafafa;
@@ -218,6 +218,10 @@ border-top: 1px solid #1e87f0
 .uk-navbar-item,
 .uk-navbar-toggle {
     min-height:70px
+}
+hr,
+.uk-hr {
+  border-top: 1px solid rgba(167,167,167, 0.25);
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
