@@ -13,6 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/eab0f1bdfe.js" crossorigin="anonymous"></script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                                                               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -36,6 +37,35 @@
                 <div uk-sticky="show-on-up: true">
                     <nav class="uk-navbar-container uk-navbar-default no-border uk-box-shadow-small" uk-dropnav="align:center">
                         <div class="uk-container uk-container-xlarge" uk-navbar>
+                            <!-- mobile nav -->
+                            <div class="uk-navbar-item uk-navbar-left uk-hidden@m uk-margin-right">
+                                <ul class="uk-navbar-nav">
+                                    <li>
+                                        <a class="uk-navbar-toggle uk-navbar-toggle-animate" href uk-navbar-toggle-icon></a>
+                                        <div class="uk-dropbar uk-dropbar-top uk-width-expand uk-padding" uk-drop="stretch: y; animation:reveal-top; animate-out:true">
+                                            <ul class="uk-nav uk-list uk-list-large uk-nav-default fs-16">
+                                                <li class="uk-nav-header fw-500">Current Projects</li>
+                                                <li><a href="mack.html">Mack Trucks</a></li>
+                                                <li><hr /></li>
+                                                
+                                                <li class="uk-nav-header fw-500 uk-margin-large-top">
+                                                    Past Work
+                                                </li>
+                                                <li class=""><a href="5winsights.html">5W Insights</a></li>
+                                                <li><hr /></li>
+
+                                                <li class="uk-nav-header fw-500">Coming soon</li>
+                                                <li class="">American Addiction Centers<br />Boy Scouts of America<br />Mack Trucks<br />RateGenius</li>
+                                                <li><hr /></li>
+                                                
+                                                <li class="uk-nav-header fw-500 uk-margin-large-top">Contact Me</li>
+                                                <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn <span uk-icon="link-external"></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
                             <div class="uk-navbar-item uk-navbar-left uk-logo uk-link-reset">
                                 <a href="/gd/" class="fw-500 warm">
                                     <img src="img/headshot.webp" alt="" class="uk-border-circle uk-box-shadow-medium uk-float-left uk-margin-small-right" style="max-height:38px;border:3px solid #fff" /> 
@@ -63,38 +93,10 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="uk-navbar-item uk-navbar-right uk-link-reset uk-visible@m">
-                                <a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn</a>
+                            <div class="uk-navbar-item uk-navbar-right uk-link-reset">
+                                <a href="https://www.linkedin.com/in/brianfrenchcreative/" class="uk-flex uk-flex-middle" target="_blank"><i class="fa-brands fa-linkedin fs-18"></i><span class="uk-visible@s uk-margin-small-left"> LinkedIn</span></a>
                             </div>
 
-                            <!-- mobile nav -->
-                            <div class="uk-navbar-item uk-navbar-right uk-hidden@m">
-                                <ul class="uk-navbar-nav">
-                                    <li>
-                                        <a class="uk-navbar-toggle uk-navbar-toggle-animate" href uk-navbar-toggle-icon></a>
-                                        <div class="uk-dropbar uk-dropbar-top uk-width-expand uk-padding" uk-drop="stretch: y; animation:reveal-top; animate-out:true">
-                                            <ul class="uk-nav uk-list uk-list-large uk-nav-default fs-16">
-                                                <li class="uk-nav-header fw-500">Current Projects</li>
-                                                <li><a href="mack.html">Mack Trucks</a></li>
-                                                <li><hr /></li>
-
-                                                <li class="uk-nav-header fw-500 uk-margin-large-top">
-                                                    Past Work
-                                                </li>
-                                                <li class=""><a href="5winsights.html">5W Insights</a></li>
-                                                <li><hr /></li>
-
-                                                <li class="uk-nav-header fw-500">Coming soon</li>
-                                                <li class="">American Addiction Centers<br />Boy Scouts of America<br />Mack Trucks<br />RateGenius</li>
-                                                <li><hr /></li>
-
-                                                <li class="uk-nav-header fw-500 uk-margin-large-top">Contact Me</li>
-                                                <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" class="" target="_blank">LinkedIn <span uk-icon="link-external"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </nav>
                 </div>
