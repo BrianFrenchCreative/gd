@@ -108,6 +108,9 @@ h3 a:hover {
 .uk-navbar-nav > li > a, .uk-button {
     text-transform: none
 }
+.uk-navbar-item {
+    color: var(--text)
+}
 .uk-navbar-item > a {
     padding: 6px 12px;
     border-radius: 80px;
@@ -138,11 +141,16 @@ h3 a:hover {
     font-weight: 500
 }
 .uk-logo {
-    font-size:1.2rem;
-    line-height:2.5rem
+    font-size:1.1rem;
+    line-height:2.5rem;
+    font-weight: 500;
+    color: var(--text)
 }
-.uk-logo > a:hover {
-    background-color: transparent
+a.uk-logo > img {
+    max-height:36px;
+    border:2px solid var(--background-default);
+    margin-right:10px;
+    border-radius:50%
 }
 .uk-text-small {
     font-size: 0.75rem;
@@ -289,7 +297,7 @@ hr,
         box-shadow: none
     }
 }
-.warm {
+.warm:not(a.uk-logo.warm) {
     --gc1: 130, 102, 255,;
     --gc2: 193, 179, 255,;
     --color: 255, 255, 255,;
