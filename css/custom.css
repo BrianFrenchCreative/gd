@@ -392,6 +392,33 @@ p.in {
     -webkit-backdrop-filter: blur(6px)
 }
 
+.typing {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+        typing 2s steps(60, end),
+        blinking 1s steps(1, end) 3;
+    border-right: 2px solid transparent;
+    padding-right: .25em
+}
+
+@keyframes blinking {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--text)
+    }
+}
+
+@keyframes typing { 
+    0% {width: 0;}
+    100% {width: 100%}
+} 
+
+
 
 /* Page View Transitions */
 
