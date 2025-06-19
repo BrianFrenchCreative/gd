@@ -372,6 +372,10 @@ p.in {
 .uk-background-muted {
     background-color: var(--muted)
 }
+.uk-light > * .uk-label.uk-background-muted {
+    background-color: var(--muted);
+    color: rgba(255,255,255,0.9) !important
+}
 .uk-background-muted-darker {
     background-color: var(--muted-darker)
 }
