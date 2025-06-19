@@ -212,6 +212,9 @@ border-top: 1px solid #1e87f0
 .uk-subnav > * > :first-child, .uk-dropdown-nav > li > a {
     color: #444
 }
+.uk-dropbar {
+    background-color: #e9e9e9
+}
 .uk-padding {
     padding: 24px
 }
