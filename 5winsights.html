@@ -12,7 +12,7 @@
         <script src="js/uikit-icons.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/eab0f1bdfe.js" crossorigin="anonymous"></script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -30,112 +30,23 @@
 
         <!-- Header start -->
         <header>
-            <div class="uk-background-muted">
-                <div uk-sticky="show-on-up: true">
-                    <nav class="uk-navbar-container uk-navbar-default no-border uk-box-shadow-small" uk-dropnav="align:center">
-                        <div class="uk-container uk-container-xlarge" uk-navbar>
-                            <!-- mobile nav -->
-                            <div class="uk-navbar-item uk-navbar-left uk-hidden@m uk-margin-small-right">
-                                <ul class="uk-navbar-nav">
-                                    <li class="uk-padding-xsmall uk-padding-remove-vertical">
-                                        <a class="uk-navbar-toggle uk-navbar-toggle-animate" href uk-navbar-toggle-icon></a>
-
-                                        <div class="uk-dropbar uk-dropbar-top uk-width-expand uk-padding-remove" uk-drop="stretch: y; animation:reveal-top; animate-out:true;mode:click">
-
-                                            <div class="uk-margin-left uk-margin-right uk-margin-top">
-                                                <div class="fs-14 in fw-600 uk-text-secondary uk-text-uppercase">// Select design Samples</div>
-                                                <hr class="uk-margin-small" />
-                                            </div>
-
-                                            <div class="">
-                                                <div class="uk-container uk-container-large uk-position-relative uk-slider uk-slider-container" uk-slider="finite: true">
-
-                                                    <div class="uk-slider-items uk-margin-small-top uk-margin-bottom uk-light">
-
-                                                        <!-- Mack -->
-                                                        <div class="uk-margin-left uk-margin-small-bottom">
-                                                            <a href="mack.html">
-                                                                <div class=" uk-width-medium uk-margin-small-right">
-                                                                    <div class="uk-background-cover uk-height-large uk-panel uk-overflow-hidden  uk-border-rounded-large" style="background-image: url(img/mack/mack-driver-survey.webp);">
-
-                                                                        <div class="uk-position-cover dark-frost"></div>
-
-                                                                        <div class="uk-overlay uk-position-bottom">
-                                                                            <div class="fs-24 fw-500 uk-margin-xsmall-bottom">Mack Trucks</div>
-                                                                            <div class="fs-18 uk-margin-remove-top uk-margin-small-bottom">Evolving a digital survey experience&nbsp;&rarr;</div>
-
-                                                                            <div class="uk-label uk-background-muted uk-border-pill fs-10 fw-400">Current Project</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-
-                                                        <!-- 5W Insights -->
-                                                        <div class="uk-margin-small-bottom">
-                                                            <a href="5winsights.html">
-                                                                <div class="uk-margin-large-right uk-width-medium">
-                                                                    <div class="uk-background-cover uk-height-large uk-panel uk-overflow-hidden uk-border-rounded-large" style="background-image: url(img/5winsights/conference-backdrop-mockup.webp)">
-
-                                                                        <div class="uk-position-cover dark-frost"></div>
-
-                                                                        <div class="uk-overlay uk-position-bottom">
-                                                                            <div class="fs-24 fw-500 uk-margin-xsmall-bottom">5W Insights</div>
-                                                                            <div class="fs-18 uk-margin-small-bottom">Implementing a new brand identity&nbsp;&rarr;</div>
-                                                                            <div class="uk-label uk-background-muted uk-border-pill fs-10 fw-400">Past Work</div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                </ul>
+            <div uk-sticky="cls-active: uk-box-shadow-medium">
+                <nav class="uk-navbar-container uk-navbar-default border-bottom" uk-dropnav="align:center">
+                    <div class="uk-container uk-container-large" uk-navbar>
+                        <div class="uk-navbar-left">
+                            <div class="uk-navbar-item">
+                                <a href="/gd/" class="uk-logo warm uk-flex uk-flex-middle">
+                                    <div>
+                                        Brian French <br class="uk-hidden@s" /><span class="uk-visible@s uk-text-muted" uk-hidden>&ensp;/&ensp;</span><span class="uk-text-muted fw-500">5W Insights</span>
+                                    </div>
+                                </a>
                             </div>
-
-                            <div class="uk-navbar-left">
-                                <div class="uk-navbar-item uk-link-reset">
-                                    <a href="/gd/" class="uk-logo warm uk-flex uk-flex-middle">
-                                        <img src="img/headshot.webp" alt="" /> 
-                                        <span>Brian French</span>&ensp;
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="uk-navbar-item uk-navbar-center uk-visible@m">
-                                <ul class="uk-subnav uk-flex-center ">
-                                    <li>
-                                        <a href>Current Projects<span uk-drop-parent-icon></span></a>
-                                        <div class="uk-dropdown">
-                                            <ul class="uk-nav uk-dropdown-nav">
-                                                <li><a href="mack.html">Mack Trucks</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href>Past Work<span uk-drop-parent-icon></span></a>
-                                        <div class="uk-dropdown">
-                                            <ul class="uk-nav uk-dropdown-nav uk-list uk-list-large">
-                                                <li class=""><a href="5winsights.html">5W Insights</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="uk-navbar-item uk-navbar-right uk-link-reset">
-                                <a href="https://www.linkedin.com/in/brianfrenchcreative/" class="uk-flex uk-flex-middle" target="_blank"><i class="fa-brands fa-linkedin fs-18"></i><span class="uk-visible@s uk-margin-small-left"> LinkedIn</span></a>
-                            </div>
-
                         </div>
-                    </nav>
-                </div>
+                    </div>
+                </nav>
             </div>
         </header>
+        <!-- header -->
 
 
         <main class="">
@@ -147,249 +58,277 @@
             </div>
 
             <!-- Main Content -->
-            <div class="uk-section uk-section-small">
-                <div class="uk-container uk-container-small">
-                    <div class="uk-margin-left uk-margin-right">
-                        <div class="uk-margin-auto uk-text-center@s" uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
-                            <div>
-                                <h1 class="fw-600">Implementing a new brand identity</h1>
-                            </div>
-                            <div>
-                                <h2 class="fw-500 uk-margin-large-bottom fs-18">A complete rollout across tradeshow, marketing, and promotional materials to ensure a unified brand experience.</h2>
-                            </div>
+            <div class="uk-section">
+                <div class="uk-container uk-container-large">
+                    <div class="uk-grid-large" uk-grid>
+
+                        <!-- left -->
+                        <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-3@m">
+                            <div class="uk-width-1-2"><img src="img/5winsights/5W_logo.png" /></div>
                         </div>
 
+                        <!-- right -->
+                        <div class="uk-width-1-1 uk-width-expand@s" uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
 
-                        <ul class="uk-list uk-list-large uk-list-divider" uk-accordion>
-                            <li class="uk-open">
-                                <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-18 fw-600">The Challenge</h3></a>
-                                <div class="uk-accordion-content">
-                                    <p>Following a company-wide brand refresh, a wide range of existing tradeshow and marketing materials were no longer aligned with the new visual identity and strategic messaging. This created a fragmented brand experience and diluted the impact of the new identity in the market.</p>
+                            <div>
+                                <div uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
+                                    <div>
+                                        <h1 class="fw-600" style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">Implementing 5W&rsquo;s new brand identity</h1>
+                                    </div>
+                                    <div>
+                                        <h3 class="fw-500 uk-margin-large-bottom" style="font-size: clamp(1.06rem, 3.5vw, 1.25rem)">Unifing the brand experience across tradeshow, marketing, and promotional materials </h3>
+                                    </div>
                                 </div>
-                            </li>
 
-                            <li>
-                                <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-18 fw-600">My Role</h3></a>
-                                <div class="uk-accordion-content">
-                                    <p>As the lead designer on this initiative, I was tasked with auditing all existing collateral and spearheading the effort to update every touchpoint to be consistent with the new brand standards.</p>
-                                </div>
-                            </li>
+                                <div class="uk-container uk-container-small">
+                                    <ul class="uk-list uk-list-large " uk-accordion>
+                                        <li class="uk-open">
+                                            <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">Challenge</h3></a>
+                                            <div class="uk-accordion-content">
+                                                <p>Following a company-wide brand refresh, a wide range of existing tradeshow and marketing materials were no longer aligned with the new visual identity and strategic messaging. This created a fragmented brand experience and diluted the impact of the new identity in the market.</p>
+                                            </div>
+                                        </li>
 
-                            <li>
-                                <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-18 fw-600">The Process</h3></a>
-                                <div class="uk-accordion-content">
-                                    <p>My process began with a comprehensive audit of all existing materials. I owned the responsibility of reviewing existing collateral, identifying necessary updates and polish to align with new brand standards and executing the changes.</p>
+                                        <li>
+                                            <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">Role</h3></a>
+                                            <div class="uk-accordion-content">
+                                                <p>As the lead designer on this initiative, I was tasked with auditing all existing collateral and spearheading the effort to update every touchpoint to be consistent with the new brand standards.</p>
+                                            </div>
+                                        </li>
 
-                                    <p>This involved:</p>
+                                        <li>
+                                            <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">Process</h3></a>
+                                            <div class="uk-accordion-content">
+                                                <p>My process began with a comprehensive audit of all existing materials. I owned the responsibility of reviewing existing collateral, identifying necessary updates and polish to align with new brand standards and executing the changes.</p>
 
-                                    <ul class="uk-list uk-list-bullet uk-list-large">
-                                        <li><span class="fw-600">Analysis:</span> Carefully evaluating each piece, from a large-scale tradeshow backdrop to case studies, brochures and digital ads, to determine what could be updated versus what needed to be redesigned from the ground up.</li>
+                                                <p>This involved:</p>
 
-                                        <li><span class="fw-600">Execution:</span> I then moved into hands-on design, where I created original graphic assets and visual elements, integrating them into the robust and scalable design system I built to ensure brand cohesion. This ensured that every piece of collateral was not only visually updated but also built for future consistency and ease of use.</li>
+                                                <ul class="uk-list uk-list-bullet uk-list-large">
+                                                    <li><span class="fw-600">Analysis:</span> Carefully evaluating each piece, from a large-scale tradeshow backdrop to case studies, brochures and digital ads, to determine what could be updated versus what needed to be redesigned from the ground up.</li>
 
-                                        <li><span class="fw-600">Collaboration:</span>  Throughout the project, I collaborated on internal branding and rebranding efforts with key marketing and leadership stakeholders to ensure the final output was perfectly aligned with the new strategic direction.</li>
+                                                    <li><span class="fw-600">Execution:</span> I then moved into hands-on design, where I created original graphic assets and visual elements, integrating them into the robust and scalable design system I built to ensure brand cohesion. This ensured that every piece of collateral was not only visually updated but also built for future consistency and ease of use.</li>
+
+                                                    <li><span class="fw-600">Collaboration:</span>  Throughout the project, I collaborated on internal branding and rebranding efforts with key marketing and leadership stakeholders to ensure the final output was perfectly aligned with the new strategic direction.</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700"> Outcome</h3></a>
+                                            <div class="uk-accordion-content">
+                                                <p>The result was a cohesive suite of marketing and tradeshow materials that presented a strong, unified brand identity across all customer-facing touchpoints. The updated collateral successfully launched the new identity into the market and provided the team with scalable templates to maintain consistency moving forward.</p>
+                                            </div>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li>
-
-                            <li>
-                                <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-18 fw-600">The Outcome</h3></a>
-                                <div class="uk-accordion-content">
-                                    <p>The result was a cohesive suite of marketing and tradeshow materials that presented a strong, unified brand identity across all customer-facing touchpoints. The updated collateral successfully launched the new identity into the market and provided the team with scalable templates to maintain consistency moving forward.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="uk-section uk-background-muted" uk-height-viewport="expand:true">
-
-                <div class="uk-container uk-container-large">
-
-                    <div class="uk-display-inline-block">
-                        <h2 class="fs-18 fw-500 uk-text-uppercase uk-margin-remove" uk-scrollspy="cls:typing">// Conference Booth</h2>
-                    </div>
-                    <hr />
+                            </div>
 
 
-                    <div class="uk-background-muted uk-border-rounded-large uk-padding uk-margin">
+                            <div class="uk-section" style="background-color: " uk-height-viewport="expand:true">
+                                <div class="uk-container">
+                                    <div>
 
-                        <div class="uk-grid-small" uk-grid>
-                            <div class="uk-width-1-4@m uk-flex uk-flex-middle">
-                                <div class="">
-                                    <h4 class="fs-20 fw-600 uk-margin-small-bottom">Tradeshow backdrop
-                                    </h4>
-                                    <p class="fs-14 uk-margin-small-top">The strategy for this backdrop was to capture attention on a busy tradeshow floor. I implemented 5W's bold new visual identity for immediate impact and streamlined the core message to be instantly digestible, boosting audience engagement.</p>
+                                        <div>
+                                            <h3 class="fw-700 fs-20 uk-margin-remove">Conference Booth</h3>
+                                        </div>
+                                        <hr />
 
-                                    <div class="uk-flex-center uk-flex">
-                                        <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
-                                            <ul class="uk-subnav  uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" uk-switcher="connect: #backdrop">
-                                                <li class="uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
-                                                <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
-                                            </ul>
+
+                                        <div class="uk-margin">
+                                            <div class="uk-grid" uk-grid>
+                                                <div class="uk-width-1-3@s">
+                                                    <h4 class="fw-600 fs-16 uk-margin-bottom">Tradeshow backdrop</h4>
+                                                    <p class="fs-16 uk-margin-small-top">The purpose of the booth backdrop is to capture attention on a busy tradeshow floor. I implemented 5W's bold new visual identity for immediate impact and streamlined the core message to be instantly digestible, boosting audience engagement.</p>
+                                                    <div class="uk-flex-center uk-flex">
+                                                        <div class="uk-display-inline-block uk-background-muted uk-box-shadow-inset uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-margin-top">
+                                                            <ul class="uk-subnav uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" uk-switcher="connect: #backdrop;animation: uk-animation-scale-up, uk-animation-fade">
+                                                                <li class="uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
+                                                                <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-expand uk-flex uk-flex-right uk-flex-first uk-flex-last@s" >
+                                                    <div class="uk-width-4-5@m">
+                                                        <div id="backdrop" class="uk-flex margin-auto uk-switcher uk-flex uk-flex-first uk-text-center uk-border-rounded-large" >
+                                                            <div id="backdrop-1" class="">
+                                                                <img src="img/5winsights/5W_10x10-BOOTH_2024.webp" class="uk-box-shadow-small uk-border-rounded-medium"  />
+                                                            </div>
+                                                            <div id="backdrop-2" class="">
+                                                                <img src="img/5winsights/5W_10x10-BOOTH_2023.webp" class="uk-box-shadow-small uk-border-rounded-medium" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="uk-margin-large-top" />
+                                        </div>
+
+                                        <div class="uk-margin" >
+                                            <div class="uk-grid" uk-grid>
+                                                <div class="uk-width-1-3@s">
+                                                    <div>
+                                                        <h4 class="fw-600 fs-16 uk-margin-small-bottom">Floor Sign</h4>
+                                                        <p class="fs-16 uk-margin-small-top">I developed a versatile and modular event system by redesigning this tall floor sign. Originally an informational piece, it now functions as a primary backdrop in smaller spaces, ensuring a professional and consistent brand identity at any event.</p>
+
+                                                        <div class="uk-flex-center uk-flex">
+
+                                                            <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
+                                                                <ul class="uk-subnav  uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" uk-switcher="connect: #floor-sign;animation: uk-animation-scale-up, uk-animation-fade">
+                                                                    <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
+                                                                    <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-expand uk-flex uk-flex-right uk-flex-first uk-flex-last@s" >
+                                                    <div class="uk-width-4-5@m uk-flex uk-flex-center uk-background-muted uk-border-rounded-medium">
+                                                        <div id="floor-sign" class="uk-switcher">
+                                                            <div>
+                                                                <img src="img/5winsights/5W_FloorSign_2024.webp" class="uk-height-max-large uk-border-rounded" />
+                                                            </div>
+                                                            <div>
+                                                                <img src="img/5winsights/5W_FloorSign_2023.webp" class="uk-height-max-large uk-box-shadow-small uk-border-rounded" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr class="uk-margin-large-top" />
+                                        </div>
+
+                                        <div>
+                                            <div class="uk-grid" uk-grid>
+                                                <div class="uk-width-1-3@s">
+                                                    <div>
+                                                        <h4 class="fw-600 fs-16 uk-margin-small-bottom">Podium</h4>
+                                                        <p class="fs-16 uk-margin-small-top">I updated this podium wrap with a bolder color palette and new visuals to command attention and create a cohesive, professional on-stage brand presence.</p>
+
+                                                        <div class="uk-flex-center uk-flex">
+                                                            <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
+                                                                <ul class="uk-subnav  uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" uk-switcher="connect: #podium;animation: uk-animation-scale-up, uk-animation-fade">
+                                                                    <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
+                                                                    <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uk-width-expand uk-flex uk-flex-right uk-flex-first uk-flex-last@s" >
+                                                    <div class="uk-width-4-5@m uk-flex uk-flex-center uk-border-rounded-medium">
+                                                        <div id="podium" class="uk-switcher">
+                                                            <div class="">
+                                                                <img src="img/5winsights/5W_podium_2024.webp" class="uk-box-shadow-small uk-border-rounded-medium" />
+
+                                                            </div>
+                                                            <div>
+                                                                <img src="img/5winsights/5W_podium_2023.webp" class="uk-box-shadow-small uk-border-rounded-medium" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="uk-width-expand uk-flex-first uk-flex-last@m">
-                                <div id="backdrop" class="uk-switcher uk-flex uk-flex-first uk-text-center">
-
-                                    <div id="backdrop-1" class="">
-                                        <img src="img/5winsights/5W_10x10-BOOTH_2024.webp" class="uk-box-shadow-small uk-border-rounded-medium"  />
-                                    </div>
-
-                                    <div id="backdrop-2" class="">
-                                        <img src="img/5winsights/5W_10x10-BOOTH_2023.webp" class="uk-box-shadow-small uk-border-rounded-medium" />
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="uk-grid" uk-grid uk-height-match="target: > div > .uk-background-muted">
-                        <div class="uk-width-1-3@m">
-                            <div class="uk-background-muted uk-padding uk-border-rounded-large"  >
-
-                                <div class="uk-grid-small" uk-grid>
-                                    <div class="uk-width-expand@s uk-flex uk-flex-middle">
+                            <div class="uk-section" uk-height-viewport="expand:true">
+                                <div class="uk-container">     
                                         <div>
-                                            <h4 class="fs-20 fw-600 uk-margin-small-bottom">Floor Sign</h4>
-                                            <p class="fs-14 uk-margin-small-top">I developed a versatile and modular event system by redesigning this tall floor sign. Originally an informational piece, it now functions as a primary backdrop in smaller spaces, ensuring a professional and consistent brand identity at any event.</p>
+                                            <h3 class="fw-700 fs-20 uk-margin-remove">LinkedIn</h3>
+                                        </div>
+                                        <hr />
 
-                                            <div class="uk-flex-center uk-flex">
+                                    <div class="uk-grid" uk-grid>
+                                        <div class="uk-width-1-3@s">
+                                            <h4 class="fw-600 fs-16 uk-margin-small-bottom ">Carousel slider</h4>
+                                            <p class="fs-16 uk-margin-small-top">The LinkedIn carousel was a key asset for a pre-conference marketing campaign to drive booth attendance. </p>
+                                            <p>The five-slide sequence strategically outlines a range of incentives, from free AI donor insights and case studies on proven results to exclusive discounts, all designed to capture interest and convert online engagement into in-person booth visits.</p>
+                                        </div>
 
-                                                <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
-                                                    <ul class="uk-subnav  uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" uk-switcher="connect: #floor-sign">
-                                                        <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
-                                                        <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
-                                                    </ul>
+                                        <div class="uk-width-expand uk-flex uk-flex-right uk-flex-first uk-flex-last@s uk-overflow-hidden" >
+                                            <div class="uk-width-4-5@m">
+                                                <div class="uk-width-auto">
+                                                    <div class="uk-position-relative uk-slider uk-slider-container" tabindex="-1" uk-slider="finite:true;">
+                                                        <div class="uk-slider-items">
+
+                                                            <div id="bridge-slide-1" class="uk-width-medium uk-width-auto@s">
+                                                                <div class="uk-margin-small-right">
+                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="bridge-slide-2" class="uk-width-medium uk-width-auto@s">
+                                                                <div class="uk-margin-small-right">
+                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides2.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded"  />
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="bridge-slide-3" class="uk-width-medium uk-width-auto@s">
+                                                                <div class="uk-margin-small-right">
+                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides3.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="bridge-slide-4" class="uk-width-medium uk-width-auto@s">
+                                                                <div class="uk-margin-small-right">
+                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides4.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div id="bridge-slide-5" class="uk-width-medium uk-width-auto@s">
+                                                                <div class="uk-margin-small-right">
+                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides5.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin uk-dar"></ul>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <hr class="uk-margin-large-top" />
+
+                                    <div>
+                                        <div class="uk-grid" uk-grid id="li-post">
+                                            <div class="uk-width-1-3@s">
+                                                <h4 class="fw-600 fs-16 uk-margin-small-bottom">Post graphic</h4>
+                                                <p class="fs-16 uk-margin-small-top">I designed this promotional graphic to announce a speaking session by 5W's CEO at a major industry conference. </p>
+                                                <p>The key challenge was creating a co-branded visual that harmoniously featured both the 5W Insights and the conference logo. I leveraged elements from 5W's brand refresh to create a dynamic layout, establishing a clear visual hierarchy that drove attention to the session details while maintaining brand consistency for 5W and the conference.</p>
+                                            </div>
+                                            <div class="uk-width-expand uk-flex uk-flex-right uk-flex-first uk-flex-last@s" >
+                                                <div class="uk-width-4-5@m uk-flex uk-flex-center uk-border-rounded-medium">
+                                                    <div>
+                                                        <img src="img/5winsights/li/5W_VFRI-speaker_LinkedIn.webp" class="uk-border-rounded-medium" />
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="uk-width-1-3@s uk-flex-first uk-flex-last@s uk-text-center">
-                                        <div id="floor-sign" class="uk-switcher">
-                                            <div><img src="img/5winsights/5W_FloorSign_2024.webp" class="uk-height-max-large uk-border-rounded" /></div>
-                                            <div><img src="img/5winsights/5W_FloorSign_2023.webp" class="uk-height-max-large uk-box-shadow-small uk-border-rounded" /></div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="uk-width-2-3@m">
-
-                            <div class="uk-background-muted uk-padding uk-border-rounded-large uk-flex uk-flex-middle"  >
-
-                                <div class="uk-grid-small" uk-grid>
-                                    <div class="uk-width-expand@m uk-flex uk-flex-middle">
-                                        <div>
-                                            <h4 class="fs-20 fw-600 uk-margin-small-bottom">Podium</h4>
-                                            <p class="fs-14 uk-margin-small-top">I updated this podium wrap with a bolder color palette and new visuals to command attention and create a cohesive, professional on-stage brand presence.</p>
-
-                                            <div class="uk-flex-center uk-flex">
-                                                <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
-                                                    <ul class="uk-subnav  uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" uk-switcher="connect: #podium">
-                                                        <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
-                                                        <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="uk-width-4-5@l uk-flex-first uk-flex-last@l uk-text-center">
-                                        <div id="podium" class="uk-switcher">
-                                            <div class="">
-                                                <img src="img/5winsights/5W_podium_2024.webp" class="uk-box-shadow-small uk-border-rounded-medium" />
-
-                                            </div>
-                                            <div>
-                                                <img src="img/5winsights/5W_podium_2023.webp" class="uk-box-shadow-small uk-border-rounded-medium" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="uk-section uk-background-muted" uk-height-viewport="expand:true">
-                <div class="uk-container uk-container-large">     
-                    <div class="uk-display-inline-block">
-                        <h2 class="fs-18 fw-500 uk-text-uppercase uk-margin-remove" uk-scrollspy="cls:typing">// LinkedIn</h2>
-                    </div>
-                    <hr />
 
-                    <div class="uk-background-muted uk-padding-small uk-border-rounded-large uk-margin-bottom">
-
-                        <div class="uk-container uk-container-large uk-position-relative" uk-slider="finite:true">
-                            <div class="uk-slider-items">
-
-                                <div id="bridge-slide-1" class="uk-width-medium uk-width-1-5@l">
-                                    <div class="uk-margin-small-right">
-                                        <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides.webp" class="uk-border-rounded" />
-                                    </div>
-                                </div>
-
-                                <div id="bridge-slide-2" class="uk-width-medium uk-width-1-5@l">
-                                    <div class="uk-margin-small-right">
-                                        <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides2.webp" class="uk-border-rounded"  />
-                                    </div>
-                                </div>
-
-                                <div id="bridge-slide-3" class="uk-width-medium uk-width-1-5@l">
-                                    <div class="uk-margin-small-right">
-                                        <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides3.webp" class="uk-border-rounded" />
-                                    </div>
-                                </div>
-
-                                <div id="bridge-slide-4" class="uk-width-medium uk-width-1-5@l">
-                                    <div class="uk-margin-small-right">
-                                        <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides4.webp" class="uk-border-rounded" />
-                                    </div>
-                                </div>
-
-                                <div id="bridge-slide-5" class="uk-width-medium uk-width-1-5@l">
-                                    <div class="uk-margin-small-right">
-                                        <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides5.webp" class="uk-border-rounded" />
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="uk-width-4-5@l">
-                            <h4 class="fs-20 fw-600 uk-margin-small-bottom uk-margin-top">LinkedIn Carousel slider</h4>
-                            <p class="fs-14 uk-margin-small-top">I designed this LinkedIn carousel as a key asset for a pre-conference marketing campaign to drive booth attendance. The five-slide sequence strategically outlines a range of incentives, from free AI donor insights and case studies on proven results to exclusive discounts, all designed to capture interest and convert online engagement into in-person booth visits.</p>
-                        </div>
-                    </div>
-
-                    <div class="uk-width-2-3@s uk-width-1-2@m">
-                        <div class="uk-background-muted  uk-padding-small uk-border-rounded-large" id="li-post">
-                            <div>
-                                <img src="img/5winsights/li/5W_VFRI-speaker_LinkedIn.webp" class="uk-border-rounded-medium" />
-                            </div>
-                            <h4 class="fs-20 fw-600 uk-margin-small-bottom uk-margin-top">LinkedIn Post graphic</h4>
-                            <p class="fs-14 uk-margin-small-top">I designed this promotional graphic to announce a speaking session by 5W's CEO at a major industry conference. The key challenge was creating a co-branded visual that harmoniously featured both the 5W Insights and the conference logo. I leveraged elements from 5W's recent brand refresh to create a dynamic layout, establishing a clear visual hierarchy that drove attention to the session details while maintaining brand consistency for both entities.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
 
-        <footer class="uk-background-muted uk-section-small ">
-            <div class="uk-container uk-container-xlarge">
+        <footer class="uk-section-small">
+            <div class="uk-container uk-container-large">
                 <div class="uk-grid">
                     <div class="uk-width-expand">
-                        <p class="fs-12">&copy; Brian French 2025. All rights reserved. </p>
+                        <p class="fs-12">Web design and content &copy; 2025 Brian French</p>
                     </div>
                     <div class="uk-width-auto">
                         <a href="#" uk-totop uk-scroll class="fs-12"></a>

@@ -35,7 +35,7 @@
 
 /* UIKit css overrides */
 :root{
-    --primary: rgb(74, 80, 156);
+    --primary: #237899ff;
     --secondary: #222;
     --muted: rgba(167, 167, 167, 0.2);
     --muted-darker: rgb(102,102,102);
@@ -48,41 +48,40 @@
 /* add future support for light/dark preferred 
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --text: #fafafa;
-        --background: #101010;
-        --background-default: #1e1d1d;
-        --other: #202020;
-        --muted: rgba(255,255,255, 0.1);
-        --text: #dfdfdf;
-    }
+:root {
+--text: #fafafa;
+--background: #101010;
+--background-default: #1e1d1d;
+--other: #202020;
+--muted: rgba(255,255,255, 0.1);
+--text: #dfdfdf;
+}
 }
 */
 
 html {
-    font-family: "Albert Sans", sans-serif;
-    font-size: 17px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
     line-height: 25px;
     font-weight: 400;
     color: var(--text);
-    background-color: var(--background);
+    background-color: var(--background-default);
 }
+body, h1, h2, h3, h4, h5, p {
+    font-family: "Inter", sans-serif;
+}
+
 blockquote {
     font-size: 1rem;
     font-style: normal;
-    font-family: "Inconsolata"
+    font-family: "Inter"
 }
 blockquote footer {
     font-style: italic
 }
-h1, h3 {
-    font-family: "Albert Sans", sans-serif;
-}
-h2 {
-    font-family: "Inconsolata", sans-serif;
-    letter-spacing: 1.25px
-}
+
 h1 {
+    font-family: "Inter", sans-serif;
     font-size: 2.4rem;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -105,6 +104,10 @@ h3 a:hover {
     color:inherit;
     text-decoration: underline solid 1px
 }
+p {
+    font-size: 1.1rem;
+}
+
 .uk-navbar-nav > li > a, .uk-button {
     text-transform: none
 }
@@ -116,12 +119,12 @@ h3 a:hover {
     border-radius: 80px;
     color: #333
 }
-.uk-navbar-item > a:hover {
-    background-color: #ddd;
-    color: #333
-}
+/* uk-navbar-item > a:hover {
+background-color: #aaa;
+color: #333
+} */
 .uk-navbar-container:not(.uk-navbar-transparent) {
-    background: #e9e9e9;
+    background: var(--background-default);
 }
 .uk-nav-default > li > a {
     color: var(--text);
@@ -143,14 +146,15 @@ h3 a:hover {
     font-weight: 500
 }
 .uk-navbar-item > .uk-logo {
-    font-size:1.2rem;
-    line-height:2.5rem;
-    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    font-size:1.5rem;
+    line-height:1.5rem;
+    font-weight: 600;
     color: #000
 }
 a.uk-logo > img {
     max-height:36px;
-    border:2px solid var(--background-default);
+    border:2px solid var(--background);
     margin-right:10px;
     border-radius:50%
 }
@@ -192,22 +196,17 @@ a.uk-logo > img {
 
 .uk-button {
     font-weight: 500;
-    font-size: 1rem
+    font-size: 0.9rem;
+    line-height: 1.25rem;
+    padding: 12px 24px;
+}
+.uk-button-primary {
+    background: var(--primary)
 }
 .uk-text-bold {
     font-weight: 600
 }
 
-/* broken :|
-.uk-nav>li.uk-active>a:before {
-content: "";
-position: absolute;
-top: 15px;
-left: -25px;
-width: 15px;
-border-top: 1px solid #1e87f0
-}
-*/
 
 .uk-subnav > * > :first-child, .uk-dropdown-nav > li > a {
     color: #444
@@ -237,7 +236,7 @@ border-top: 1px solid #1e87f0
 }
 hr,
 .uk-hr {
-  border-top: 1px solid rgba(167,167,167, 0.25);
+    border-top: 1px solid rgba(167,167,167, 0.25);
 }
 /* Desktop and bigger */
 @media (min-width: 1200px) {
@@ -270,16 +269,23 @@ hr,
 .pill {
     border-radius: 5px
 }
+.border-quote-right {
+    border-radius: 24px 24px 24px 2px;
+}
 /* Phone landscape and bigger */
 @media (min-width: 640px) {
     .pill {
         border-radius: 500px
     }
+
 }
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
     .pill {
         border-radius: 500px
+    }
+    .border-quote-right {
+        border-radius: 2px 24px 24px;
     }
 }
 /* Desktop and bigger */
@@ -350,24 +356,18 @@ hr,
         box-shadow: 0 0 0 15px rgba(var(--gc2) 0.15)
     }
 }
-.as {
-    font-family: "Albert Sans", sans-serif
-}
-.in {
-    font-family: "Inconsolata", sans-serif;
-    letter-spacing: 1px
-}
-p.in {
-    letter-spacing: 0
-}
+
 .border {
     border: 1px solid #acacac
+}
+.border-bottom {
+    border-bottom:1px solid rgba(197,197,197,0.5)
 }
 .no-border {
     border: none !important
 }
 .border-muted {
-    border: 2px solid var(--muted-darker)
+    border: 2px solid var(--muted)
 }
 .uk-background-muted {
     background-color: var(--muted)
@@ -381,6 +381,52 @@ p.in {
 }
 .uk-padding-xsmall {
     padding: 8px
+}
+
+.hire-me {
+    color: #219E76;
+}
+.hire-me-ellipse {
+    position: relative;
+    margin-right: 15px;
+    height: 12px;
+    width: 12px;
+    margin-top: 6px;
+    font-size: 10px;
+    color: rgb(59, 236, 67);
+    box-shadow: 0 0 10px rgba(59, 236, 67, 0.75);
+    background-color: rgba(59, 236, 67,1);
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    content: "!!!"
+}
+
+#site-nav li a {
+    padding:12px 24px;
+        align-items: center;
+    justify-content: center;
+}
+
+#site-nav li {
+    display: flex;
+}
+
+#site-nav li.uk-active::before {
+    content: "—";
+    color: var(--primary);
+    display: flex;
+    font-size: 1em;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height:42px;
+}
+
+.text-shadow {
+    -webkit-filter: drop-shadow(4px 4px 14px rgba(0, 0, 0, 1))
+        drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
+    filter:  drop-shadow(4px 4px 14px rgba(0, 0, 0, 1))
+        drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
 
 /* From https://css.glass */
@@ -398,9 +444,9 @@ p.in {
     backdrop-filter: blur(60px);
     -webkit-backdrop-filter: blur(60px);
     -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-      -webkit-mask-size: 100% 80%;
-      -webkit-mask-repeat: no-repeat;
-      -webkit-mask-position: left bottom;
+    -webkit-mask-size: 100% 80%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: left bottom;
 }
 
 .typing {
