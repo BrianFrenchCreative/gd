@@ -1,4 +1,4 @@
-/*! UIkit 3.23.10 | https://www.getuikit.com | (c) 2014 - 2025 YOOtheme | MIT License */
+/*! UIkit 3.23.12 | https://www.getuikit.com | (c) 2014 - 2025 YOOtheme | MIT License */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
@@ -3744,7 +3744,7 @@
     };
     App.util = util;
     App.options = {};
-    App.version = "3.23.10";
+    App.version = "3.23.12";
 
     const PREFIX = "uk-";
     const DATA = "__uikit__";
@@ -6976,28 +6976,13 @@
           if (this.useObjectFit) {
             return false;
           }
-          const { ratio, cover } = Dimensions;
-          const { $el, width, height } = this;
-          let dim = { width, height };
-          if (!width || !height) {
-            const intrinsic = {
-              width: $el.naturalWidth || $el.videoWidth || $el.clientWidth,
-              height: $el.naturalHeight || $el.videoHeight || $el.clientHeight
-            };
-            if (width) {
-              dim = ratio(intrinsic, "width", width);
-            } else if (height) {
-              dim = ratio(intrinsic, "height", height);
-            } else {
-              dim = intrinsic;
-            }
-          }
-          const { offsetHeight: coverHeight, offsetWidth: coverWidth } = getPositionedParent($el) || parent($el);
-          const coverDim = cover(dim, { width: coverWidth, height: coverHeight });
-          if (!coverDim.width || !coverDim.height) {
-            return false;
-          }
-          return coverDim;
+          const { $el, width = $el.clientWidth, height = $el.clientHeight } = this;
+          const el = getPositionedParent($el) || parent($el);
+          const dim = Dimensions.cover(
+            { width, height },
+            { width: el.offsetWidth, height: el.offsetHeight }
+          );
+          return dim.width && dim.height ? dim : false;
         },
         write({ height, width }) {
           css(this.$el, { height, width });
@@ -8313,7 +8298,10 @@
       extends: ButtonComponent,
       i18n: { label: "Open menu" },
       beforeConnect() {
-        this.$el.ariaExpanded = false;
+        const button = this.$el.closest("a,button");
+        if (button) {
+          button.ariaExpanded = false;
+        }
       }
     };
     const Close = {
@@ -9076,10 +9064,7 @@
         offset: 0
       },
       computed: {
-        links: ({ target }, $el) => $$(target, $el).filter((el) => getTargetedElement(el)),
-        elements({ closest }) {
-          return this.links.map((el) => el.closest(closest || "*"));
-        }
+        links: ({ target }, $el) => $$(target, $el).filter(isSameSiteAnchor)
       },
       watch: {
         links(links) {
@@ -9092,7 +9077,8 @@
       update: [
         {
           read() {
-            const targets = this.links.map(getTargetedElement);
+            const links = this.links.filter(getTargetedElement);
+            const targets = links.map(getTargetedElement);
             const { length } = targets;
             if (!length || !isVisible(this.$el)) {
               return false;
@@ -9113,16 +9099,17 @@
                 active = +i;
               }
             }
-            return { active };
+            return { active, links };
           },
-          write({ active }) {
-            const changed = active !== false && !hasClass(this.elements[active], this.cls);
+          write({ active, links }) {
+            const elements = links.map((el) => el.closest(this.closest || "*"));
+            const changed = active !== false && !hasClass(elements[active], this.cls);
             this.links.forEach((el) => el.blur());
-            for (let i = 0; i < this.elements.length; i++) {
-              toggleClass(this.elements[i], this.cls, +i === active);
+            for (let i = 0; i < elements.length; i++) {
+              toggleClass(elements[i], this.cls, +i === active);
             }
             if (changed) {
-              trigger(this.$el, "active", [active, this.elements[active]]);
+              trigger(this.$el, "active", [active, elements[active]]);
             }
           },
           events: ["scroll", "resize"]
@@ -9556,13 +9543,9 @@
     }
     const loadSVG = memoize(async (src) => {
       if (src) {
-        if (startsWith(src, "data:")) {
-          return decodeURIComponent(src.split(",", 2)[1]);
-        } else {
-          const response = await fetch(src);
-          if (response.headers.get("Content-Type") === "image/svg+xml") {
-            return response.text();
-          }
+        const response = await fetch(src);
+        if (response.headers.get("Content-Type") === "image/svg+xml") {
+          return response.text();
         }
       }
       return Promise.reject();
