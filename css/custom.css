@@ -207,6 +207,7 @@ a.uk-logo > img {
     font-weight: 600
 }
 
+.uk-accordion-content p {font-size: 1rem}
 
 .uk-subnav > * > :first-child, .uk-dropdown-nav > li > a {
     color: #444
