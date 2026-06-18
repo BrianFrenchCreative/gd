@@ -93,17 +93,17 @@
             <!-- Main Content -->
             <div class="uk-section">
                 <div class="uk-container uk-container-large">
-                    <div class="uk-grid">
+                    <div class="uk-grid uk-grid-divider" uk-grid>
 
                         <!-- left -->    
-                        <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-5@m"
+                        <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-5@m uk-visible@s"
                              uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
 
                             <!-- sticky nav (hidden for mobile) -->
                             <div class="uk-margin-top" 
                                  uk-sticky="end: true; offset:150" 
                                  uk-scrollspy-class="uk-animation-scale-up">
-                                <ul id="cas-nav" class="uk-visible@s uk-nav uk-nav-default uk-margin-left uk-margin-xlarge-top" uk-scrollspy-nav="closest: li; scroll: true">
+                                <ul id="cas-nav" class=" uk-nav uk-nav-default uk-margin-left uk-margin-xlarge-top" uk-scrollspy-nav="closest: li; scroll: true">
                                     <li><a href="#chi-town-alley">I. Chi-Town Alley</a></li>
                                     <li><a href="#chicago-overlanding">II. Overlanding Chicago</a></li>
                                     <li><a href="#supercar-gallery">III. Supercar Gallery</a></li>
@@ -128,7 +128,7 @@
                                 </div>
 
 
-                                <div id="chi-town-alley" class="uk-section uk-section-small">
+                                <div id="chi-town-alley" class="uk-margin-top">
                                     <!-- banner -->
                                     <div>
                                         <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
@@ -136,10 +136,11 @@
                                             </div>
                                         </div>
                                     </div>                                    
-                                    
+
                                     <!-- section heading -->
                                     <p class="fs-24 fw-800">I. Chi-Town Alley</p>
                                     <hr />
+
 
                                     <!-- description -->
                                     <div class="uk-margin-large-bottom"><p>I had the honor of leading the environmental graphics and spatial branding to define the visual identity for Chi-Town Alley, a new platform dedicated to the city's homegrown car community at the 2026 Chicago Auto Show.</p></div>
@@ -199,7 +200,7 @@
                                                 <div class="uk-width-1-2@s uk-animation-toggle">
                                                     <div class="uk-background-muted uk-box-shadow-hover-medium uk-overflow-hidden">
                                                         <a class="uk-inline" href="img/cas/cas-cta-ring-render-art9.webp" data-caption="Conceptual spatial rendering designed to secure executive sign-off prior to vendor dimensioning.">
-                                                            <img src="img/cas/cas-cta-ring-render-art9.webp" uk-img="loading: eager" class="uk-animation-kenburns">
+                                                            <img src="img/cas/cas-cta-ring-render-art9.webp" uk-img="loading: eager" class="uk-animation-kenburns ">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -217,7 +218,7 @@
                                             </div>
 
 
-                                            <div class="uk-grid-small" uk-grid>
+                                            <div class="uk-grid-small uk-grid-divid" uk-grid>
                                                 <!-- car club car id old -->
                                                 <div class="uk-width-1-2@s uk-animation-toggle">
                                                     <div class="uk-background-muted uk-box-shadow-hover-medium uk-overflow-hidden">
@@ -239,10 +240,10 @@
                                             </div>
 
 
-                                            <div class="uk-width-1-2@s">
-                                                <div class="uk-grid-small" uk-grid>
+                                            <div class="uk-width-2-3@s uk-margin-auto">
+                                                <div class="uk-grid uk-grid-small" uk-grid>
                                                     <!-- tower final art -->
-                                                    <div class="uk-width-1-2 uk-width-1-2@s uk-animation-toggle">
+                                                    <div class="uk-width-1-2 uk-animation-toggle">
                                                         <div class="uk-background-muted uk-box-shadow-hover-medium uk-overflow-hidden">
                                                             <a class="uk-inline" href="img/cas/cas-cta-tower.webp" data-caption="Uniform Car Club ID base artwork, utilizing industrial and street-art motifs to anchor the zone's aesthetic.">
                                                                 <img src="img/cas/cas-cta-tower.webp" uk-img="loading: eager" class="uk-animation-kenburns">
@@ -251,23 +252,54 @@
                                                     </div>
 
                                                     <!-- tower actual -->
-                                                    <div class="uk-width-1-2 uk-width-1-2@s uk-animation-toggle">
+                                                    <div class="uk-width-1-2 uk-animation-toggle">
                                                         <div class="uk-background-muted uk-box-shadow-hover-medium uk-overflow-hidden">
                                                             <a class="uk-inline" href="img/cas/cas-cta-tower-photo.webp" data-caption="Fabricated four-sided towers functioning as structural wayfinding and branding bases for rotating car club participants.">
                                                                 <img src="img/cas/cas-cta-tower-photo.webp" uk-img="loading: eager" class="uk-animation-kenburns">
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <p class="uk-text-small uk-margin-bottom">Structural Wayfinding & Branding: Custom vector artwork utilizing industrial and street-art motifs (left), applied to four-sided fabricated towers that anchored the zone's aesthetic and framed rotating Car Club IDs (right).</p>
+
+                                                    <p class="uk-text-small uk-margin-bottom">Structural Wayfinding &amp; Branding: Custom vector artwork utilizing industrial and street-art motifs (left), applied to four-sided fabricated towers that anchored the zone's aesthetic and framed rotating Car Club IDs (right).</p>
+
 
                                                 </div>
                                             </div>
+
+                                            <div class="uk-width-2-3@s uk-margin-auto">
+                                                <div class=" uk-grid uk-grid-small" uk-grid>
+                                                    <!-- exhibitors final art -->
+                                                    <div class="uk-width-1-2 uk-animation-toggle">
+                                                        <div class="uk-background-muted uk-box-shadow-hover-medium uk-overflow-hidden">
+                                                            <a class="uk-inline" href="img/cas/cas-cta-exhibitors.webp" data-caption="Flat artwork demonstrating the standardized container system built to harmonize disparate stakeholder logos without compromising the overarching brand aesthetic.">
+                                                                <img src="img/cas/cas-cta-exhibitors.webp" uk-img="loading: eager" class="uk-animation-kenburns">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- exhibitors photo -->
+                                                    <div class="uk-width-1-2 uk-animation-toggle">
+                                                        <div class="uk-background-muted uk-box-shadow-hover-medium uk-overflow-hidden">
+                                                            <a class="uk-inline" href="img/cas/cas-cta-exhibitors-photo.webp" data-caption="Fabricated freestanding stanchion deployed at high-traffic intersections, integrating B2B sponsor visibility seamlessly into the attendee experience.">
+                                                                <img src="img/cas/cas-cta-exhibitors-photo.webp" uk-img="loading: eager" class="uk-animation-kenburns">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <p class="uk-text-small uk-margin-bottom">Stakeholder Integration: Developed a standardized, UI-inspired container system to harmonize disparate sponsor and exhibitor logos, maintaining environmental brand integrity without sacrificing legibility.</p>
+
+                                                </div>
+                                            </div>
+
+
+
+
 
                                         </div>
                                     </div>
 
 
                                 </div>
+                                <hr />
 
                                 <div id="chicago-overlanding" class="uk-section uk-section-small">
                                     <div>
@@ -286,6 +318,8 @@
 
                                 </div>
 
+                                <hr />
+
                                 <div id="supercar-gallery" class="uk-section uk-section-small">
                                     <div>
                                         <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
@@ -303,6 +337,8 @@
 
                                 </div>       
 
+                                <hr />
+
                                 <div id="experiential-touchpoints" class="uk-section uk-section-small">
                                     <div>
                                         <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
@@ -319,7 +355,9 @@
                                     </div>
 
                                 </div>
-                                
+
+                                <hr />
+
                                 <div id="upcoming" class="uk-section uk-section-small">
                                     <div>
                                         <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
