@@ -85,156 +85,143 @@
             <div class="uk-section" uk-filter="target:js-filter">
                 <div class="uk-container uk-container-large">
                     <div uk-filter="target: .js-filter">
-                        <div class="uk-width-1-1 uk-width-expand@s" >
+                        <div class="uk-grid uk-grid-divider" uk-grid>
 
-                            <div class="uk-container uk-container-small">
-                                <div>
-                                    <div>
-                                        <h1 class="fw-600" style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">Strategic  Design Transformations</h1>
-                                    </div>
-                                    <div>
-                                        <h3 class="fw-400 uk-margin-large-bottom" style="font-size: clamp(1.06rem, 3.5vw, 1.15rem)">Every  transformation on this page started as a real-world business hurdle. This gallery is a peek behind the curtain at my process, showing how I take raw concepts or flawed assets, find their potential, and craft them into highly intentional, production-ready assets for the real world.</h3>
-                                    </div>
+                            <!-- left -->    
+                            <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-5@m uk-visible@s"
+                                 uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
+
+                                <!-- sticky nav (hidden for mobile) -->
+                                <div class="uk-margin-top" 
+                                     uk-sticky="end: true; offset:150" 
+                                     uk-scrollspy-class="uk-animation-scale-up">
+                                    <ul id="cas-nav" class=" uk-nav uk-nav-default uk-margin-left uk-margin-xlarge-top" uk-scrollspy-nav="closest: li; scroll: true">
+                                        <li><a href="#integrity-superchargers">Integrity Superchargers</a></li>
+                                        <li><a href="#the-saintes">The SAINTES</a></li>
+                                        <li><a href="#5w-insights">5W Insights</a></li>
+                                    </ul>
                                 </div>
 
-                                <ul class="uk-subnav uk-subnav-pill uk-hidden">
-                                    <li uk-filter-control=".tag-logo"><a href="#">Logos</a></li>
-                                </ul>
                             </div>
 
+                            <!-- center/right -->
+                            <div class="uk-width-1-1 uk-width-expand@s uk-width-3-5@m" uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
 
-                            <div class="uk-section uk-container uk-container" uk-height-viewport="expand:true">
-                                <div class="uk-container" >
 
-                                    <ul class="js-filter uk-list">
+                                <div class="uk-width-1-1 uk-width-expand@s" >
 
-                                        <li class="tag-logo">
-                                            <div class="uk-margin">
-                                                <div class="uk-grid uk-flex uk-flex-middle" uk-grid>
-                                                    <!-- description -->
-                                                    <div class="uk-width-1-3@s">
-                                                        <h4 class="fw-600 uk-margin-small-bottom">Integrity Superchargers</h4>
-                                                        <div class="uk-text-small">2026</div>
-                                                        <p class="fs-15 uk-margin-small-top"><b>About:</b> Nonpartisan community platform empowering Americans to strengthen their lives and communities through integrity-driven action</p>
-                                                        <p class="fs-15 uk-margin-small-top"><b>The Refinement:</b> Engineered a unified, high-momentum visual anchor. Replaced the literal, fragile legacy tree with an integrated "I" monogram that stabilizes the brand and projects the baseline institutional trust required for a national civic movement.</p>
+                                    <div class="uk-container uk-container-small">
+                                        <div>
+                                            <div>
+                                                <h1 class="fw-600" style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">Strategic  Design Transformations</h1>
+                                            </div>
+                                            <div>
+                                                <h3 class="fw-400" style="font-size: clamp(1.06rem, 3.5vw, 1.15rem)">Every  transformation on this page started as a real-world business hurdle. This gallery is a peek behind the curtain at my process, showing how I take raw concepts or flawed assets, find their potential, and craft them into highly intentional, production-ready assets for the real world.</h3>
+                                            </div>
+                                            <hr />
+                                        </div>
 
-                                                    </div>
+                                        <ul class="uk-subnav uk-subnav-pill uk-hidden">
+                                            <li uk-filter-control=".tag-logo"><a href="#">Logos</a></li>
+                                        </ul>
+                                    </div>
 
-                                                    <!-- image -->
-                                                    <div class="uk-width-expand uk-flex uk-flex-right uk-flex-first uk-flex-last@s" >
+
+                                    <div class=" uk-container uk-container" uk-height-viewport="expand:true">
+                                        <div class="uk-container" >
+
+                                            <ul class="js-filter uk-list uk-grid uk-grid-divider" uk-grid >
+
+                                                <li id="integrity-superchargers" class="tag-logo">
+                                                    <div class="uk-margin">
+                                                        <!-- image -->
                                                         <div class="">
                                                             <img src="img/5winsights/integrity-superchargers-before-after.jpg" />
                                                         </div>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <hr class="uk-margin-large-top" />
-                                        </li>
-
-                                        <li class="tag-logo">
-                                            <div class="uk-margin">
-                                                <div class="uk-grid uk-flex uk-flex-middle" uk-grid>
-                                                    <!-- description -->
-                                                    <div class="uk-width-1-3@s">
-                                                        <h4 class="fw-600 uk-margin-small-bottom">The SAINTES</h4>
-                                                        <div class="uk-text-small">2025</div>
-                                                        <p class="fs-15 uk-margin-small-top"><b>About:</b> Nonpartisan civic movement leveraging collective voting power and fact-based education to advance economic fairness and security across America</p>
-                                                        <p class="fs-15 uk-margin-small-top"><b>The Refinement:</b> Balanced a raw AI-generated layout, injecting intentional institutional storytelling and precise production geometry:</p>
-
-
-                                                        <ul class="uk-list uk-list-divider uk-accordion uk-accordion-default uk-padding-small border uk-border-rounded" uk-accordion="multiple: false">
-                                                            <li class="uk-open">
-                                                                <a class="uk-accordion-title" href>
-                                                                    <h3 class="uk-margin-remove fs-15 fw-700">Architectural Blueprint:</h3>
-                                                                    <span uk-accordion-icon></span>
-                                                                </a>
-                                                                <div class="uk-accordion-content"><p>Re-proportioned the logo to project absolute strength and stability through a wider baseline. The structural framework explicitly mirrors the historic facade proportions of the White House at the base, topped by the precise aerodynamic angles of the B-2 Spirit stealth bomber.</p>
-                                                                </div>
-                                                            </li>
-
-                                                            <li>
-                                                                <a class="uk-accordion-title" href>
-                                                                    <h3 class="uk-margin-remove fs-15 fw-700">Hidden Symbolism:</h3>
-                                                                    <span uk-accordion-icon></span>
-                                                                </a>
-
-                                                                <div class="uk-accordion-content">
-                                                                    <p>Aligned the gold entrance and upper triangle to form a hidden, upward-pointing arrow for progress, anchored by a pair of red eqaul sign representing balance and equality.
-                                                                    </p>
-                                                                </div>
-                                                            </li>
-
-                                                            <li>
-                                                                <a class="uk-accordion-title" href>
-                                                                    <h3 class="uk-margin-remove fs-15 fw-700">Manufacturing Optimization:</h3>
-                                                                    <span uk-accordion-icon></span>
-                                                                </a>
-
-                                                                <div class="uk-accordion-content">
-                                                                    <p>Engineered the perimeter silhouette to scale flawlessly for a stamped lapel pin execution for lawmakers, refining the halo to add dimensional depth without breaking vector constraints.</p>
-                                                                </div>
-                                                            </li>
-
-                                                            <li>
-                                                                <a class="uk-accordion-title" href>
-                                                                    <h3 class="uk-margin-remove fs-15 fw-700">Typography:</h3>
-                                                                    <span uk-accordion-icon></span>
-                                                                </a>
-
-                                                                <div class="uk-accordion-content">
-                                                                    <p>Replaced the generic, crowded lettering with a commanding, high-legibility sans-serif typeface.</p>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-
-                                                        <div uk-lightbox>
-                                                            <a class="uk-text-primary fw-600" href="pdf/saintes-logo-usage-guide.pdf" data-caption="SAINTES Logo Usage Guidelines" data-type="iframe">See Logo Usage Guidelines <span class="uk-icon" uk-icon="file-pdf"></span></a>
+                                                        <!-- description -->
+                                                        <div >
+                                                            <h4 class="fs-24 fw-800 uk-margin-small-bottom">Integrity Superchargers</h4>
+                                                            <p class="fw-600">2026 &bull; Commissioned Concept Exploration</p>
+                                                            <p class="fs-15 uk-margin-small-top"><b>About:</b> Nonpartisan community platform empowering Americans to strengthen their lives and communities through integrity-driven action</p>
+                                                            <p class="fs-15 uk-margin-small-top"><b>The Refinement:</b> Solicited to explore stronger directions for the client's original concept, I replaced a visually and metaphorically weak tree graphic with a bold "I" monogram. This new structure works on multiple strategic levels: it acts as the initial for Integrity, symbolizes individual agency, serves as a solid trunk to replace the original sagging tree, and takes the form of a classical pillar &mdash; representing integrity itself as a foundational ethical virtue. This commissioned exploration successfully established a highly stable, trustworthy visual anchor before the client paused the initiative.</p>
                                                         </div>
-
-
-
                                                     </div>
+                                                </li>
 
-                                                    <!-- image -->
-                                                    <div class="uk-width-expand uk-flex uk-flex-right uk-flex-first uk-flex-last@s" >
+                                                <li id="the-saintes" class="tag-logo">
+                                                    <div class="uk-margin">
+                                                        <!-- image -->
                                                         <div class="">
                                                             <img src="img/5winsights/saintes-before-after.jpg" />
                                                         </div>
+                                                        <!-- description -->
+                                                        <div>
+                                                            <h4 class="fs-24 fw-800 uk-margin-small-bottom">The SAINTES</h4>
+                                                            <p class="fw-600">2025 &bull; Logo refinement</p>
+                                                            <p class="fs-15 uk-margin-small-top"><b>About:</b> Nonpartisan civic movement leveraging collective voting power and fact-based education to advance economic fairness and security across America</p>
+                                                            <p class="fs-15 uk-margin-small-top"><b>The Refinement:</b> Balanced a raw AI-generated layout, injecting intentional institutional storytelling and precise production geometry:</p>
+
+                                                            <div class="uk-background-muted uk-padding uk-border-rounded ">
+                                                                <div class="uk-child-width-1-2@s uk-grid" uk-grid>
+                                                                    <div>
+                                                                        <p class="uk-margin-remove fs-14"><b>Architectural Blueprint</b><br />Re-proportioned the logo to project absolute strength and stability through a wider baseline. The structural framework explicitly mirrors the historic facade proportions of the White House at the base, topped by the precise aerodynamic angles of the B-2 Spirit stealth bomber.</p>
+
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <p class="uk-margin-remove fs-14"><b>Hidden Symbolism</b><br />Aligned the gold entrance and upper triangle to form a hidden, upward-pointing arrow for progress, anchored by a pair of red eqaul sign representing balance and equality.
+                                                                        </p>
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <p class="uk-margin-remove fs-14"><b>Manufacturing Optimization</b><br />Engineered the perimeter silhouette to scale flawlessly for a stamped lapel pin execution for lawmakers, refining the halo to add dimensional depth without breaking vector constraints.</p>
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <p class="uk-margin-remove fs-14"><b>Typography</b><br />Replaced the generic, crowded lettering with a commanding, high-legibility sans-serif typeface.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <p class="fs-15 uk-margin-large-top"><b>Saints Logo Usage Guidelines</b> </p>
+                                                            <p>Anticipating the organization's future deployment needs, I developed a functional hand-off guide to ensure seamless logo integration across media. While the 1-5 star tiering system was a specific client requirement, I proactively engineered inverse and single-color variations to guarantee legibility across complex, high-contrast backgrounds. This guide acts as a practical roadmap for their internal teams, detailing file naming conventions and color space rules to prevent future execution errors.</p>
+
+                                                            <div class="uk-grid uk-grid-small uk-child-width-1-3" uk-lightbox uk-grid>
+                                                                <a href="img/5winsights/saintes-logo-usage-guidelines-2.webp" data-caption="SAINTES Logo Usage Guidelines" data-type="image"><img class="uk-box-shadow-medium" src="img/5winsights/saintes-logo-usage-guidelines-2.webp" /></a>
+                                                                <a href="img/5winsights/saintes-logo-usage-guidelines-3.webp" data-caption="SAINTES Logo Usage Guidelines" data-type="image"><img class="uk-box-shadow-medium" src="img/5winsights/saintes-logo-usage-guidelines-3.webp" /></a>
+                                                                <a href="img/5winsights/saintes-logo-usage-guidelines-4.webp" data-caption="SAINTES Logo Usage Guidelines" data-type="image"><img class="uk-box-shadow-medium" src="img/5winsights/saintes-logo-usage-guidelines-4.webp" /></a>
+                                                                <a href="img/5winsights/saintes-logo-usage-guidelines-5.webp" data-caption="SAINTES Logo Usage Guidelines" data-type="image"><img class="uk-box-shadow-medium" src="img/5winsights/saintes-logo-usage-guidelines-5.webp" /></a>
+                                                                <a href="img/5winsights/saintes-logo-usage-guidelines-6.webp" data-caption="SAINTES Logo Usage Guidelines" data-type="image"><img class="uk-box-shadow-medium" src="img/5winsights/saintes-logo-usage-guidelines-6.webp" /></a>
+                                                                <a href="img/5winsights/saintes-logo-usage-guidelines-7.webp" data-caption="SAINTES Logo Usage Guidelines" data-type="image"><img class="uk-box-shadow-medium" src="img/5winsights/saintes-logo-usage-guidelines-7.webp" /></a>
+                                                            </div>
+                                                        </div>
+
                                                     </div>
-                                                </div>
-                                            </div>
+                                                </li>
 
-                                            <hr class="uk-margin-large-top" />
-                                        </li>
-
-                                        <li class="tag-logo">
-                                            <div class="uk-margin">
-                                                <div class="uk-grid uk-flex uk-flex-middle" uk-grid>
-                                                    <!-- description -->
-                                                    <div class="uk-width-1-3@s">
-                                                        <h4 class="fw-600 uk-margin-small-bottom">5W Insights</h4>
-                                                        <div class="uk-text-small">2022</div>
-                                                        <p class="fs-15 uk-margin-small-top"><b>About:</b> Fractional marketing analytics and consulting agency delivering AI tools, custom data models, and strategic roadmaps to optimize audience engagement and revenue</p>
-                                                        <p class="fs-15 uk-margin-small-top"><b>The Refinement:</b> Dropped the overly complex literal human figure that fractured at small sizes. Built a crisp, modular geometric monogram that actively conveys data integration and multi-channel connectivity, signaling a modern, tech-forward authority. </p>
-
-                                                    </div>
-
-                                                    <!-- image -->
-                                                    <div class="uk-width-expand uk-flex uk-flex-right uk-flex-first uk-flex-last@s" >
+                                                <li  id="5w-insights" class="tag-logo">
+                                                    <div class="uk-margin">
+                                                        <!-- image -->
                                                         <div class="">
                                                             <img src="img/5winsights/5w-insights-before-after.jpg" />
                                                         </div>
+
+                                                        <!-- description -->
+                                                        <div>
+                                                            <h4 class="fs-24 fw-800 uk-margin-small-bottom">5W Insights</h4>
+                                                            <p class="fw-600">2022 &bull; Logo redesign</p>
+                                                            <p class="fs-15 uk-margin-small-top"><b>About:</b> Fractional marketing analytics and consulting agency delivering AI tools, custom data models, and strategic roadmaps to optimize audience engagement and revenue</p>
+                                                            <p class="fs-15 uk-margin-small-top"><b>The Refinement:</b> Dropped the overly complex literal human figure that fractured at small sizes. Built a crisp, modular geometric monogram that actively conveys data integration and multi-channel connectivity, signaling a modern, tech-forward authority. </p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>                          
+                                                </li>
+                                            </ul>
+                                        </div>                          
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
