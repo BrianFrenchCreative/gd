@@ -71,7 +71,7 @@ body, h1, h2, h3, h4, h5, p {
     font-family: "Inter", sans-serif;
 }
 
-blockquote {
+blockquote p {
     font-size: 1rem;
     font-style: normal;
     font-family: "Inter"
@@ -118,6 +118,9 @@ p {
     padding: 6px 12px;
     border-radius: 80px;
     color: #333
+}
+.uk-nav-default > li.uk-active > a {
+    color: var(--primary);
 }
 /* uk-navbar-item > a:hover {
 background-color: #aaa;
