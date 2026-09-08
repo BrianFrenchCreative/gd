@@ -105,7 +105,7 @@ h3 a:hover {
     text-decoration: underline solid 1px
 }
 p {
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .uk-navbar-nav > li > a, .uk-button {
@@ -212,8 +212,11 @@ a.uk-logo > img {
 
 .uk-accordion-content p {font-size: 1rem}
 
+.uk-navbar-dropdown li a {
+    color: inherit;
+}
 .uk-subnav > * > :first-child, .uk-dropdown-nav > li > a {
-    color: #444
+    color: inherit
 }
 .uk-dropbar {
     background-color: #e9e9e9
