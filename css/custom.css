@@ -108,7 +108,7 @@ p {
     font-size: 1rem;
 }
 
-.uk-navbar-nav > li > a, .uk-button {
+.uk-button {
     text-transform: none
 }
 .uk-navbar-item {
@@ -236,15 +236,38 @@ a.uk-logo > img {
 .uk-border-rounded-large {
     border-radius: 24px
 }
-.uk-navbar-nav > li > a,
 .uk-navbar-item,
 .uk-navbar-toggle {
     min-height:70px
+}
+.uk-navbar-nav > li > a {
+    text-transform: none;
+    min-height: 70px;
+    color: var(--muted-darker); 
+    transition: color 0.3s ease-out, transform 0.3s ease-out; 
+}
+.uk-navbar-dropdown .uk-navbar-dropdown-nav > li > a {
+    color: var(--muted-darker);
+    transition: color 0.3s ease-out;
+}
+.uk-navbar-dropdown .uk-navbar-dropdown-nav > li > a > div {
+    transition: transform 0.3s ease-out;
+}
+.uk-navbar-dropdown .uk-navbar-dropdown-nav > li > a:hover {
+    color: #000;
+}
+.uk-navbar-dropdown .uk-navbar-dropdown-nav > li.uk-active > a {
+    color: #000;
+}
+.uk-navbar-dropdown .uk-navbar-dropdown-nav > li > a .fw-500 {
+    line-height: 1.2; 
+    padding-bottom: 2px;
 }
 hr,
 .uk-hr {
     border-top: 1px solid rgba(167,167,167, 0.25);
 }
+
 /* Desktop and bigger */
 @media (min-width: 1200px) {
     .uk-padding {
