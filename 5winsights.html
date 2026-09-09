@@ -49,7 +49,7 @@
                                     <a href="#">Featured<span class="uk-visible@s"> Work</span><span uk-navbar-parent-icon></span></a>
                                     <div class="uk-navbar-dropdown">
                                         <ul class="uk-nav uk-navbar-dropdown-nav uk-list-divider">
-                                            <li class="uk-active">
+                                            <li>
                                                 <a href="chicago-auto-show.html">
                                                     <div>
                                                         <div class="fw-500">Chicago Auto Show</div>
@@ -73,7 +73,7 @@
                                                     </div>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li class="uk-active">
                                                 <a href="5winsights.html">
                                                     <div>
                                                         <div class="fw-500">5W Insights</div>
@@ -97,287 +97,305 @@
 
         <main class="">
 
-            <!-- Main Content -->
-            <div class="uk-section">
-                <div class="uk-container uk-container-large">
-                    <div class="uk-grid uk-grid-divider" uk-grid>
+    <!-- Main Content -->
+    <div class="uk-section">
+        <div class="uk-container uk-container-large">
+            <div class="uk-grid uk-grid-divider" uk-grid>
 
-                        <!-- left -->  
-                        <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-5@m uk-visible@s"
-                             uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
+                <!-- left --> 
+                <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-5@m uk-visible@s"
+                     uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
 
-                            <!-- sticky nav (hidden for mobile) -->
-                            <div class="uk-margin-top" 
-                                 uk-sticky="end: true; offset:150" 
-                                 uk-scrollspy-class="uk-animation-scale-up">
-                                <ul id="site-nav" class=" uk-nav uk-nav-default uk-margin-xlarge-top" uk-scrollspy-nav="closest: li; scroll: true">
-                                    <li><a href="#about">I. About</a></li>
-                                    <li><a href="#booth">II. Conference Booth</a></li>
-                                    <li><a href="#linkedin">III. LinkedIn</a></li>
-                                </ul>
+                    <!-- sticky nav (hidden for mobile) -->
+                    <div class="uk-margin-top" 
+                         uk-sticky="end: true; offset:150" 
+                         uk-scrollspy-class="uk-animation-scale-up">
+                        <ul id="site-nav" class=" uk-nav uk-nav-default uk-margin-xlarge-top" uk-scrollspy-nav="closest: li; scroll: true">
+                            <li><a href="#about">I. About</a></li>
+                            <li><a href="#booth">II. Conference Booth</a></li>
+                            <li><a href="#linkedin">III. LinkedIn</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+                <!-- center/right -->
+                <div class="uk-width-1-1 uk-width-expand@s uk-width-3-5@m" uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
+
+                    <div class="uk-container">
+                        <div uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
+                            <div>
+                                <h1 class="fw-600 uk-margin-small-bottom" style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">5W Insights: Implementing a Scalable Brand Identity</h1>
                             </div>
+                        </div>
 
+                        <!-- banner -->
+                        <div id="about">
+                            <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
+                                <div class="uk-background-top-center uk-background-cover uk-panel uk-flex uk-flex-top uk-flex-center " style="background-image: url(img/5winsights/conference-backdrop-mockup.webp);" uk-height-viewport="offset-top: true; offset-bottom: 50;min:300" uk-img="loading: eager">
+                                </div>
+                            </div>
                         </div>
 
 
+                        <!-- section heading -->
+                        <p class="fs-24 fw-800">I. About the Project</p>
+                        <hr />
 
-                        <!-- center/right -->
-                        <div class="uk-width-1-1 uk-width-expand@s uk-width-3-5@m" uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
 
-                            <div class="uk-container">
-                                <div uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
-                                    <div>
-                                        <h1 class="fw-600 uk-margin-small-bottom" style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">5W Insights: Implementing a Scalable Brand Identity</h1>
+                        <div>
+                            <!-- details -->
+                            <ul class="uk-list uk-list-large uk-list-divider uk-accordion uk-accordion-default" uk-accordion="multiple: true">
+                                <li class="uk-open">
+                                    <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">🎯 The Challenge</h3><span uk-accordion-icon></span></a>
+                                    <div class="uk-accordion-content">
+                                        <p>5W Insights&rsquo; legacy, text-heavy marketing approach was creating friction at live events, greeting prospects with dense reading material rather than engaging brand experiences. The challenge was to distill the company&rsquo;s wealth of information into a modern, visual-first system that simplified messaging, prioritized high-impact visuals, and invited human-to-human conversations.</p>
                                     </div>
-                                </div>
+                                </li>
 
-                                <!-- banner -->
-                                <div id="about">
-                                    <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
-                                        <div class="uk-background-top-center uk-background-cover uk-panel uk-flex uk-flex-top uk-flex-center " style="background-image: url(img/5winsights/conference-backdrop-mockup.webp);" uk-height-viewport="offset-top: true; offset-bottom: 50;min:300" uk-img="loading: eager">
-                                        </div>
+                                <li>
+                                    <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">👤 My Role</h3><span uk-accordion-icon></span></a>
+                                    <div class="uk-accordion-content">
+                                        <p>Serving as the Lead Visual Strategist and Creative Director, I directed the brand evolution from initial executive alignment through the final omnichannel rollout.</p>
                                     </div>
+                                </li>
+
+                                <li>
+                                    <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">⚙️ The Process</h3><span uk-accordion-icon></span></a>
+                                    <div class="uk-accordion-content">
+                                        <ul class="uk-list uk-list-bullet uk-list-large">
+                                            <li><span class="fw-600">Stakeholder Alignment:</span> Partnered with executive leadership to transition our detailed corporate messaging into a "less is more" visual philosophy, demonstrating how strong visual anchors would act as better conversation-starters.</li>
+
+                                            <li><span class="fw-600">Digital Redesign &amp; Asset Scalability:</span> Executed the launch of the new corporate website, overhauling the UI/UX to align with the simplified brand identity, and built robust, scalable templates for high-volume marketing materials (eBooks, case studies, social media).</li>
+
+                                            <li><span class="fw-600">Experiential Design:</span> Translated the new visual strategy into physical environments, intentionally designing tradeshow architecture to be highly scannable and viewer-friendly, placing the emphasis on conversation rather than passive reading.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">📈 The Outcome</h3><span uk-accordion-icon></span></a>
+                                    <div class="uk-accordion-content">
+                                        <p>Delivered a flawless, cohesive suite of omnichannel marketing and experiential tradeshow materials that successfully projected a unified brand identity to the market. By transforming a fragmented legacy library into an agile system of scalable templates, I protected the brand's long-term governance and equipped the internal team with the tools to maintain visual consistency moving forward.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="uk-section uk-container uk-container" uk-height-viewport="expand:true" uk-lightbox="animation: fade">
+                        <div class="uk-container">
+                            <div>
+
+                                <div id="booth">
+                                    <h3 class="fw-700 fs-20 uk-margin-remove">II. Conference Booth</h3>
                                 </div>
-
-
-                                <!-- section heading -->
-                                <p class="fs-24 fw-800">I. About the Project</p>
                                 <hr />
 
 
-                                <div>
-                                    <!-- details -->
-                                    <ul class="uk-list uk-list-large uk-list-divider uk-accordion uk-accordion-default" uk-accordion="multiple: true">
-                                        <li class="uk-open">
-                                            <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">🎯 The Challenge</h3><span uk-accordion-icon></span></a>
-                                            <div class="uk-accordion-content">
-                                                <p>5W Insights&rsquo; legacy, text-heavy marketing approach was creating friction at live events, greeting prospects with dense reading material rather than engaging brand experiences. The challenge was to distill the company&rsquo;s wealth of information into a modern, visual-first system that simplified messaging, prioritized high-impact visuals, and invited human-to-human conversations.</p>
+                                <div class="uk-grid uk-margin uk-margin-large-bottom" uk-grid>
+                                    <div class="uk-width-expand" >
+                                        <div class=" uk-border-rounded-medium">
+                                            <div id="backdrop" class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large" uk-grid>
+
+                                                <div class="uk-width-1-2@m uk-transition-toggle">
+                                                    <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden uk-inline uk-dark">
+                                                        <a class="uk-inline" href="img/5winsights/5W_10x10-BOOTH_2023.webp" data-caption="Old">
+                                                            <img src="img/5winsights/5W_10x10-BOOTH_2023.webp" uk-img="loading: eager" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow">
+                                                            <div class="uk-position-bottom-right uk-padding-xsmall frost-dark uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                <span uk-icon="icon: expand"></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
+                                                </div>
+
+                                                <div class="uk-width-1-2@m uk-transition-toggle">
+                                                    <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden uk-inline uk-light">
+                                                        <a class="uk-inline" href="img/5winsights/5W_10x10-BOOTH_2024.webp" data-caption="New">
+                                                            <img src="img/5winsights/5W_10x10-BOOTH_2024.webp" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow"/>
+                                                            <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                <span uk-icon="icon: expand"></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
+                                                </div>
                                             </div>
-                                        </li>
-
-                                        <li>
-                                            <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">👤 My Role</h3><span uk-accordion-icon></span></a>
-                                            <div class="uk-accordion-content">
-                                                <p>Serving as the Lead Visual Strategist and Creative Director, I directed the brand evolution from initial executive alignment through the final omnichannel rollout.</p>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">⚙️ The Process</h3><span uk-accordion-icon></span></a>
-                                            <div class="uk-accordion-content">
-                                                <ul class="uk-list uk-list-bullet uk-list-large">
-                                                    <li><span class="fw-600">Stakeholder Alignment:</span> Partnered with executive leadership to transition our detailed corporate messaging into a "less is more" visual philosophy, demonstrating how strong visual anchors would act as better conversation-starters.</li>
-
-                                                    <li><span class="fw-600">Digital Redesign &amp; Asset Scalability:</span> Executed the launch of the new corporate website, overhauling the UI/UX to align with the simplified brand identity, and built robust, scalable templates for high-volume marketing materials (eBooks, case studies, social media).</li>
-
-                                                    <li><span class="fw-600">Experiential Design:</span> Translated the new visual strategy into physical environments, intentionally designing tradeshow architecture to be highly scannable and viewer-friendly, placing the emphasis on conversation rather than passive reading.</li>
-                                                </ul>
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">📈 The Outcome</h3><span uk-accordion-icon></span></a>
-                                            <div class="uk-accordion-content">
-                                                <p>Delivered a flawless, cohesive suite of omnichannel marketing and experiential tradeshow materials that successfully projected a unified brand identity to the market. By transforming a fragmented legacy library into an agile system of scalable templates, I protected the brand's long-term governance and equipped the internal team with the tools to maintain visual consistency moving forward.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
-
-                            <div class="uk-section uk-container uk-container" uk-height-viewport="expand:true" uk-lightbox="animation: fade">
-                                <div class="uk-container">
+                                        </div>
+                                    </div>
                                     <div>
-
-                                        <div id="booth">
-                                            <h3 class="fw-700 fs-20 uk-margin-remove">II. Conference Booth</h3>
-                                        </div>
-                                        <hr />
-
-
-                                        <div class="uk-grid uk-margin uk-margin-large-bottom" uk-grid>
-                                            <div class="uk-width-expand" >
-                                                <div class=" uk-border-rounded-medium">
-                                                    <div id="backdrop" class="uk-grid uk-child-width-1-2 margin-auto  uk-text-center uk-border-rounded-large" uk-grid>
-
-                                                        <div class="uk-width-1-2@m uk-animation-toggle">
-                                                            <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden">
-                                                                <a class="uk-inline" href="img/5winsights/5W_10x10-BOOTH_2023.webp" data-caption="Old">
-                                                                    <img src="img/5winsights/5W_10x10-BOOTH_2023.webp" uk-img="loading: eager" class="uk-animation-kenburns">
-                                                                </a>
-                                                            </div>
-                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
-                                                        </div>
-
-                                                        <div class="uk-width-1-2@m uk-animation-toggle">
-                                                            <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden">
-                                                                <a class="uk-inline" href="img/5winsights/5W_10x10-BOOTH_2024.webp" data-caption="New">
-                                                                    <img src="img/5winsights/5W_10x10-BOOTH_2024.webp" class="uk-animation-kenburns"/>
-                                                                </a>
-                                                            </div>
-                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h4 class="fw-600 fs-16 uk-margin-small-bottom">Tradeshow backdrop</h4>
-                                                <p class="fs-14 fw-500 uk-margin-small-top">The legacy backdrop over-indexed on dense educational copy, which forced attendees into a passive reading experience and acted as a visual barrier. To shift the dynamic, I streamlined the messaging architecture to feature only core value propositions. By introducing bold, human-centric visual elements and high-contrast typography, I transformed the footprint from a clinical informational display into an active lead-generation space designed to spark conversation.</p>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="uk-margin uk-margin-large-bottom">
-                                            <div class="uk-width-4-5 uk-width-3-5@s uk-margin-auto" >
-                                                <div class=" uk-border-rounded-medium uk-margin-bottom">
-                                                    <div id="backdrop" class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large" uk-grid uk-height-match="target:div > div > a > img">
-                                                        <div class="uk-width-1-2 uk-animation-toggle">
-                                                            <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden">
-                                                                <a class="uk-inline" href="img/5winsights/5W_FloorSign_2023.webp" data-caption="Old">
-                                                                    <img src="img/5winsights/5W_FloorSign_2023.webp" uk-img="loading: eager" class="uk-animation-kenburns">
-                                                                </a>
-                                                            </div>
-                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
-                                                        </div>
-                                                        <div class="uk-width-1-2 uk-animation-toggle">
-                                                            <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden">
-                                                                <a class="uk-inline" href="img/5winsights/5W_FloorSign_2024.webp" data-caption="New">
-                                                                    <img src="img/5winsights/5W_FloorSign_2024.webp" uk-img="loading: eager" class="uk-animation-kenburns"/>
-                                                                </a>
-                                                            </div>
-                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h4 class="fw-600 fs-16 uk-margin-small-bottom">Floor Sign</h4>
-                                                <p class="fs-14 fw-500 uk-margin-small-top">The legacy floor sign suffered from the same information overload, attempting to cram dense paragraphs into a narrow vertical layout. I re-engineered this asset using the updated visual puzzle motif and high-contrast brand system to maximize legibility from a distance. This strategic adaptation allows the sign to act as a seamless visual extension of the primary booth, or serve as a commanding, standalone brand anchor in smaller event footprints.</p>
-                                            </div>
-
-                                        </div>
-
-
-
-                                        <div class="uk-grid uk-margin" uk-grid>
-                                            <div class="uk-width-expand" >
-                                                <div class=" uk-border-rounded-medium">
-                                                    <div id="backdrop" class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large" uk-grid>
-                                                        <div class="uk-width-1-2@m uk-animation-toggle">
-                                                            <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden">
-                                                                <a class="uk-inline" href="img/5winsights/5W_podium_2023.webp" data-caption="Old">
-                                                                    <img src="img/5winsights/5W_podium_2023.webp" uk-img="loading: eager" class="uk-animation-kenburns">
-                                                                </a>
-                                                            </div>
-                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
-                                                        </div>
-                                                        <div class="uk-width-1-2@m uk-animation-toggle">
-                                                            <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden">
-                                                                <a class="uk-inline" href="img/5winsights/5W_podium_2024.webp" data-caption="New">
-                                                                    <img src="img/5winsights/5W_podium_2024.webp" uk-img="loading: eager" class="uk-animation-kenburns"/>
-                                                                </a>
-                                                            </div>
-                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <h4 class="fw-600 fs-16 uk-margin-small-bottom">Podium Wrap</h4>
-                                                <p class="fs-14 fw-500 uk-margin-small-top">While the legacy wrap already utilized the puzzle motif on its side panels, the front-facing graphic felt like a clinical presentation slide that washed out under stage lighting. By wrapping the entire 3D structure in the new high-contrast brand palette and introducing an engaging human element to the primary face, I transformed a basic logo placement into a bold, cohesive anchor that visually grounds the speaker.</p>
-                                            </div>
-                                        </div>
-
-
+                                        <h4 class="fw-600 fs-16 uk-margin-small-bottom">Tradeshow backdrop</h4>
+                                        <p class="fs-14 fw-500 uk-margin-small-top">The legacy backdrop over-indexed on dense educational copy, which forced attendees into a passive reading experience and acted as a visual barrier. To shift the dynamic, I streamlined the messaging architecture to feature only core value propositions. By introducing bold, human-centric visual elements and high-contrast typography, I transformed the footprint from a clinical informational display into an active lead-generation space designed to spark conversation.</p>
                                     </div>
                                 </div>
+
+
+                                <div class="uk-margin uk-margin-large-bottom">
+                                    <div class="uk-width-4-5 uk-width-3-5@s uk-margin-auto" >
+                                        <div class=" uk-border-rounded-medium uk-margin-bottom">
+                                            <div id="backdrop" class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large" uk-grid uk-height-match="target:div > div > a > img">
+                                                <div class="uk-width-1-2 uk-transition-toggle">
+                                                    <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden uk-inline uk-dark">
+                                                        <a class="uk-inline" href="img/5winsights/5W_FloorSign_2023.webp" data-caption="Old">
+                                                            <img src="img/5winsights/5W_FloorSign_2023.webp" uk-img="loading: eager" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow">
+                                                            <div class="uk-position-bottom-right uk-padding-xsmall frost-dark uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                <span uk-icon="icon: expand"></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
+                                                </div>
+                                                <div class="uk-width-1-2 uk-transition-toggle">
+                                                    <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden uk-inline uk-light">
+                                                        <a class="uk-inline" href="img/5winsights/5W_FloorSign_2024.webp" data-caption="New">
+                                                            <img src="img/5winsights/5W_FloorSign_2024.webp" uk-img="loading: eager" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow"/>
+                                                            <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                <span uk-icon="icon: expand"></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="fw-600 fs-16 uk-margin-small-bottom">Floor Sign</h4>
+                                        <p class="fs-14 fw-500 uk-margin-small-top">The legacy floor sign suffered from the same information overload, attempting to cram dense paragraphs into a narrow vertical layout. I re-engineered this asset using the updated visual puzzle motif and high-contrast brand system to maximize legibility from a distance. This strategic adaptation allows the sign to act as a seamless visual extension of the primary booth, or serve as a commanding, standalone brand anchor in smaller event footprints.</p>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="uk-grid uk-margin" uk-grid>
+                                    <div class="uk-width-expand" >
+                                        <div class=" uk-border-rounded-medium">
+                                            <div id="backdrop" class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large" uk-grid>
+                                                <div class="uk-width-1-2@m uk-transition-toggle">
+                                                    <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden uk-inline uk-dark">
+                                                        <a class="uk-inline" href="img/5winsights/5W_podium_2023.webp" data-caption="Old">
+                                                            <img src="img/5winsights/5W_podium_2023.webp" uk-img="loading: eager" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow">
+                                                            <div class="uk-position-bottom-right uk-padding-xsmall frost-dark uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                <span uk-icon="icon: expand"></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
+                                                </div>
+                                                <div class="uk-width-1-2@m uk-transition-toggle">
+                                                    <div class="uk-background-muted uk-box-shadow-small uk-border-rounded uk-box-shadow-hover-medium uk-overflow-hidden uk-inline uk-light">
+                                                        <a class="uk-inline" href="img/5winsights/5W_podium_2024.webp" data-caption="New">
+                                                            <img src="img/5winsights/5W_podium_2024.webp" uk-img="loading: eager" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow"/>
+                                                            <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                <span uk-icon="icon: expand"></span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="fw-600 fs-16 uk-margin-small-bottom">Podium Wrap</h4>
+                                        <p class="fs-14 fw-500 uk-margin-small-top">While the legacy wrap already utilized the puzzle motif on its side panels, the front-facing graphic felt like a clinical presentation slide that washed out under stage lighting. By wrapping the entire 3D structure in the new high-contrast brand palette and introducing an engaging human element to the primary face, I transformed a basic logo placement into a bold, cohesive anchor that visually grounds the speaker.</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="linkedin" class="uk-section uk-container" uk-height-viewport="expand:true">
+                        <div class="uk-container"> 
+                            <div>
+                                <h3 class="fw-700 fs-20 uk-margin-remove">III. LinkedIn</h3>
+                            </div>
+                            <hr />
+
+                            <div class="uk-grid" uk-grid>
+
+                                <div class="uk-width-expand uk-overflow-hidden" >
+                                    <div class="">
+                                        <div class="uk-width-auto">
+                                            <div class="uk-position-relative uk-slider uk-slider-container" tabindex="-1" uk-slider="finite:true;">
+                                                <div class="uk-slider-items">
+
+                                                    <div id="bridge-slide-1" class="uk-width-medium uk-width-auto@s">
+                                                        <div class="uk-margin-small-right">
+                                                            <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="bridge-slide-2" class="uk-width-medium uk-width-auto@s">
+                                                        <div class="uk-margin-small-right">
+                                                            <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides2.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="bridge-slide-3" class="uk-width-medium uk-width-auto@s">
+                                                        <div class="uk-margin-small-right">
+                                                            <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides3.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="bridge-slide-4" class="uk-width-medium uk-width-auto@s">
+                                                        <div class="uk-margin-small-right">
+                                                            <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides4.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="bridge-slide-5" class="uk-width-medium uk-width-auto@s">
+                                                        <div class="uk-margin-small-right">
+                                                            <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides5.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin uk-dar"></ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="uk-margin uk-margin-large-bottom">
+                                    <h4 class="fw-600 fs-16 uk-margin-small-bottom ">Omnichannel Lead Generation</h4>
+                                    <p class="fs-14 fw-500 uk-margin-small-top">As the digital extension of the event campaign, this LinkedIn carousel was engineered to drive top-of-funnel awareness and booth attendance. I structured the five-slide sequence as a high-conversion digital funnel, distilling complex incentives—such as AI donor insights and ROI case studies—into a bold, highly scannable narrative. This strategic pacing captures online interest and actively converts digital engagement into physical tradeshow traffic.</p>
+                                </div>
+
                             </div>
 
-                            <div id="linkedin" class="uk-section uk-container" uk-height-viewport="expand:true">
-                                <div class="uk-container">     
-                                    <div>
-                                        <h3 class="fw-700 fs-20 uk-margin-remove">III. LinkedIn</h3>
-                                    </div>
-                                    <hr />
-
-                                    <div class="uk-grid" uk-grid>
-
-                                        <div class="uk-width-expand uk-overflow-hidden" >
-                                            <div class="">
-                                                <div class="uk-width-auto">
-                                                    <div class="uk-position-relative uk-slider uk-slider-container" tabindex="-1" uk-slider="finite:true;">
-                                                        <div class="uk-slider-items">
-
-                                                            <div id="bridge-slide-1" class="uk-width-medium uk-width-auto@s">
-                                                                <div class="uk-margin-small-right">
-                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
-                                                                </div>
-                                                            </div>
-
-                                                            <div id="bridge-slide-2" class="uk-width-medium uk-width-auto@s">
-                                                                <div class="uk-margin-small-right">
-                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides2.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded"  />
-                                                                </div>
-                                                            </div>
-
-                                                            <div id="bridge-slide-3" class="uk-width-medium uk-width-auto@s">
-                                                                <div class="uk-margin-small-right">
-                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides3.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
-                                                                </div>
-                                                            </div>
-
-                                                            <div id="bridge-slide-4" class="uk-width-medium uk-width-auto@s">
-                                                                <div class="uk-margin-small-right">
-                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides4.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
-                                                                </div>
-                                                            </div>
-
-                                                            <div id="bridge-slide-5" class="uk-width-medium uk-width-auto@s">
-                                                                <div class="uk-margin-small-right">
-                                                                    <img src="img/5winsights/li/5W_Bridge-LI-Carousel-Slides5.webp" class="uk-border-rounded uk-height-max-large uk-border-rounded" />
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-
-                                                        <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin uk-dar"></ul>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="uk-margin uk-margin-large-bottom">
-                                            <h4 class="fw-600 fs-16 uk-margin-small-bottom ">Omnichannel Lead Generation</h4>
-                                            <p class="fs-14 fw-500 uk-margin-small-top">As the digital extension of the event campaign, this LinkedIn carousel was engineered to drive top-of-funnel awareness and booth attendance. I structured the five-slide sequence as a high-conversion digital funnel, distilling complex incentives—such as AI donor insights and ROI case studies—into a bold, highly scannable narrative. This strategic pacing captures online interest and actively converts digital engagement into physical tradeshow traffic.</p>
-                                        </div>
-
-                                    </div>
-
-                                    <div>
-                                        <div class="uk-grid" uk-grid id="li-post">
-                                            <div class="uk-width-expand" >
-                                                <div class="uk-margin-auto uk-border-rounded-medium">
-                                                    <div>
-                                                        <img src="img/5winsights/li/5W_VFRI-speaker_LinkedIn.webp" class="uk-border-rounded-medium" />
-                                                    </div>
-                                                </div>
-                                            </div>
-
+                            <div>
+                                <div class="uk-grid" uk-grid id="li-post">
+                                    <div class="uk-width-expand" >
+                                        <div class="uk-margin-auto uk-border-rounded-medium">
                                             <div>
-                                                <h4 class="fw-600 fs-16 uk-margin-small-bottom">Co-Branded Executive Promotion</h4>
-                                                <p class="fs-14 fw-500 uk-margin-small-top">Promoting a CEO keynote session required a layout that could balance the newly established 5W visual identity with rigid conference co-branding requirements. I developed a high-contrast digital asset with a strict visual hierarchy, ensuring critical session details and executive authority stand out in high-distraction social feeds while preserving seamless institutional brand continuity.</p></div>
+                                                <img src="img/5winsights/li/5W_VFRI-speaker_LinkedIn.webp" class="uk-border-rounded-medium" />
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <div>
+                                        <h4 class="fw-600 fs-16 uk-margin-small-bottom">Co-Branded Executive Promotion</h4>
+                                        <p class="fs-14 fw-500 uk-margin-small-top">Promoting a CEO keynote session required a layout that could balance the newly established 5W visual identity with rigid conference co-branding requirements. I developed a high-contrast digital asset with a strict visual hierarchy, ensuring critical session details and executive authority stand out in high-distraction social feeds while preserving seamless institutional brand continuity.</p></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </div>
+</main>
 
         <footer class="uk-section-small">
             <div class="uk-container uk-container-large">

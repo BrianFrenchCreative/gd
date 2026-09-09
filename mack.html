@@ -43,7 +43,7 @@
                             </div>
                         </div>
 
-                                                <div class="uk-navbar-right">
+                        <div class="uk-navbar-right">
                             <ul class="uk-navbar-nav">
                                 <li>
                                     <a href="#">Featured<span class="uk-visible@s"> Work</span><span uk-navbar-parent-icon></span></a>
@@ -65,7 +65,7 @@
                                                     </div>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li class="uk-active">
                                                 <a href="mack.html">
                                                     <div>
                                                         <div class="fw-500">Mack Trucks</div>
@@ -95,256 +95,267 @@
         <!-- header -->
 
 
-        <main>
+        <main class="">
+
             <!-- Main Content -->
-            <div>
-                <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
-                    <div class="uk-background-bottom-left  uk-background-cover uk-panel uk-flex uk-flex-bottom uk-flex-center " style="background-image: url(img/mack/mack-driver-survey.webp);" uk-height-viewport="offset-top: true; offset-bottom: 53;min:300">
-                    </div>
-                </div>
-            </div>
+            <main class="">
 
-            <div class="uk-section">
-                <div class="uk-container uk-container-large">
-                    <div class="uk-grid-large" uk-grid>
+                <!-- Main Content -->
+                <div class="uk-section">
+                    <div class="uk-container uk-container-large">
+                        <div class="uk-grid uk-grid-divider" uk-grid>
 
-                        <!-- left -->
-                        <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-3@m uk-flex uk-flex-right@small">
-                            <div class="uk-width-1-2"><img src="img/mack.webp" /></div>
-                        </div>
+                            <!-- left --> 
+                            <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-5@m uk-visible@s"
+                                 uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
 
-                        <!-- right -->
-                        <div class="uk-width-1-1 uk-width-expand@s" uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
+                                <!-- sticky nav (hidden for mobile) -->
+                                <div class="uk-margin-top" 
+                                     uk-sticky="end: true; offset:150" 
+                                     uk-scrollspy-class="uk-animation-scale-up">
+                                    <ul id="site-nav" class=" uk-nav uk-nav-default uk-margin-xlarge-top" uk-scrollspy-nav="closest: li; scroll: true">
+                                        <li><a href="#about">I. About</a></li>
+                                        <li><a href="#login">II. Survey Login</a></li>
+                                        <li><a href="#info">III. Contact Information</a></li>
+                                        <li><a href="#questions">IV. Survey Questions</a></li>
+                                    </ul>
+                                </div>
 
-                                <div class="uk-container uk-container-small">
+                            </div>
+
+                            <!-- center/right -->
+                            <div class="uk-width-1-1 uk-width-expand@s uk-width-3-5@m" uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
+
+                                <div class="uk-container">
+                                    <div uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
+                                        <div>
+                                            <h1 class="fw-600 uk-margin-small-bottom" style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">Mack Trucks: Evolving a digital survey experience</h1>
+                                        </div>
+                                        <div>
+                                            <h2 class="fw-500 uk-margin-small-top uk-margin-remove-bottom" style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)">A design exploration to elevate visual and interaction design</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- banner -->
+                                    <div id="about" class="uk-margin-top">
+                                        <div class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
+                                            <div class="uk-background-bottom-left uk-background-cover uk-panel uk-flex uk-flex-top uk-flex-center " style="background-image: url(img/mack/mack-driver-survey.webp);" uk-height-viewport="offset-top: true; offset-bottom: 50;min:300" uk-img="loading: eager">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- section heading -->
+                                    <p class="fs-24 fw-800">I. About the Project</p>
+                                    <hr />
+
                                     <div>
-                                        <div class="uk-margin-auto" uk-scrollspy="target:div;delay:75;repeat: true;">
-                                            <div uk-scrollspy-class="uk-animation-slide-bottom-small">
-                                                <h1 class="fw-600 uk-margin-medium-bottom" style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">Evolving a digital survey experience</h1>
-                                            </div>
-                                            <div uk-scrollspy-class="uk-animation-slide-bottom-small">
-                                                <h3 class="fw-500 uk-margin-large-bottom" style="font-size: clamp(1.06rem, 3.5vw, 1.25rem)">A design exploration to elevate the visual design of a Mack Trucks Survey Project</h3>
-                                            </div>
-                                        </div>
+                                        <!-- details -->
+                                        <ul class="uk-list uk-list-large uk-list-divider uk-accordion uk-accordion-default" uk-accordion="multiple: true">
+                                            <li class="uk-open">
+                                                <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">🎨 Modern Redesign</h3><span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content">
+                                                    <p>In this project I revisit the original 2015 online survey and reimagine how it could be improved using modern user-centered design principles, UI/UX, interaction design, information architecture, contemporary visual design trends, and a stronger alignment with Mack's brand identity.</p>
+                                                    <p>Presented below as an 'Old vs. New' comparison, this project serves as a case study demonstrating my evolution and growth as a designer and my deeper understanding of modern digital product design. It directly illustrates how I now approach similar challenges with an expanded skillset in areas like design thinking and creating more delightful, functional design systems.</p>
+                                                </div>
+                                            </li>
 
-                                        <div class="uk-container uk-container-small">
-                                            <div>
-                                                <ul class="uk-list uk-list-large uk-list-divider" uk-accordion>
-                                                    <li class="uk-open ">
-                                                        <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-20 fw-600">Modern Redesign</h3></a>
-                                                        <div class="uk-accordion-content fw-500">
-                                                            <p>In this project I revisit the original 2015 online survey and reimagine how it could be improved using using modern user-centered design principles, UI/UX, interaction design, information architecture, contemporary visual design trends, and a stronger alignment with Mack's brand identity.</p>
+                                            <li>
+                                                <a class="uk-accordion-title" href><h3 class="uk-margin-remove fs-16 fw-700">🕰️ About the 2015 Original</h3><span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content">
+                                                    <p>While the original initiative was primarily focused on marketing goals, execution of the project involved significant underlying user experience challenges, including designing an intuitive user flow for survey completion, structuring information effectively, and ensuring a seamless experience across devices.</p>
 
-                                                            <p>Presented below as an 'Old vs. New' comparison, this project serves as a case study demonstrating my evolution and growth as a designer and my deeper understanding of modern digital product design.</p>
+                                                    <p>As the lead designer for the original survey site, my responsibilities included:</p>
 
-                                                            <p>This comparison directly illustrates how I now approach similar challenges with an expanded skillset in areas like design thinking and creating more delightful, functional design systems, my ability to apply modern design thinking to significantly improve a user experience, and my commitment to creating high-quality, user-centric digital products.</p></div>
-                                                    </li>
-
-                                                    <li class="">
-                                                        <a class="uk-accordion-title" href>
-                                                            <h3 class="uk-margin-remove fs-20 fw-600">About the 2015 Original</h3>
-                                                        </a>
-                                                        <div class="uk-accordion-content fw-500">
-                                                            <p>While the original initiative was primarily focused on marketing goals, execution of the project involved significant underlying user experience challenges, including designing an intuitive user flow for survey completion, structuring information effectively, and ensuring a seamless experience across devices via responsive design.</p>
-
-                                                            <p>As the lead designer for the original survey site, I was responsible for:</p>
-
-                                                            <div class="">
-                                                                <div class="uk-child-width-1-3@s uk-grid-small" uk-grid>
-                                                                    <div>
-                                                                        <div class="uk-background-muted uk-padding-small uk-border-rounded-medium uk-margin-small-bottom">
-
-                                                                            <h4 class="fs-17 fw-600 uk-margin-small">Design (UI/UX/Branding)</h4>
-                                                                            <ul class="uk-list uk-list-bullet uk-margin-small fs-14">
-                                                                                <li class="uk-margin-small">Translating the printed survey into an intuitive digital experience</li>
-                                                                                <li class="uk-margin-small">Defining an online design language that was aligned to the campaign's print materials</li>
-                                                                                <li class="uk-margin-small">Presenting my designs to cross-functional stakeholders</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div class="uk-background-muted uk-padding-small uk-border-rounded-medium uk-margin-small-bottom">
-                                                                            <h4 class="fs-15 fw-500 uk-margin-small">Execution</h4>
-                                                                            <ul class="uk-list uk-list-bullet uk-margin-small fs-14">
-                                                                                <li class="uk-margin-small">Converting my mockups into a fast and seamless experience by writing minimal, optimized HTML/CSS code</li>
-                                                                                <li class="uk-margin-small">Collaborating with the back-end team during the code phase to provide them with front-end code to which they could easily incorporate survey functionality</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div><div>
-                                                                    <div class="uk-background-muted uk-padding-small uk-border-rounded-medium uk-margin-small-bottom">
-                                                                        <h4 class="fs-15 fw-500 uk-margin-small">Quality Assurance</h4>
-                                                                        <ul class="uk-list uk-list-bullet uk-margin-small-top fs-14">
-                                                                            <li class="uk-margin-small">Conducting a multi-stage quality control process to ensure accuracy</li>
-                                                                            <li class="uk-margin-small">Reviewing user flow</li>
-                                                                            <li class="uk-margin-small">Testing functionality and device compatibility</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    </div>
-                                                                </div>
-
-                                                                <p>The original campaign was highly successful, generating over 1,000 responders (qualified leads), with a significant percentage expressing interest in learning more or test driving a truck.</p>
-                                                                <p>This success, even within the context of 2015 design practices, highlights the impact of effective user flow and clear information architecture in meeting business objectives.</p>
+                                                    <div class="uk-child-width-1-3@s uk-grid-small uk-margin-top" uk-grid>
+                                                        <div>
+                                                            <div class="uk-background-muted uk-padding-small uk-border-rounded-medium uk-margin-small-bottom uk-height-1-1">
+                                                                <h4 class="fs-15 fw-600 uk-margin-small">Design (UI/UX)</h4>
+                                                                <ul class="uk-list uk-list-bullet uk-margin-small fs-14">
+                                                                    <li>Translating the printed survey into an intuitive digital experience</li>
+                                                                    <li>Defining an online design language aligned to the campaign's print materials</li>
+                                                                </ul>
                                                             </div>
-
                                                         </div>
-                                                    </li>
+                                                        <div>
+                                                            <div class="uk-background-muted uk-padding-small uk-border-rounded-medium uk-margin-small-bottom uk-height-1-1">
+                                                                <h4 class="fs-15 fw-600 uk-margin-small">Execution</h4>
+                                                                <ul class="uk-list uk-list-bullet uk-margin-small fs-14">
+                                                                    <li>Converting mockups into a fast, seamless experience with optimized HTML/CSS</li>
+                                                                    <li>Collaborating with the back-end team to incorporate survey functionality</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="uk-background-muted uk-padding-small uk-border-rounded-medium uk-margin-small-bottom uk-height-1-1">
+                                                                <h4 class="fs-15 fw-600 uk-margin-small">Quality Assurance</h4>
+                                                                <ul class="uk-list uk-list-bullet uk-margin-small fs-14">
+                                                                    <li>Conducting a multi-stage quality control process to ensure accuracy</li>
+                                                                    <li>Testing user flow and device compatibility</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
 
-                                                </ul>
-
-                                            </div>
-                                        </div>
+                                                    <p class="uk-margin-top">The original campaign was highly successful, generating over 1,000 qualified leads. This success highlights the impact of effective user flow and clear information architecture in meeting business objectives, even within the context of 2015 design practices.</p>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
 
-                            <div class="uk-section" uk-height-viewport="expand:true">
 
-                                <div class="uk-container uk-container-xlarge">
+                                <div class="uk-section uk-container uk-container" uk-height-viewport="expand:true" uk-lightbox="animation: fade">
+                                    <div class="uk-container">
 
-                                    <div class="uk-grid uk-grid-large" uk-grid>
+                                        <!-- Login Section -->
+                                        <div id="login">
+                                            <h3 class="fw-700 fs-20 uk-margin-remove">II. Survey Login</h3>
+                                        </div>
+                                        <hr />
 
+                                        <div class="uk-grid uk-margin" uk-grid>
+                                            <div class="uk-width-expand">
+                                                <div class="uk-border-rounded-medium">
+                                                    <div class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large" uk-grid>
 
-                                        <div class="uk-width-expand@s">
-
-                                            <div class="uk-section uk-container uk-container-expand" id="login">
-                                                <div class="uk-display-inline-block">
-                                                    <h2 class="fw-700 fs-20 uk-margin-remove"> Survey Login</h2>
-                                                </div>
-                                                <hr />
-
-                                                <div class="uk-background-muted uk-padding uk-padding-remove-horizontal uk-border-rounded-large">
-                                                    <!-- Login Switcher Container -->
-                                                    <div id="login-screens" class="uk-width-5-6@l uk-switcher uk-flex uk-flex-first uk-margin-auto uk-padding-xsmall uk-padding-remove-vertical" uk-lightbox="animation: fade;slidenav: false; nav: dotnav" >
-                                                        <div>
-                                                            <a href="img/mack/login-2025.webp" data-caption="Redesign">
-                                                                <img src="img/mack/login-2025.webp" alt="Redesign" />
-                                                            </a>
+                                                        <div class="uk-width-1-2@m uk-transition-toggle">
+                                                            <div class="uk-border-rounded uk-overflow-hidden uk-inline uk-light">
+                                                                <a class="uk-inline" href="img/mack/login-2015.png" data-caption="Original 2015 Login">
+                                                                    <img src="img/mack/login-2015.png" uk-img="loading: eager" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow">
+                                                                    <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                        <span uk-icon="icon: expand"></span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
                                                         </div>
-                                                        <div>
-                                                            <a href="img/mack/login-2015.png" data-caption="Original">
-                                                                <img src="img/mack/login-2015.png" alt="Original" />
-                                                            </a>
+
+                                                        <div class="uk-width-1-2@m uk-transition-toggle">
+                                                            <div class="uk-border-rounded uk-overflow-hidden uk-inline uk-light">
+                                                                <a class="uk-inline" href="img/mack/login-2025.webp" data-caption="2025 Redesign">
+                                                                    <img src="img/mack/login-2025.webp" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow"/>
+                                                                    <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                        <span uk-icon="icon: expand"></span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
                                                         </div>
-                                                    </div>
 
-                                                    <!-- Login Switcher Controls -->
-                                                    <div class="uk-flex-center uk-flex uk-margin-top">
-                                                        <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
-                                                            <ul class="uk-subnav uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" 
-                                                                uk-switcher="connect: #login-screens">
-                                                                <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
-                                                                <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-
-                                            <div class="uk-section uk-container uk-container-expand" id="info">
-                                                <div class="uk-display-inline-block">
-                                                    <h2 class="fw-700 fs-20 uk-margin-remove">Contact Information Form</h2>
-                                                </div>
-                                                <hr />
-
-                                                <div class="uk-background-muted uk-padding uk-padding-remove-horizontal uk-border-rounded-large">
-
-                                                    <!-- Info Switcher Container -->
-                                                    <div id="contact-form-screens" class="uk-width-5-6@l uk-switcher uk-flex uk-flex-first uk-margin-auto uk-padding-xsmall uk-padding-remove-vertical" uk-lightbox="animation: fade;slidenav: false; nav: dotnav" >
-                                                        <div>
-                                                            <a href="img/mack/info-2025.webp" data-caption="Redesign">
-                                                                <img src="img/mack/info-2025.webp" alt="Redesign"   />
-                                                            </a>
-                                                        </div>
-                                                        <div>
-                                                            <a href="img/mack/info-2015.webp" data-caption="Original">
-                                                                <img src="img/mack/info-2015.webp" alt="Original"  />
-                                                            </a>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Info Switcher Controls -->
-                                                    <div class="uk-flex-center uk-flex uk-margin-top">
-                                                        <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
-                                                            <ul class="uk-subnav uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" 
-                                                                uk-switcher="connect: #contact-form-screens">
-                                                                <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
-                                                                <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
-                                                            </ul>
-                                                        </div>
                                                     </div>
                                                 </div>
-
-                                            </div>
-
-
-                                            <!-- <div class="uk-position-relative uk-visible-toggle " tabindex="-1" uk-slideshow>
-
-                                                <div class="uk-slideshow-items">
-                                                    <div>
-                                                        <img src="img/mack/info-2025.webp" alt="" uk-cover>
-                                                    </div>
-                                                    <div>
-                                                        <img src="img/mack/info-2015.webp" alt="" uk-cover>
-                                                    </div>
-                                                </div>
-
-                                                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
-                                                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
-
-                                            </div> -->
-
-
-                                            <div class="uk-section uk-container uk-container-expand" id="questions-1">
-                                                <div class="uk-display-inline-block">
-                                                    <h2 class="fw-700 fs-20 uk-margin-remove">Survey Questions</h2>
-                                                </div>
-                                                <hr />
-
-                                                <div class="uk-background-muted uk-padding uk-padding-remove-horizontal uk-border-rounded-large">
-                                                    <!-- Login Switcher Container -->
-                                                    <div id="questions-1-screens" class="uk-width-5-6@l uk-switcher uk-flex uk-flex-first uk-margin-auto uk-padding-xsmall uk-padding-remove-vertical" uk-lightbox="animation: fade;slidenav: false; nav: dotnav">
-                                                        <div>
-                                                            <a href="img/mack/questions-1-2025.webp" data-caption="Redesign">
-                                                                <img src="img/mack/questions-1-2025.webp" alt="Redesign"  />
-                                                            </a>
-                                                        </div>
-                                                        <div>
-                                                            <a href="img/mack/questions-2015.webp" data-caption="Original">
-                                                                <img src="img/mack/questions-2015.webp" alt="Original"  />
-                                                            </a>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Login Switcher Controls -->
-                                                    <div class="uk-flex-center uk-flex uk-margin-top">
-                                                        <div class="uk-display-inline-block uk-background-muted uk-border-pill uk-flex-center uk-flex-middle uk-grid-small uk-box-shadow-inset">
-                                                            <ul class="uk-subnav uk-padding-xsmall uk-subnav-pill uk-margin-remove uk-margin" 
-                                                                uk-switcher="connect: #questions-1-screens">
-                                                                <li class="uk-margin-remove uk-active uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-small uk-padding-remove-vertical">New</a></li>
-                                                                <li class="uk-margin-xsmall-left uk-padding-remove"><a href="#" class="uk-border-pill uk-padding-remove-vertical uk-padding-small">Old</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-
-                                                <div class="uk-section uk-text-center">
-                                                    <hr class="uk-divider-small " />
-                                                    <div class="fw-500">More examples coming soon</div>
-                                                </div>
-
                                             </div>
                                         </div>
-                                    </div>
 
+                                        <div class="uk-margin-large-bottom">
+                                            <h4 class="fw-600 fs-16 uk-margin-small-bottom">Streamlining the Entry Point</h4>
+                                            <p class="fs-14 fw-500 uk-margin-small-top">Revisiting this 2015 project provided the perfect sandbox to get hands-on with Figma. The legacy login screen was functional but visually heavy by today's standards. For this theoretical redesign, I stripped away the clutter, utilized a full-bleed hero image to reinforce the Mack Trucks brand, and modernized the authentication module to create a frictionless, welcoming entry point.</p>
+                                        </div>
+
+                                        <!-- Contact Info Section -->
+                                        <div id="info">
+                                            <h3 class="fw-700 fs-20 uk-margin-remove">III. Contact Information</h3>
+                                        </div>
+                                        <hr />
+
+                                        <div class="uk-grid uk-margin" uk-grid>
+                                            <div class="uk-width-expand">
+                                                <div class="uk-border-rounded-medium">
+                                                    <div class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large" uk-grid>
+
+                                                        <div class="uk-width-1-2@m uk-transition-toggle">
+                                                            <div class="uk-border-rounded uk-overflow-hidden uk-inline uk-light">
+                                                                <a class="uk-inline" href="img/mack/info-2015.webp" data-caption="Original 2015 Contact Form">
+                                                                    <img src="img/mack/info-2015.webp" uk-img="loading: eager" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow">
+                                                                    <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                        <span uk-icon="icon: expand"></span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
+                                                        </div>
+
+                                                        <div class="uk-width-1-2@m uk-transition-toggle">
+                                                            <div class="uk-border-rounded uk-overflow-hidden uk-inline uk-light">
+                                                                <a class="uk-inline" href="img/mack/info-2025.webp" data-caption="2025 Redesign">
+                                                                    <img src="img/mack/info-2025.webp" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow"/>
+                                                                    <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                        <span uk-icon="icon: expand"></span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="uk-margin-large-bottom">
+                                            <h4 class="fw-600 fs-16 uk-margin-small-bottom">Reducing Friction in Form Design</h4>
+                                            <p class="fs-14 fw-500 uk-margin-small-top">Forms are notoriously high-friction areas for users. The original layout presented a dense wall of inputs that felt tedious to complete. In this conceptual update, I focused on modern UX best practices—introducing generous padding, clear typographical hierarchy, and contemporary input styling to drastically reduce cognitive load and make the data-entry process feel effortless.</p>
+                                        </div>
+
+                                        <!-- Questions Section -->
+                                        <div id="questions">
+                                            <h3 class="fw-700 fs-20 uk-margin-remove">IV. Survey Questions</h3>
+                                        </div>
+                                        <hr />
+
+                                        <div class="uk-grid uk-margin" uk-grid>
+                                            <div class="uk-width-expand">
+                                                <div class="uk-border-rounded-medium">
+                                                    <div class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large" uk-grid>
+
+                                                        <div class="uk-width-1-2@m uk-transition-toggle">
+                                                            <div class="uk-border-rounded uk-overflow-hidden uk-inline uk-light">
+                                                                <a class="uk-inline" href="img/mack/questions-2015.webp" data-caption="Original 2015 Questions">
+                                                                    <img src="img/mack/questions-2015.webp" uk-img="loading: eager" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow">
+                                                                    <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                        <span uk-icon="icon: expand"></span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">Old</p>
+                                                        </div>
+
+                                                        <div class="uk-width-1-2@m uk-transition-toggle">
+                                                            <div class="uk-border-rounded uk-overflow-hidden uk-inline uk-light">
+                                                                <a class="uk-inline" href="img/mack/questions-1-2025.webp" data-caption="2025 Redesign">
+                                                                    <img src="img/mack/questions-1-2025.webp" class="uk-transition-scale-up uk-transition-opaque uk-transition-slow"/>
+                                                                    <div class="uk-position-bottom-right uk-padding-xsmall frost uk-button uk-border-circle uk-margin-small uk-margin-small-right uk-transition-slide-bottom-small uk-transition-slow">
+                                                                        <span uk-icon="icon: expand"></span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <p class="fs-14 fw-500 uk-text-muted uk-margin-small-top">New</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="uk-margin-large-bottom">
+                                            <h4 class="fw-600 fs-16 uk-margin-small-bottom">Modernizing Interaction Patterns</h4>
+                                            <p class="fs-14 fw-500 uk-margin-small-top">The core of the experience lies in the questions themselves. I used this section to explore Figma's component and variant features, swapping out the legacy radio-button lists for a clean, card-based interface. By enlarging tap targets and defining distinct interactive states, this redesign ensures the survey would be highly accessible and touch-friendly across all modern devices.</p>
+                                        </div>
+
+                                        <div class="uk-section uk-text-center">
+                                            <hr class="uk-divider-small " />
+                                            <div class="fw-500">More examples coming soon</div>
+                                        </div>
+
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </main>
         </main>
 
         <footer class="uk-section-small ">
