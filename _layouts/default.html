@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- Use Liquid tags to dynamically pull the page title -->
+    <title>Brian French • {{ page.title }}</title>
+    <link rel="stylesheet" href="css/uikit.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="https://kit.fontawesome.com/eab0f1bdfe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- This tells Jekyll to inject your header here -->
+    {% include header.html %}
+
+    <!-- This tells Jekyll to inject the specific page content here -->
+    {{ content }}
+
+    <footer class="uk-section-small">
+        <div class="uk-container uk-container-large">
+            <div class="uk-grid">
+                <div class="uk-width-expand">
+                    <p class="fs-12">&copy; Web design and content &copy; 2026 Brian French</p>
+                </div>
+                <div class="uk-width-auto">
+                    <a href="#" uk-totop uk-scroll class="fs-12"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

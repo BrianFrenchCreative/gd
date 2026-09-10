@@ -467,7 +467,6 @@ hr,
         drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.5));
 }
 
-/* From https://css.glass */
 .frost {
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -476,8 +475,16 @@ hr,
     border: 1px solid rgba(255, 255, 255, 0.3)
 }
 
+.frost-dark {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: var(--muted-darker) !important;
+}
+
 .dark-frost {
-    /* From https://css.glass */
     background: rgba(0, 0, 0, 1);
     backdrop-filter: blur(60px);
     -webkit-backdrop-filter: blur(60px);
@@ -496,6 +503,54 @@ hr,
         blinking 1s steps(1, end) 3;
     border-right: 2px solid transparent;
     padding-right: .25em
+}
+
+/* 1. Force UIkit's sliding dropbar to be white and sit safely above the shadow */
+.uk-navbar-dropbar {
+    background-color: #ffffff !important;
+    z-index: 10 !important; 
+}
+
+/* 2. The decoupled backdrop: locked to the viewport to prevent scrollbars */
+.mega-menu-backdrop {
+    position: fixed;
+    top: 81px; /* Starts exactly below the bottom border of your header */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Anchoring to 0 prevents any height-based scrollbars */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5; /* Sits below the white dropbar (10) but above the page */
+    opacity: 0;
+    pointer-events: none; /* Ensures clicks pass through to the page below */
+    transition: opacity 0.3s ease-out;
+}
+
+/* 3. Modern CSS: Fades in the backdrop ONLY when a menu item is open */
+.uk-navbar-container:has(.uk-open) + .mega-menu-backdrop {
+    opacity: 1;
+}
+
+/* 1. Add comfortable padding and rounded corners to the links */
+.uk-navbar-dropdown-nav > li > a {
+    padding: 12px 16px !important;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+    display: block; /* Ensures the entire padded area is clickable */
+}
+
+/* 2. Light gray background on hover */
+.uk-navbar-dropdown-nav > li > a:hover {
+    background-color: #f8f8f8 !important; /* Matches UIkit's default 'muted' gray */
+    text-decoration: none;
+}
+
+/* 3. Slightly darker gray for the active page indicator */
+.uk-navbar-dropdown-nav > li.uk-active > a {
+    background-color: #eeeeee !important; 
+}
+/* Mega Menu Accessibility: Darker subtext for contrast */
+.uk-navbar-dropdown-nav .uk-text-muted {
+    color: #666666 !important; /* Overrides UIkit's default light gray */
 }
 
 @keyframes blinking {

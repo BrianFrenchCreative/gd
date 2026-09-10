@@ -1,0 +1,107 @@
+<!-- Header start -->
+<header>
+    <div uk-sticky="cls-active: uk-box-shadow-medium" style="z-index: 999; background-color: #ffffff;">
+        <nav class="uk-navbar-container uk-navbar-default border-bottom">
+            <div class="uk-container uk-container-large" uk-navbar="dropbar: true; dropbar-mode: slide; align: center;">
+                
+                <div class="uk-navbar-left">
+                    <div class="uk-navbar-item uk-padding-remove-horizontal">
+                        <a href="/gd/" class="uk-logo warm uk-flex uk-flex-middle fs-20">
+                            <div>
+                                Brian French <br class="uk-hidden@s" /><span class="uk-visible@s uk-text-muted fw-400 fs-16" uk-hidden>| </span><span class="uk-text-muted fw-400">Portfolio</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="uk-navbar-right">
+                    <ul class="uk-navbar-nav">
+                        <li>
+                            <a href="#">Featured<span class="uk-visible@s"> Work</span><span uk-navbar-parent-icon></span></a>
+                            
+                            <div class="uk-navbar-dropdown uk-margin-remove uk-padding-remove-horizontal mega-menu-overlay" uk-drop="boundary: !.uk-navbar-container; stretch: x; boundary-align: true; pos: bottom-justify; flip: false">
+                                <div class="uk-container uk-container-large uk-padding-small">
+                                    <div class="uk-navbar-dropdown-grid uk-child-width-1-1 uk-child-width-1-3@m" uk-grid>
+                                        
+                                        <!-- Column 1: Digital & UX -->
+                                        <div>
+                                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                <li class="uk-nav-header fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Digital Experience &amp; UI/UX</li>
+                                                <li class="{% if page.active_page == 'mack' %}uk-active{% endif %} uk-margin-small-bottom">
+                                                    <a href="mack.html">
+                                                        <div>
+                                                            <div class="fw-500 uk-text-emphasis">Mack Trucks</div>
+                                                            <div class="fs-12 uk-text-muted">Evolving a digital survey experience</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="{% if page.active_page == 'sdt' %}uk-active{% endif %}">
+                                                    <a href="strategic-design-transformations.html">
+                                                        <div>
+                                                            <div class="fw-500 uk-text-emphasis">Strategic Design Transformations</div>
+                                                            <div class="fs-12 uk-text-muted">Solving real-world design problems</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 2: Marketing -->
+                                        <div>
+                                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                <li class="uk-nav-header fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Campaigns &amp; Lead Gen</li>
+                                                <li class="{% if page.active_page == 'aac' %}uk-active{% endif %} uk-margin-small-bottom">
+                                                    <a href="american-addiction-centers.html">
+                                                        <div>
+                                                            <div class="fw-500 uk-text-emphasis">American Addiction Centers</div>
+                                                            <div class="fs-12 uk-text-muted">Multi-channel eBook campaign</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="{% if page.active_page == 'bsa' %}uk-active{% endif %}">
+                                                    <a href="bsa.html">
+                                                        <div>
+                                                            <div class="fw-500 uk-text-emphasis">Boy Scouts of America</div>
+                                                            <div class="fs-12 uk-text-muted">Direct mail fundraising appeal</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Column 3: Brand & Experiential -->
+                                        <div>
+                                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                                <li class="uk-nav-header fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Brand &amp; Experiential</li>
+                                                <li class="{% if page.active_page == '5w' %}uk-active{% endif %} uk-margin-small-bottom">
+                                                    <a href="5winsights.html">
+                                                        <div>
+                                                            <div class="fw-500 uk-text-emphasis">5W Insights</div>
+                                                            <div class="fs-12 uk-text-muted">Implementing a new brand identity</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="{% if page.active_page == 'cas' %}uk-active{% endif %}">
+                                                    <a href="chicago-auto-show.html">
+                                                        <div>
+                                                            <div class="fw-500 uk-text-emphasis">Chicago Auto Show</div>
+                                                            <div class="fs-12 uk-text-muted">Architectural event spaces</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="about-me.html">About</a></li>
+                        <li><a href="https://www.linkedin.com/in/brianfrenchcreative/" target="_blank"><i class="fa-brands fa-linkedin fs-15"></i><span class="uk-visible@s"> LinkedIn</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="mega-menu-backdrop"></div>
+    </div>
+</header>
