@@ -6,10 +6,10 @@
         <meta name="viewport" content="initial-scale=1" />
         <!-- Use Liquid tags to dynamically pull the page title -->
         <title>Brian French • {{ page.title }}</title>
-        <link rel="stylesheet" href="css/uikit.css" />
-        <link rel="stylesheet" href="css/custom.css" />
-        <script src="js/uikit.min.js"></script>
-        <script src="js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="css/uikit.css?v=3.25.21" />
+        <link rel="stylesheet" href="css/custom.css?v={{ site.time | date: '%s' }}" />
+        <script src="js/uikit.min.js?v=3.25.21"></script>
+        <script src="js/uikit-icons.min.js?v=3.25.21"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -31,6 +31,13 @@
                 });
             }
         </script>
+                <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                    })(window,document,'script','dataLayer','GTM-WJNPDXXB');</script>
+        <!-- End Google Tag Manager -->
     </head>
     <body>
 
