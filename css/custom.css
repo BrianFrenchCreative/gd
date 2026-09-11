@@ -37,7 +37,7 @@
 :root{
     --primary: #237899ff;
     --secondary: #222;
-    --muted: rgba(167, 167, 167, 0.2);
+    --muted: rgba(167, 167, 167, 0.1);
     --muted-darker: rgb(102,102,102);
     --text: #424242;
     --background: #fafafa;
@@ -226,6 +226,14 @@ a.uk-logo > img {
 }
 .uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
     box-shadow: 2px 8px 14px rgba(0, 0, 0, 0.10)
+}
+/* Soften the card shadows and round the corners */
+.uk-card-default {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.uk-card-hover:not(.uk-card-default, .uk-card-primary, .uk-card-secondary, .uk-card-overlay):hover
+{
+    background-color: var(--muted);
 }
 .uk-border-rounded {
     border-radius: 4px
@@ -477,7 +485,6 @@ hr,
 
 .frost-dark {
     background: rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border: 1px solid rgba(0, 0, 0, 0.15);
