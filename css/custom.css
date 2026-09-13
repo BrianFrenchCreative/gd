@@ -71,25 +71,6 @@
     --card-hover-shadow: rgba(0, 0, 0, 0.45);
 }
 
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --primary: #3eaad4;
-        --secondary: #e0e0e0;
-        --muted: rgba(255, 255, 255, 0.08);
-        --muted-darker: #a0a0a0;
-        --text: #d4d4d4;
-        --heading: #f0f0f0;
-        --background: #121212;
-        --background-default: #1c1c1c;
-        --other: #282828;
-        --border-color: rgba(255, 255, 255, 0.12);
-        --dropdown-bg: #1c1c1c;
-        --dropdown-hover: #292929;
-        --dropdown-active: #333333;
-        --card-bg: #242424;
-        --card-hover-shadow: rgba(0, 0, 0, 0.45);
-    }
-}
 
 html {
     font-family: "Inter", sans-serif;
@@ -109,9 +90,6 @@ body,
 .uk-card {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
-body, h1, h2, h3, h4, h5, p {
-    font-family: "Inter", sans-serif;
-}
 h1, h2, h3, h4, h5, h6 {
     color: var(--heading);
 }
@@ -119,14 +97,12 @@ h1, h2, h3, h4, h5, h6 {
 blockquote p {
     font-size: 1rem;
     font-style: normal;
-    font-family: "Inter"
 }
 blockquote footer {
     font-style: italic
 }
 
 h1 {
-    font-family: "Inter", sans-serif;
     font-size: 2.4rem;
     line-height: 1.1;
     margin-bottom: 1rem;
@@ -194,7 +170,6 @@ color: #333
     font-weight: 500
 }
 .uk-navbar-item > .uk-logo {
-    font-family: "Inter", sans-serif;
     font-size:1.5rem;
     line-height:1.5rem;
     font-weight: 600;
@@ -324,12 +299,6 @@ hr,
     border-left: 1px solid var(--border-color);
 }
 
-/* Desktop and bigger */
-@media (min-width: 1200px) {
-    .uk-padding {
-        padding: 24px
-    }
-}
 /* Small
 ========================================================================== */
 .uk-padding-small {
@@ -711,15 +680,6 @@ hr,
     color: #f59e0b;
 }
 
-@media (prefers-color-scheme: dark) {
-    html:not([data-theme="light"]) .theme-icon-moon {
-        display: none !important;
-    }
-    html:not([data-theme="light"]) .theme-icon-sun {
-        display: inline-block !important;
-        color: #f59e0b;
-    }
-}
 
 /* Dark mode specific component adjustments */
 [data-theme="dark"] .uk-navbar-nav > li > a {
@@ -737,6 +697,32 @@ hr,
 
 [data-theme="dark"] footer p {
     color: var(--muted-darker);
+}
+
+/* Dark Mode Testimonials & Muted Container Text Contrast */
+[data-theme="dark"] blockquote,
+[data-theme="dark"] blockquote p,
+[data-theme="dark"] .uk-card,
+[data-theme="dark"] .uk-background-muted {
+    color: var(--text) !important;
+}
+
+/* Dark Mode Hyperlinks & Anchor Colors */
+[data-theme="dark"] a:not(.uk-button):not(.uk-navbar-toggle):not(.uk-logo):not(.uk-link-reset),
+[data-theme="dark"] a:not(.uk-button):not(.uk-navbar-toggle):not(.uk-logo):not(.uk-link-reset):visited,
+[data-theme="dark"] .uk-link:not(.uk-button):not(.uk-link-reset),
+[data-theme="dark"] .uk-link:not(.uk-button):not(.uk-link-reset):visited {
+    color: #1e87f0;
+}
+
+[data-theme="dark"] a:not(.uk-button):not(.uk-navbar-toggle):not(.uk-logo):not(.uk-link-reset):hover,
+[data-theme="dark"] .uk-link:not(.uk-button):not(.uk-link-reset):hover {
+    color: #3aa3e3;
+}
+
+[data-theme="dark"] a.uk-text-primary,
+[data-theme="dark"] a.uk-text-primary:visited {
+    color: var(--primary) !important;
 }
 
 /* Dark Mode Dropdown High-Contrast Text */
@@ -769,36 +755,6 @@ hr,
     color: #e0e0e0 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-    html:not([data-theme="light"]) .uk-navbar-dropdown {
-        background-color: var(--dropdown-bg);
-    }
-
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li > a {
-        color: #f5f5f5 !important;
-    }
-
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav .uk-text-emphasis {
-        color: #f5f5f5 !important;
-    }
-
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav .uk-text-muted,
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav .fs-12 {
-        color: #b0b0b0 !important;
-    }
-
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li > a:hover .uk-text-emphasis,
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li.uk-active > a .uk-text-emphasis {
-        color: #ffffff !important;
-    }
-
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li > a:hover .uk-text-muted,
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li.uk-active > a .uk-text-muted,
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li > a:hover .fs-12,
-    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li.uk-active > a .fs-12 {
-        color: #e0e0e0 !important;
-    }
-}
 
 @keyframes blinking {
     from,
