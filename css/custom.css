@@ -707,19 +707,7 @@ hr,
     color: var(--text) !important;
 }
 
-/* Dark Mode Hyperlinks & Anchor Colors */
-[data-theme="dark"] a:not(.uk-button):not(.uk-navbar-toggle):not(.uk-logo):not(.uk-link-reset),
-[data-theme="dark"] a:not(.uk-button):not(.uk-navbar-toggle):not(.uk-logo):not(.uk-link-reset):visited,
-[data-theme="dark"] .uk-link:not(.uk-button):not(.uk-link-reset),
-[data-theme="dark"] .uk-link:not(.uk-button):not(.uk-link-reset):visited {
-    color: #1e87f0;
-}
-
-[data-theme="dark"] a:not(.uk-button):not(.uk-navbar-toggle):not(.uk-logo):not(.uk-link-reset):hover,
-[data-theme="dark"] .uk-link:not(.uk-button):not(.uk-link-reset):hover {
-    color: #3aa3e3;
-}
-
+/* Dark Mode Primary Links */
 [data-theme="dark"] a.uk-text-primary,
 [data-theme="dark"] a.uk-text-primary:visited {
     color: var(--primary) !important;
