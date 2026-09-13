@@ -6,10 +6,19 @@
         <meta name="viewport" content="initial-scale=1" />
         <!-- Use Liquid tags to dynamically pull the page title -->
         <title>Brian French • {{ page.title }}</title>
+        <script>
+            (function() {
+                var savedTheme = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var theme = savedTheme === 'dark' || (!savedTheme && prefersDark) ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', theme);
+            })();
+        </script>
         <link rel="stylesheet" href="css/uikit.css?v=3.25.21" />
         <link rel="stylesheet" href="css/custom.css?v={{ site.time | date: '%s' }}" />
         <script src="js/uikit.min.js?v=3.25.21"></script>
         <script src="js/uikit-icons.min.js?v=3.25.21"></script>
+        <script src="js/custom.js?v={{ site.time | date: '%s' }}"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">

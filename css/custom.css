@@ -33,31 +33,63 @@
 .fw-800 {font-weight: 800 !important}
 .fw-900 {font-weight: 900 !important}
 
-/* UIKit css overrides */
-:root{
+/* Theme Tokens & Variables */
+:root,
+[data-theme="light"] {
     --primary: #237899ff;
     --secondary: #222;
     --muted: rgba(167, 167, 167, 0.1);
     --muted-darker: rgb(102,102,102);
     --text: #424242;
+    --heading: #1a1a1a;
     --background: #fafafa;
-    --background-default: #fff;
+    --background-default: #ffffff;
     --other: #eeeeee;
+    --border-color: rgba(197, 197, 197, 0.5);
+    --dropdown-bg: #ffffff;
+    --dropdown-hover: #f8f8f8;
+    --dropdown-active: #eeeeee;
+    --card-bg: rgba(167, 167, 167, 0.1);
+    --card-hover-shadow: rgba(0, 0, 0, 0.10);
 }
 
-/* add future support for light/dark preferred 
+[data-theme="dark"] {
+    --primary: #3eaad4;
+    --secondary: #e0e0e0;
+    --muted: rgba(255, 255, 255, 0.08);
+    --muted-darker: #a0a0a0;
+    --text: #d4d4d4;
+    --heading: #f0f0f0;
+    --background: #121212;
+    --background-default: #1c1c1c;
+    --other: #282828;
+    --border-color: rgba(255, 255, 255, 0.12);
+    --dropdown-bg: #1c1c1c;
+    --dropdown-hover: #292929;
+    --dropdown-active: #333333;
+    --card-bg: #242424;
+    --card-hover-shadow: rgba(0, 0, 0, 0.45);
+}
 
 @media (prefers-color-scheme: dark) {
-:root {
---text: #fafafa;
---background: #101010;
---background-default: #1e1d1d;
---other: #202020;
---muted: rgba(255,255,255, 0.1);
---text: #dfdfdf;
+    :root:not([data-theme="light"]) {
+        --primary: #3eaad4;
+        --secondary: #e0e0e0;
+        --muted: rgba(255, 255, 255, 0.08);
+        --muted-darker: #a0a0a0;
+        --text: #d4d4d4;
+        --heading: #f0f0f0;
+        --background: #121212;
+        --background-default: #1c1c1c;
+        --other: #282828;
+        --border-color: rgba(255, 255, 255, 0.12);
+        --dropdown-bg: #1c1c1c;
+        --dropdown-hover: #292929;
+        --dropdown-active: #333333;
+        --card-bg: #242424;
+        --card-hover-shadow: rgba(0, 0, 0, 0.45);
+    }
 }
-}
-*/
 
 html {
     font-family: "Inter", sans-serif;
@@ -67,8 +99,21 @@ html {
     color: var(--text);
     background-color: var(--background-default);
 }
+body {
+    color: var(--text);
+    background-color: var(--background-default);
+}
+body,
+.uk-navbar-container,
+.uk-navbar-dropbar,
+.uk-card {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
 body, h1, h2, h3, h4, h5, p {
     font-family: "Inter", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading);
 }
 
 blockquote p {
@@ -153,7 +198,7 @@ color: #333
     font-size:1.5rem;
     line-height:1.5rem;
     font-weight: 600;
-    color: #000
+    color: var(--heading);
 }
 a.uk-logo > img {
     max-height:36px;
@@ -262,10 +307,10 @@ a.uk-logo > img {
     transition: transform 0.3s ease-out;
 }
 .uk-navbar-dropdown .uk-navbar-dropdown-nav > li > a:hover {
-    color: #000;
+    color: var(--heading);
 }
 .uk-navbar-dropdown .uk-navbar-dropdown-nav > li.uk-active > a {
-    color: #000;
+    color: var(--heading);
 }
 .uk-navbar-dropdown .uk-navbar-dropdown-nav > li > a .fw-500 {
     line-height: 1.2; 
@@ -273,7 +318,10 @@ a.uk-logo > img {
 }
 hr,
 .uk-hr {
-    border-top: 1px solid rgba(167,167,167, 0.25);
+    border-top: 1px solid var(--border-color);
+}
+.uk-grid-divider > :not(.uk-first-column)::before {
+    border-left: 1px solid var(--border-color);
 }
 
 /* Desktop and bigger */
@@ -399,7 +447,7 @@ hr,
     border: 1px solid #acacac
 }
 .border-bottom {
-    border-bottom:1px solid rgba(197,197,197,0.5)
+    border-bottom: 1px solid var(--border-color);
 }
 .no-border {
     border: none !important
@@ -512,9 +560,9 @@ hr,
     padding-right: .25em
 }
 
-/* 1. Force UIkit's sliding dropbar to be white and sit safely above the shadow */
+/* 1. Force UIkit's sliding dropbar to use background-default and sit safely above the shadow */
 .uk-navbar-dropbar {
-    background-color: #ffffff !important;
+    background-color: var(--background-default) !important;
     z-index: 10 !important; 
 }
 
@@ -541,23 +589,215 @@ hr,
 .uk-navbar-dropdown-nav > li > a {
     padding: 12px 16px !important;
     border-radius: 6px;
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     display: block; /* Ensures the entire padded area is clickable */
 }
 
-/* 2. Light gray background on hover */
+/* 2. Light Theme Dropdown Navigation Colors */
+.uk-navbar-dropdown {
+    background-color: var(--dropdown-bg);
+}
+
+.uk-navbar-dropdown-nav > li > a {
+    color: var(--text) !important;
+}
+
 .uk-navbar-dropdown-nav > li > a:hover {
-    background-color: #f8f8f8 !important; /* Matches UIkit's default 'muted' gray */
+    background-color: var(--dropdown-hover) !important;
     text-decoration: none;
 }
 
-/* 3. Slightly darker gray for the active page indicator */
 .uk-navbar-dropdown-nav > li.uk-active > a {
-    background-color: #eeeeee !important; 
+    background-color: var(--dropdown-active) !important;
 }
-/* Mega Menu Accessibility: Darker subtext for contrast */
-.uk-navbar-dropdown-nav .uk-text-muted {
-    color: #666666 !important; /* Overrides UIkit's default light gray */
+
+.uk-navbar-dropdown-nav .uk-text-emphasis {
+    color: var(--heading) !important;
+    transition: color 0.2s ease;
+}
+
+.uk-navbar-dropdown-nav .uk-text-muted,
+.uk-navbar-dropdown-nav .fs-12 {
+    color: var(--muted-darker) !important;
+    transition: color 0.2s ease;
+}
+
+.uk-navbar-dropdown-nav > li > a:hover .uk-text-emphasis {
+    color: #000000 !important;
+}
+
+.uk-navbar-dropdown-nav > li > a:hover .uk-text-muted,
+.uk-navbar-dropdown-nav > li > a:hover .fs-12 {
+    color: #333333 !important;
+}
+
+/* Mobile Dropdown Max Height for scrolling on small screens */
+.uk-navbar-dropdown.uk-hidden\@m {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mobile-edge-drop {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 0 !important;
+    margin-top: 0 !important;
+    box-sizing: border-box;
+    border: none !important;
+}
+
+/* Navbar Toggle (Hamburger icon) */
+.uk-navbar-toggle {
+    color: var(--heading) !important;
+    padding: 0 10px;
+    min-height: 70px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.uk-navbar-toggle:hover,
+.uk-navbar-toggle[aria-expanded="true"] {
+    color: var(--primary) !important;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--muted);
+    color: var(--primary);
+    border-color: var(--primary);
+    transform: scale(1.08);
+}
+
+.theme-toggle-btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Theme Toggle Icons - Default / Light Theme */
+.theme-icon-sun {
+    display: none !important;
+}
+
+.theme-icon-moon {
+    display: inline-block !important;
+}
+
+/* Theme Toggle Icons - Dark Theme Active */
+[data-theme="dark"] .theme-icon-moon {
+    display: none !important;
+}
+
+[data-theme="dark"] .theme-icon-sun {
+    display: inline-block !important;
+    color: #f59e0b;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) .theme-icon-moon {
+        display: none !important;
+    }
+    html:not([data-theme="light"]) .theme-icon-sun {
+        display: inline-block !important;
+        color: #f59e0b;
+    }
+}
+
+/* Dark mode specific component adjustments */
+[data-theme="dark"] .uk-navbar-nav > li > a {
+    color: var(--muted-darker);
+}
+
+[data-theme="dark"] .uk-navbar-nav > li > a:hover,
+[data-theme="dark"] .uk-navbar-nav > li.uk-active > a {
+    color: var(--heading);
+}
+
+[data-theme="dark"] .uk-card.uk-background-muted {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] footer p {
+    color: var(--muted-darker);
+}
+
+/* Dark Mode Dropdown High-Contrast Text */
+[data-theme="dark"] .uk-navbar-dropdown {
+    background-color: var(--dropdown-bg);
+}
+
+[data-theme="dark"] .uk-navbar-dropdown-nav > li > a {
+    color: #f5f5f5 !important;
+}
+
+[data-theme="dark"] .uk-navbar-dropdown-nav .uk-text-emphasis {
+    color: #f5f5f5 !important;
+}
+
+[data-theme="dark"] .uk-navbar-dropdown-nav .uk-text-muted,
+[data-theme="dark"] .uk-navbar-dropdown-nav .fs-12 {
+    color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .uk-navbar-dropdown-nav > li > a:hover .uk-text-emphasis,
+[data-theme="dark"] .uk-navbar-dropdown-nav > li.uk-active > a .uk-text-emphasis {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .uk-navbar-dropdown-nav > li > a:hover .uk-text-muted,
+[data-theme="dark"] .uk-navbar-dropdown-nav > li.uk-active > a .uk-text-muted,
+[data-theme="dark"] .uk-navbar-dropdown-nav > li > a:hover .fs-12,
+[data-theme="dark"] .uk-navbar-dropdown-nav > li.uk-active > a .fs-12 {
+    color: #e0e0e0 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) .uk-navbar-dropdown {
+        background-color: var(--dropdown-bg);
+    }
+
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li > a {
+        color: #f5f5f5 !important;
+    }
+
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav .uk-text-emphasis {
+        color: #f5f5f5 !important;
+    }
+
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav .uk-text-muted,
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav .fs-12 {
+        color: #b0b0b0 !important;
+    }
+
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li > a:hover .uk-text-emphasis,
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li.uk-active > a .uk-text-emphasis {
+        color: #ffffff !important;
+    }
+
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li > a:hover .uk-text-muted,
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li.uk-active > a .uk-text-muted,
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li > a:hover .fs-12,
+    html:not([data-theme="light"]) .uk-navbar-dropdown-nav > li.uk-active > a .fs-12 {
+        color: #e0e0e0 !important;
+    }
 }
 
 @keyframes blinking {
