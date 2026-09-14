@@ -141,7 +141,8 @@
     --dropdown-active: #eeeeee;
     --card-bg: rgba(167, 167, 167, 0.1);
     --card-hover-shadow: rgba(0, 0, 0, 0.10);
-    --card-hover-border: rgba(0, 0, 0, 0.12);
+    --card-hover-border: rgba(121, 121, 121, 0.1);
+    --focus-color: #333;
 }
 
 [data-theme="dark"] {
@@ -161,6 +162,7 @@
     --card-bg: #242424;
     --card-hover-shadow: rgba(0, 0, 0, 0.45);
     --card-hover-border: #9b51e0;
+    --focus-color: #9b51e0;
 }
 
 
@@ -1006,4 +1008,18 @@ hr,
     to {
         opacity: 0
     }
+}
+
+a:focus-visible, 
+button:focus-visible, 
+[tabindex]:focus-visible {
+    outline: 2px solid var(--focus-color) !important;
+    outline-offset: 4px !important;
+    border-radius: inherit;
+}
+
+.uk-navbar-dropdown-nav > li > a:focus-visible {
+    outline: 2px solid var(--focus-color) !important;
+    outline-offset: 4px !important;
+    border-radius: 8px !important;
 }
