@@ -179,17 +179,14 @@ blockquote {
     font-family: "Inter", sans-serif;
 }
 
+html, body {
+    color: var(--text);
+    background-color: var(--background-default);
+}
 html {
     font-size: 16px;
     line-height: 25px;
     font-weight: 400;
-    color: var(--text);
-    background-color: var(--background-default);
-}
-
-body {
-    color: var(--text);
-    background-color: var(--background-default);
 }
 
 body,
@@ -267,10 +264,6 @@ p {
     color: var(--primary);
 }
 
-/* uk-navbar-item > a:hover {
-background-color: #aaa;
-color: #333
-} */
 .uk-navbar-container:not(.uk-navbar-transparent) {
     background: var(--background-default);
 }
@@ -509,31 +502,12 @@ hr,
     .pill {
         border-radius: 500px
     }
-
 }
 
 /* Tablet landscape and bigger */
 @media (min-width: 960px) {
-    .pill {
-        border-radius: 500px
-    }
-
     .border-quote-right {
         border-radius: 2px 24px 24px;
-    }
-}
-
-/* Desktop and bigger */
-@media (min-width: 1200px) {
-    .pill {
-        border-radius: 500px
-    }
-}
-
-/* Large screen and bigger */
-@media (min-width: 1600px) {
-    .pill {
-        border-radius: 500px
     }
 }
 
@@ -592,10 +566,6 @@ hr,
     0% {
         box-shadow: 0 0 0 0 rgba(var(--gc2) .85);
     }
-
-    3% {}
-
-    20% {}
 
     100% {
         box-shadow: 0 0 0 15px rgba(var(--gc2) 0.15)
