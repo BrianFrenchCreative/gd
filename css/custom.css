@@ -141,6 +141,7 @@
     --dropdown-active: #eeeeee;
     --card-bg: rgba(167, 167, 167, 0.1);
     --card-hover-shadow: rgba(0, 0, 0, 0.10);
+    --card-hover-border: rgba(0, 0, 0, 0.12);
 }
 
 [data-theme="dark"] {
@@ -159,6 +160,7 @@
     --dropdown-active: #333333;
     --card-bg: #242424;
     --card-hover-shadow: rgba(0, 0, 0, 0.45);
+    --card-hover-border: #9b51e0;
 }
 
 
@@ -390,13 +392,19 @@ a.uk-logo>img {
     padding: 24px
 }
 
-.uk-card-hover:not(.uk-card-default):not(.uk-card-primary):not(.uk-card-secondary):hover {
-    box-shadow: 2px 8px 14px rgba(0, 0, 0, 0.10)
+.uk-card-hover {
+    border: 1px solid transparent !important;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.uk-card-hover:hover {
+    border-color: var(--card-hover-border) !important;
 }
 
 /* Soften the card shadows and round the corners */
 .uk-card-default {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
 }
 
 .uk-card-hover:not(.uk-card-default, .uk-card-primary, .uk-card-secondary, .uk-card-overlay):hover {
@@ -413,6 +421,10 @@ a.uk-logo>img {
 
 .uk-border-rounded-large {
     border-radius: 24px
+}
+
+.uk-border-rounded-xlarge {
+    border-radius: 32px !important;
 }
 
 .uk-navbar-item,
@@ -675,19 +687,26 @@ hr,
 }
 
 .frost {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.3)
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: none;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+        inset 0 2px 10px rgba(255, 255, 255, 0.4);
 }
 
 .frost-dark {
-    background: rgba(0, 0, 0, 0.05);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    color: var(--muted-darker) !important;
+    background: linear-gradient(135deg, rgba(80, 80, 80, 0.6) 0%, rgba(20, 20, 20, 0.4) 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: none;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+        inset 0 2px 10px rgba(255, 255, 255, 0.15);
+    color: #ffffff !important;
 }
 
 .dark-frost {
@@ -695,9 +714,13 @@ hr,
     backdrop-filter: blur(60px);
     -webkit-backdrop-filter: blur(60px);
     -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     -webkit-mask-size: 100% 80%;
+    mask-size: 100% 80%;
     -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
     -webkit-mask-position: left bottom;
+    mask-position: left bottom;
 }
 
 .typing {
@@ -885,7 +908,10 @@ hr,
 }
 
 /* Dark Mode Dividers */
-[data-theme="dark"] .uk-grid-divider > *::before, [data-theme="dark"] .uk-list-divider > li:nth-child(n+2) { border-color: var(--border-color) !important; }
+[data-theme="dark"] .uk-grid-divider>*::before,
+[data-theme="dark"] .uk-list-divider>li:nth-child(n+2) {
+    border-color: var(--border-color) !important;
+}
 
 /* Dark Mode Testimonials & Muted Container Text Contrast */
 [data-theme="dark"] blockquote,
