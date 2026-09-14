@@ -884,6 +884,9 @@ hr,
     color: var(--muted-darker);
 }
 
+/* Dark Mode Dividers */
+[data-theme="dark"] .uk-grid-divider > *::before, [data-theme="dark"] .uk-list-divider > li:nth-child(n+2) { border-color: var(--border-color) !important; }
+
 /* Dark Mode Testimonials & Muted Container Text Contrast */
 [data-theme="dark"] blockquote,
 [data-theme="dark"] blockquote p,
