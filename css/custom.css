@@ -389,7 +389,8 @@ a.uk-logo>img {
     padding: 24px
 }
 
-.uk-card-hover {
+.uk-card-hover,
+.uk-box-shadow-hover-medium {
     border: 1px solid transparent !important;
     transition: all 0.3s ease-in-out;
 }
@@ -984,4 +985,11 @@ button:focus-visible,
     outline: 2px solid var(--focus-color) !important;
     outline-offset: 4px !important;
     border-radius: 8px !important;
+}
+
+/* Lock clipping mask for Chromium/Brave hover animations */
+.uk-card.uk-border-rounded-large.uk-overflow-hidden {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
