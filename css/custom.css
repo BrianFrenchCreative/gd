@@ -987,9 +987,17 @@ button:focus-visible,
     border-radius: 8px !important;
 }
 
-/* Lock clipping mask for Chromium/Brave hover animations */
+/* Parent container: Hardware lock only. No mask here, so the shadow can project freely */
 .uk-card.uk-border-rounded-large.uk-overflow-hidden {
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
     transform: translateZ(0);
     backface-visibility: hidden;
+}
+
+/* Image wrapper: Apply mask and round the top, but force the bottom corners to stay square */
+.uk-card.uk-border-rounded-large.uk-overflow-hidden>.uk-card-media-top {
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    border-radius: inherit;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    overflow: hidden;
 }
