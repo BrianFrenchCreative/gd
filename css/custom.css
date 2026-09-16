@@ -392,6 +392,7 @@ a.uk-logo>img {
 .uk-card-hover {
     border: 1px solid transparent !important;
     transition: border-color 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 .uk-card-hover:hover {
