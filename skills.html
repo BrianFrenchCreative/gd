@@ -14,12 +14,12 @@ active_page: skills
                 <!-- Left Sticky Navigation & Filter Controls -->
                 <div class="uk-width-1-3@s uk-visible@s"
                     uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
-                    <div class="uk-margin-top" uk-sticky="end: true; offset:150"
+                    <div class="uk-margin-top" uk-sticky="end: true; offset:100"
                         uk-scrollspy-class="uk-animation-scale-up">
 
                         <!-- Filter Menu 1: Work Experience (Scrollspy Anchor Nav) -->
                         <ul id="work-history-nav" class="uk-nav uk-nav-default uk-list uk-list-divider"
-                            uk-scrollspy-nav="closest: li; scroll: true; offset: 120">
+                            uk-scrollspy-nav="closest: li; scroll: true">
                             <li class="uk-nav-header fs-12 fw-700 uk-text-primary">Work Experience</li>
 
                             <li class="uk-margin-small-top">
@@ -124,7 +124,8 @@ active_page: skills
                             <!-- ==============================================
                                  INDEPENDENT CONTRACTOR & FREELANCE DESIGNER 
                                  ============================================== -->
-                            <li id="freelance" class="job-heading uk-background-default uk-margin-remove-top uk-margin-medium-bottom">
+                            <li id="freelance" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li class="job-heading uk-background-default uk-margin-remove-top uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Independent Contractor &amp; Freelance
                                     Designer</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
@@ -189,7 +190,8 @@ active_page: skills
                             <!-- ==============================================
                                  CREATIVE DIRECTOR • 5W INSIGHTS 
                                  ============================================== -->
-                            <li id="5w-creative" class="job-heading uk-background-default uk-margin-medium-bottom">
+                            <li id="5w-creative" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li class="job-heading uk-background-default uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Creative Director</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
                                     style="border:none; padding-left:0;">5W Insights &bull; Mar 2019 &mdash; Jun 2024
@@ -250,7 +252,8 @@ active_page: skills
                             <!-- ==============================================
                                  MARKETING DIRECTOR • 5W INSIGHTS 
                                  ============================================== -->
-                            <li id="5w-marketing" class="job-heading uk-background-default uk-margin-medium-bottom">
+                            <li id="5w-marketing" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li class="job-heading uk-background-default uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Marketing Director</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
                                     style="border:none; padding-left:0;">5W Insights &bull; Sep 2013 &mdash; Mar 2019
@@ -340,7 +343,8 @@ active_page: skills
                             <!-- ==============================================
                                  RICHMOND SUBURBAN NEWSPAPERS 
                                  ============================================== -->
-                            <li id="rsn" class="job-heading uk-background-default uk-margin-medium-bottom">
+                            <li id="rsn" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li class="job-heading uk-background-default uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Design &amp; Production Manager</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
                                     style="border:none; padding-left:0;">Richmond Suburban Newspapers &bull; Jan 2007
@@ -379,7 +383,8 @@ active_page: skills
                             <!-- ==============================================
                                  POWHATAN TODAY NEWSPAPER 
                                  ============================================== -->
-                            <li id="powhatan" class="job-heading uk-background-default uk-margin-medium-bottom">
+                            <li id="powhatan" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li class="job-heading uk-background-default uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Graphic Designer &amp; Production
                                     Manager</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
@@ -416,23 +421,41 @@ active_page: skills
             const clearFilterBtn = document.querySelector('#clear-filters a');
             const capNavLinks = document.querySelectorAll('#capabilities-nav [uk-filter-control] a');
             const dynamicSubtitle = document.getElementById('dynamic-subtitle');
+            const filterWrapper = document.querySelector('[uk-filter]');
+            
+            let pendingScrollTarget = null;
 
             // 1. Sync Work History clicks to reset the capability filter
             workNavLinks.forEach(link => {
-                link.addEventListener('click', function () {
-                    // Check if 'All Capabilities' is not active. If it isn't, click it to restore the full list
+                link.addEventListener('click', function (e) {
                     if (clearFilterBtn && !clearFilterBtn.parentElement.classList.contains('uk-active')) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        pendingScrollTarget = this.getAttribute('href');
                         clearFilterBtn.click();
                     }
                 });
             });
 
-            // 2. Dynamically update the subtitle based on the active capability filter
+            // 2. Wait for UIkit to finish expanding the list before scrolling
+            if (filterWrapper) {
+                UIkit.util.on(filterWrapper, 'afterFilter', function () {
+                    if (pendingScrollTarget) {
+                        const targetEl = document.querySelector(pendingScrollTarget);
+                        if (targetEl) {
+                            const topOffset = targetEl.getBoundingClientRect().top + window.pageYOffset - 120;
+                            window.scrollTo({ top: topOffset, behavior: 'smooth' });
+                        }
+                        pendingScrollTarget = null;
+                    }
+                });
+            }
+
+            // 3. Dynamically update the subtitle based on the active capability filter
             if (capNavLinks && dynamicSubtitle) {
                 capNavLinks.forEach(link => {
                     link.addEventListener('click', function () {
                         const filterText = this.innerText;
-
                         if (filterText === 'All Capabilities') {
                             dynamicSubtitle.innerHTML = 'Consolidated highlights across all roles and disciplines';
                         } else {
