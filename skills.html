@@ -18,7 +18,7 @@ active_page: skills
                         uk-scrollspy-class="uk-animation-scale-up">
 
                         <!-- Filter Menu 1: Work Experience (Scrollspy Anchor Nav) -->
-                        <ul id="work-history-nav" class="uk-nav uk-nav-default uk-list uk-list-divider"
+                        <ul id="work-history-nav" class="uk-nav uk-nav-default"
                             uk-scrollspy-nav="closest: li; scroll: true">
                             <li class="uk-nav-header fs-12 fw-700 uk-text-primary">Work Experience</li>
 
@@ -124,7 +124,8 @@ active_page: skills
                             <!-- ==============================================
                                  INDEPENDENT CONTRACTOR & FREELANCE DESIGNER 
                                  ============================================== -->
-                            <li id="freelance" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li id="freelance"
+                                style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
                             <li class="job-heading uk-background-default uk-margin-remove-top uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Independent Contractor &amp; Freelance
                                     Designer</h2>
@@ -190,7 +191,8 @@ active_page: skills
                             <!-- ==============================================
                                  CREATIVE DIRECTOR • 5W INSIGHTS 
                                  ============================================== -->
-                            <li id="5w-creative" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li id="5w-creative"
+                                style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
                             <li class="job-heading uk-background-default uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Creative Director</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
@@ -252,7 +254,8 @@ active_page: skills
                             <!-- ==============================================
                                  MARKETING DIRECTOR • 5W INSIGHTS 
                                  ============================================== -->
-                            <li id="5w-marketing" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li id="5w-marketing"
+                                style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
                             <li class="job-heading uk-background-default uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Marketing Director</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
@@ -383,7 +386,8 @@ active_page: skills
                             <!-- ==============================================
                                  POWHATAN TODAY NEWSPAPER 
                                  ============================================== -->
-                            <li id="powhatan" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
+                            <li id="powhatan" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;">
+                            </li>
                             <li class="job-heading uk-background-default uk-margin-medium-bottom">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Graphic Designer &amp; Production
                                     Manager</h2>
@@ -422,7 +426,7 @@ active_page: skills
             const capNavLinks = document.querySelectorAll('#capabilities-nav [uk-filter-control] a');
             const dynamicSubtitle = document.getElementById('dynamic-subtitle');
             const filterWrapper = document.querySelector('[uk-filter]');
-            
+
             let pendingScrollTarget = null;
 
             // 1. Sync Work History clicks to reset the capability filter
