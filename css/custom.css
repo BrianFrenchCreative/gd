@@ -1009,7 +1009,7 @@ button:focus-visible,
 /* Experience Grid Global Typography, Spacing, & Accents */
 #experience-grid h3 {
     font-size: 1rem !important;
-    font-weight: 800 !important;
+    font-weight: 700 !important;
     margin-top: 0 !important;
     margin-bottom: 10px !important;
 }
@@ -1021,4 +1021,20 @@ button:focus-visible,
     margin: 0 !important;
     border-left: 3px solid #ccc;
     padding-left: 15px;
+}
+
+/* Sidebar Navigation Hover & Active States */
+#work-history-nav>li {
+    padding: 4px 16px !important;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#work-history-nav>li:hover {
+    background-color: #f8f8f8 !important;
+    text-decoration: none;
+}
+
+#work-history-nav>li.uk-active {
+    background-color: #eeeeee !important;
 }
