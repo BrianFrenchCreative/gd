@@ -1038,3 +1038,15 @@ button:focus-visible,
 #work-history-nav>li.uk-active {
     background-color: #eeeeee !important;
 }
+
+.job-heading {
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+    margin-top: 0 !important;
+}
