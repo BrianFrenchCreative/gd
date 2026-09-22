@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Skills & Capabilities
-active_page: skills
+title: Professional Experience
+active_page: experience
 ---
 
 <main class="">
@@ -19,7 +19,7 @@ active_page: skills
                         <!-- Filter Menu 1: Work Experience (Scrollspy Anchor Nav) -->
                         <ul id="work-history-nav" class="uk-nav uk-nav-default"
                             uk-scrollspy-nav="closest: li; scroll: true">
-                            <li class="uk-nav-header fs-12 fw-700 uk-text-primary">Work Experience</li>
+                            <li class="uk-nav-header fs-12 fw-700 uk-text-primary">Employment History</li>
 
                             <li class="uk-margin-small-top">
                                 <a href="#freelance" class="uk-display-block">
@@ -86,8 +86,7 @@ active_page: skills
                                 Experience</h1>
                             <h2 id="dynamic-subtitle"
                                 class="fw-500 uk-margin-small-top uk-margin-remove-bottom uk-text-muted"
-                                style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)">Consolidated highlights across all
-                                roles and disciplines</h2>
+                                style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)"></h2>
                         </div>
                     </div>
 
@@ -546,7 +545,7 @@ active_page: skills
                     link.addEventListener('click', function () {
                         const filterText = this.innerText;
                         if (filterText === 'All Capabilities' || filterText === 'Show All') {
-                            dynamicSubtitle.innerHTML = 'Consolidated highlights across all roles and disciplines';
+                            dynamicSubtitle.innerHTML = '';
                             document.body.classList.remove('capability-filter-active');
                         } else {
                             dynamicSubtitle.innerHTML = 'Capability Focus: <span class="uk-text-emphasis fw-700">' + filterText + '</span>';
