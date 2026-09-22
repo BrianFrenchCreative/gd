@@ -19,7 +19,7 @@ active_page: experience
                         <!-- Filter Menu 1: Work Experience (Scrollspy Anchor Nav) -->
                         <ul id="work-history-nav" class="uk-nav uk-nav-default"
                             uk-scrollspy-nav="closest: li; scroll: true">
-                            <li class="uk-nav-header fs-12 fw-700 uk-text-primary">Employment History</li>
+                            <li class="uk-nav-header fs-12 fw-700 uk-text-muted">Employment History</li>
 
                             <li class="uk-margin-small-top">
                                 <a href="#freelance" class="uk-display-block">
@@ -57,25 +57,37 @@ active_page: experience
                             </li>
                         </ul>
 
-                        <!-- Filter Menu 2: Capabilities -->
-                        <ul id="capabilities-nav" class="uk-nav uk-nav-default uk-margin-large-top">
-                            <li class="uk-nav-header fs-12 fw-700 uk-text-primary uk-margin-small-bottom"><i
-                                    class="fa-solid fa-filter"></i> Filter by Capability
-                            </li>
-                            <li id="clear-filters" class="uk-active uk-margin-small-bottom" uk-filter-control><a
-                                    href="#">Show All</a></li>
-                            <li uk-filter-control=".tag-direct"><a href="#">Direct Response &amp; Omnichannel</a></li>
-                            <li uk-filter-control=".tag-digital"><a href="#">Digital, Web &amp; Email</a></li>
-                            <li uk-filter-control=".tag-print"><a href="#">Print, Prepress &amp; VDP</a></li>
-                            <li uk-filter-control=".tag-brand"><a href="#">Brand Systems &amp; Identity</a></li>
-                            <li uk-filter-control=".tag-event"><a href="#">Event &amp; Experiential</a></li>
-                            <li uk-filter-control=".tag-workflow"><a href="#">Workflow &amp; Team Leadership</a></li>
-                        </ul>
+                        <!-- Filter Menu 2: Capabilities Dropdown -->
+                        <div class="uk-margin-large-top">
+                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-small-bottom"
+                                style="letter-spacing: 0.5px;">Capabilities</div>
+                            <button
+                                class="uk-button uk-button-default uk-width-1-1 uk-text-left uk-flex uk-flex-between uk-flex-middle uk-border-rounded"
+                                type="button" style="text-transform: none; border-color: rgba(150,150,150,0.3);">
+                                <span class="fw-500 uk-text-emphasis">Filter projects...</span>
+                                <span uk-icon="icon: chevron-down"></span>
+                            </button>
+                            <div uk-dropdown="mode: click; pos: bottom-justify; offset: 5; boundary: !.uk-width-1-4@l"
+                                class="uk-padding-remove uk-border-rounded-medium uk-box-shadow-medium">
+                                <ul id="capabilities-nav" class="uk-nav uk-dropdown-nav uk-padding-small">
+                                    <li id="clear-filters" class="uk-active uk-margin-small-bottom" uk-filter-control><a
+                                            href="#">Show All</a></li>
+                                    <li uk-filter-control=".tag-direct"><a href="#">Direct Response &amp;
+                                            Omnichannel</a></li>
+                                    <li uk-filter-control=".tag-digital"><a href="#">Digital, Web &amp; Email</a></li>
+                                    <li uk-filter-control=".tag-print"><a href="#">Print, Prepress &amp; VDP</a></li>
+                                    <li uk-filter-control=".tag-brand"><a href="#">Brand Systems &amp; Identity</a></li>
+                                    <li uk-filter-control=".tag-event"><a href="#">Event &amp; Experiential</a></li>
+                                    <li uk-filter-control=".tag-workflow"><a href="#">Workflow &amp; Team Leadership</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
 
-                <!-- Right Content & Filterable List -->
+                <!-- Middle Content & Filterable List -->
                 <div class="uk-width-expand uk-width-2-5@m"
                     uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
 
@@ -185,56 +197,9 @@ active_page: experience
                                     and execution across print, digital, and direct response channels.</div>
                             </li>
 
-                            <li class="tag-brand tag-5w">
-                                <h3>5W Insights Corporate Brand Overhaul</h3>
-                                <p>Led the internal rebrand for 5W Insights, establishing a modular geometric monogram
-                                    and scalable brand identity system, and rolling it out across web, collateral,
-                                    tradeshows, and social media.</p>
-                            </li>
-
-                            <li class="tag-workflow tag-5w">
-                                <h3>Executive Summary Data Visualization</h3>
-                                <p>Translated complex campaign performance data, sales flows, and segmentation metrics
-                                    into clear, engaging visual narratives for executive summaries and leadership
-                                    presentations.</p>
-                            </li>
-
-                            <li class="tag-brand tag-5w">
-                                <h3>Corporate Brand Stewardship &amp; Governance</h3>
-                                <p>Enforced and maintained strict brand guidelines for national corporate and healthcare
-                                    clients (including BlueChoice HealthPlan SC, Mack Trucks, Assurant, and AAA),
-                                    ensuring visual consistency across all channels without compromising campaign
-                                    performance.</p>
-                            </li>
-
-                            <li class="tag-event tag-5w">
-                                <h3>Corporate Trade Show Booths &amp; Environmental Graphics</h3>
-                                <p>Conceptualized and produced corporate trade show booth backdrops, modular displays,
-                                    large-scale banners, podium wraps, signage, and promotional collateral for national
-                                    industry conferences.</p>
-                            </li>
-
-                            <li class="tag-brand tag-5w">
-                                <h3>Scalable Design Templates &amp; Asset Libraries</h3>
-                                <p>Developed standardized design templates, component libraries, and structured file
-                                    systems for eBooks, whitepapers, infographics, and social media assets, accelerating
-                                    production cycles and eliminating layout discrepancies.</p>
-                            </li>
-
-                            <li class="tag-event tag-5w">
-                                <h3>Omnichannel Event Campaign Integration</h3>
-                                <p>Built integrated visual systems for physical conference environments, linking event
-                                    booths, mobile/tablet lead-capture landing pages, print collateral, and attendee
-                                    badges into a unified brand experience.</p>
-                            </li>
-
-                            <li class="tag-digital tag-5w">
-                                <h3>Multichannel Digital Ad &amp; Social Media Production</h3>
-                                <p>Executed and adapted high-performing creative across digital channels, designing
-                                    digital display ads (Meta, Google, LinkedIn) and SMS/MMS marketing assets to drive
-                                    direct response and audience engagement.</p>
-                            </li>
-
+                            <!-- Category 1 -->
+                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-medium-top uk-margin-small-bottom"
+                                style="letter-spacing: 0.5px;">Campaign Impact &amp; ROI</div>
 
                             <li class="tag-direct tag-5w">
                                 <h3>36% Membership Acquisition Growth</h3>
@@ -250,13 +215,6 @@ active_page: experience
                                     fundraising appeal that delivered a 26.1% ROI for the Boy Scouts of America.</p>
                             </li>
 
-                            <li class="tag-digital tag-5w">
-                                <h3>Corporate Website Redesigns (7 Major Iterations)</h3>
-                                <p>Managed the end-to-end design, UI/UX, and front-end implementation (HTML/CSS, UIkit
-                                    framework) for 7 major corporate website iterations and numerous client landing
-                                    pages, ensuring responsive layouts, fast load speeds, and modern visual design.</p>
-                            </li>
-
                             <li class="tag-direct tag-5w">
                                 <h3>B2B Lead Generation (1,000+ Qualified Leads)</h3>
                                 <p>Developed an intuitive, user-centered omnichannel survey campaign for Mack Trucks
@@ -264,60 +222,78 @@ active_page: experience
                                     combining hands-on front-end web design and coding with strict brand governance.</p>
                             </li>
 
-                            <li class="tag-print tag-5w">
-                                <h3>Variable Data Direct Mail Package Execution</h3>
-                                <p>Designed high-volume direct mail packages, inserts, reply devices, and appeals,
-                                    formatting complex variable data files and verifying mail specifications (USPS
-                                    standards) to ensure zero-error press runs.</p>
+                            <!-- Category 2 -->
+                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-medium-top uk-margin-small-bottom"
+                                style="letter-spacing: 0.5px;">Digital Experience &amp; Production</div>
+
+                            <li class="tag-digital tag-5w">
+                                <h3>Corporate Website Redesigns (7 Major Iterations)</h3>
+                                <p>Managed the end-to-end design, UI/UX, and front-end implementation (HTML/CSS, UIkit
+                                    framework) for 7 major corporate website iterations and numerous client landing
+                                    pages, ensuring responsive layouts, fast load speeds, and modern visual design.</p>
                             </li>
 
                             <li class="tag-digital tag-5w">
-                                <h3>22% Email Revenue Increase</h3>
-                                <p>Revitalized a declining nonprofit email program by strategically designing, coding,
-                                    and implementing new email templates and A/B test variations, resulting in a 22%
-                                    increase in email-attributed revenue and an 11.6% improvement in order rates.</p>
+                                <h3>Multichannel Digital Ad &amp; Social Media Production</h3>
+                                <p>Executed and adapted high-performing creative across digital channels, designing
+                                    digital display ads (Meta, Google, LinkedIn) and SMS/MMS marketing assets to drive
+                                    direct response and audience engagement.</p>
                             </li>
 
-                            <li class="tag-direct tag-5w">
-                                <h3>Audience-Centric Personalization</h3>
-                                <p>Engineered a complex variable data mail package for a single campaign, personalizing
-                                    copy and visual assets across specific audience segments (including ethnicity,
-                                    generation, and lifestyle) to ensure accurate, positive portrayals across up to
-                                    16,000 unique visual and data combinations.</p>
+                            <li class="tag-brand tag-5w">
+                                <h3>Scalable Design Templates &amp; Asset Libraries</h3>
+                                <p>Developed standardized design templates, component libraries, and structured file
+                                    systems for eBooks, whitepapers, infographics, and social media assets, accelerating
+                                    production cycles and eliminating layout discrepancies.</p>
                             </li>
 
-                            <li class="tag-direct tag-5w">
-                                <h3>Affordable Care Act Launch Campaign</h3>
-                                <p>Designed and executed comprehensive, segment-tailored omnichannel campaigns (direct
-                                    mail, email, SMS mockups, paid search, Facebook, and display ads) for BlueChoice
-                                    HealthPlan South Carolina during the inaugural Affordable Care Act (ACA) market
-                                    launch.</p>
+                            <li class="tag-workflow tag-5w">
+                                <h3>Executive Summary Data Visualization</h3>
+                                <p>Translated complex campaign performance data, sales flows, and segmentation metrics
+                                    into clear, engaging visual narratives for executive summaries and leadership
+                                    presentations.</p>
                             </li>
 
-                            <li class="tag-direct tag-5w">
-                                <h3>Client Revenue Growth (15% to 63% Increases)</h3>
-                                <p>Translated complex business objectives into compelling, high-performing omnichannel
-                                    campaigns across email, websites, social media, and direct mail, achieving 15% to
-                                    63% increases in sales, revenues, and profits for diverse clients.</p>
+                            <!-- Category 3 -->
+                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-medium-top uk-margin-small-bottom"
+                                style="letter-spacing: 0.5px;">Brand Architecture &amp; Stewardship</div>
+
+                            <li class="tag-brand tag-5w">
+                                <h3>5W Insights Corporate Brand Overhaul</h3>
+                                <p>Led the internal rebrand for 5W Insights, establishing a modular geometric monogram
+                                    and scalable brand identity system, and rolling it out across web, collateral,
+                                    tradeshows, and social media.</p>
                             </li>
 
-                            <li class="tag-print tag-5w">
-                                <h3>Print Vendor Coordination &amp; Quality Control</h3>
-                                <p>Reviewed printer proofs and press sheets for color accuracy, verified insertion order
-                                    for multi-piece packages, and coordinated directly with print vendors to minimize
-                                    print costs and ensure on-time delivery.</p>
+                            <li class="tag-brand tag-5w">
+                                <h3>Corporate Brand Stewardship &amp; Governance</h3>
+                                <p>Enforced and maintained strict brand guidelines for national corporate and healthcare
+                                    clients (including BlueChoice HealthPlan SC, Mack Trucks, Assurant, and AAA),
+                                    ensuring visual consistency across all channels without compromising campaign
+                                    performance.</p>
                             </li>
 
-                            <li class="tag-direct tag-5w">
-                                <h3>Testing Strategy &amp; Creative Matrices</h3>
-                                <p>Defined creative test strategies, built A/B and multivariate test matrices, and
-                                    illustrated campaign flowcharts to systematically measure and optimize performance
-                                    across direct mail, email, and digital ad platforms.</p>
+                            <!-- Category 4 -->
+                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-medium-top uk-margin-small-bottom"
+                                style="letter-spacing: 0.5px;">Experiential &amp; Event Design</div>
+
+                            <li class="tag-event tag-5w">
+                                <h3>Omnichannel Event Campaign Integration</h3>
+                                <p>Built integrated visual systems for physical conference environments, linking event
+                                    booths, mobile/tablet lead-capture landing pages, print collateral, and attendee
+                                    badges into a unified brand experience.</p>
+                            </li>
+
+                            <li class="tag-event tag-5w">
+                                <h3>Corporate Trade Show Booths &amp; Environmental Graphics</h3>
+                                <p>Conceptualized and produced corporate trade show booth backdrops, modular displays,
+                                    large-scale banners, podium wraps, signage, and promotional collateral for national
+                                    industry conferences.</p>
                             </li>
 
                             <!-- 5W Insights Testimonial (Mobile) -->
                             <div class="uk-hidden@l uk-margin-medium-top uk-margin-large-bottom">
-                                <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact
+                                <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback &amp; Impact
                                 </div>
                                 <div class="uk-background-muted uk-padding uk-border-rounded-large">
                                     <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is truly an
@@ -334,7 +310,7 @@ active_page: experience
                                         Instagram, SMS text, search, display, mobile, email, website and direct mail."
                                     </p>
                                     <div class="uk-margin-small-top">
-                                        <div class="fw-700 fs-14 uk-text-primary">Jerry Montgomery</div>
+                                        <div class="fw-700 fs-14 uk-text-emphasis">Jerry Montgomery</div>
                                         <div class="fs-12 uk-text-muted">CEO, 5W Insights</div>
                                     </div>
                                 </div>
@@ -387,7 +363,7 @@ active_page: experience
 
                             <!-- RSN Testimonial (Mobile) -->
                             <div class="uk-hidden@l uk-margin-medium-top uk-margin-large-bottom">
-                                <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact
+                                <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback &amp; Impact
                                 </div>
                                 <div class="uk-background-muted uk-padding uk-border-rounded-large">
                                     <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is a brilliant
@@ -398,7 +374,7 @@ active_page: experience
                                         productively in a high stress, deadline pending situation is unmatched. He is a
                                         true ASSET."</p>
                                     <div class="uk-margin-small-top">
-                                        <div class="fw-700 fs-14 uk-text-primary">Carol Taylor</div>
+                                        <div class="fw-700 fs-14 uk-text-emphasis">Carol Taylor</div>
                                         <div class="fs-12 uk-text-muted">Advertising Account Representative, Richmond
                                             Suburban News</div>
                                     </div>
@@ -454,7 +430,7 @@ active_page: experience
 
                         <!-- 5W Insights Quote -->
                         <div id="quote-5w-creative" class="job-quote" style="display: none;">
-                            <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact</div>
+                            <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback &amp; Impact</div>
                             <div class="uk-background-muted uk-padding uk-border-rounded-large">
                                 <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is truly an outstanding
                                     employee in every way including his great attitude, dedication, willingness to do
@@ -468,7 +444,7 @@ active_page: experience
                                     execute complex campaigns across all channels, including Facebook, Instagram, SMS
                                     text, search, display, mobile, email, website and direct mail."</p>
                                 <div class="uk-margin-small-top">
-                                    <div class="fw-700 fs-14 uk-text-primary">Jerry Montgomery</div>
+                                    <div class="fw-700 fs-14 uk-text-emphasis">Jerry Montgomery</div>
                                     <div class="fs-12 uk-text-muted">CEO, 5W Insights</div>
                                 </div>
                             </div>
@@ -476,7 +452,7 @@ active_page: experience
 
                         <!-- RSN Quote -->
                         <div id="quote-rsn" class="job-quote" style="display: none;">
-                            <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact</div>
+                            <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback &amp; Impact</div>
                             <div class="uk-background-muted uk-padding uk-border-rounded-large">
                                 <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is a brilliant designer
                                     also skilled with trouble shooting production issues quickly and efficiently. His
@@ -486,7 +462,7 @@ active_page: experience
                                     productively in a high stress, deadline pending situation is unmatched. He is a true
                                     ASSET."</p>
                                 <div class="uk-margin-small-top">
-                                    <div class="fw-700 fs-14 uk-text-primary">Carol Taylor</div>
+                                    <div class="fw-700 fs-14 uk-text-emphasis">Carol Taylor</div>
                                     <div class="fs-12 uk-text-muted">Advertising Account Representative, Richmond
                                         Suburban News</div>
                                 </div>
@@ -512,6 +488,8 @@ active_page: experience
 
             let pendingScrollTarget = null;
 
+            const filterDropdownBtnText = document.querySelector('#capabilities-nav')?.closest('.uk-margin-large-top')?.querySelector('button span.fw-500');
+
             // 1. Sync Work History clicks to reset the capability filter
             workNavLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
@@ -521,6 +499,7 @@ active_page: experience
                         pendingScrollTarget = this.getAttribute('href');
                         document.body.classList.remove('capability-filter-active');
                         clearFilterBtn.click();
+                        if (filterDropdownBtnText) filterDropdownBtnText.innerText = 'Filter projects...';
                     }
                 });
             });
@@ -547,9 +526,11 @@ active_page: experience
                         if (filterText === 'All Capabilities' || filterText === 'Show All') {
                             dynamicSubtitle.innerHTML = '';
                             document.body.classList.remove('capability-filter-active');
+                            if (filterDropdownBtnText) filterDropdownBtnText.innerText = 'Filter projects...';
                         } else {
                             dynamicSubtitle.innerHTML = 'Capability Focus: <span class="uk-text-emphasis fw-700">' + filterText + '</span>';
                             document.body.classList.add('capability-filter-active');
+                            if (filterDropdownBtnText) filterDropdownBtnText.innerText = filterText;
                         }
                     });
                 });

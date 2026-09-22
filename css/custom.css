@@ -1065,6 +1065,10 @@ button:focus-visible,
     margin-top: 10px !important;
 }
 
+#experience-grid li {
+    margin-bottom: 45px;
+}
+
 /* Sidebar Navigation Hover & Active States */
 #work-history-nav a,
 #work-history-nav>li>a {
@@ -1116,37 +1120,6 @@ button:focus-visible,
     margin-top: 0 !important;
 }
 
-/* Capabilities Filter Hover & Active States */
-#capabilities-nav>li:not(.uk-nav-header)>a {
-    margin-left: -16px;
-    /* Pushes the background box right to align with the grid gutter above */
-    padding: 12px 16px !important;
-    /* Matches the internal padding of the Work History links */
-    border-radius: 6px;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    display: block;
-    color: var(--text);
-}
-
-#capabilities-nav>li:not(.uk-nav-header)>a:hover {
-    background-color: var(--nav-hover-bg) !important;
-    color: var(--heading) !important;
-    text-decoration: none;
-}
-
-#capabilities-nav>li.uk-active>a {
-    background-color: var(--nav-active-bg) !important;
-    color: var(--heading) !important;
-}
-
-[data-theme="dark"] #capabilities-nav>li:not(.uk-nav-header)>a {
-    color: #a8a8a8 !important;
-}
-
-[data-theme="dark"] #capabilities-nav>li:not(.uk-nav-header)>a:hover,
-[data-theme="dark"] #capabilities-nav>li.uk-active>a {
-    color: #ffffff !important;
-}
 
 /* Hide Work History active highlight when a capability filter is selected */
 body.capability-filter-active #work-history-nav>li.uk-active a {
