@@ -143,6 +143,8 @@
     --card-hover-shadow: rgba(0, 0, 0, 0.10);
     --card-hover-border: rgba(121, 121, 121, 0.1);
     --focus-color: #333;
+    --nav-hover-bg: #f8f8f8;
+    --nav-active-bg: #eeeeee;
 }
 
 [data-theme="dark"] {
@@ -163,6 +165,8 @@
     --card-hover-shadow: rgba(0, 0, 0, 0.45);
     --card-hover-border: #9b51e0;
     --focus-color: #9b51e0;
+    --nav-hover-bg: rgba(255, 255, 255, 0.05);
+    --nav-active-bg: rgba(255, 255, 255, 0.1);
 }
 
 
@@ -877,10 +881,28 @@ hr,
     color: var(--muted-darker);
 }
 
-/* Dark Mode Dividers */
+/* Dark Mode Dividers & Borders */
 [data-theme="dark"] .uk-grid-divider>*::before,
 [data-theme="dark"] .uk-list-divider>li:nth-child(n+2) {
     border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] hr,
+[data-theme="dark"] .uk-hr {
+    border-top-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] #experience-grid p {
+    border-left-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Dark Mode Global Text Emphasis & Muted Overrides */
+[data-theme="dark"] .uk-text-emphasis {
+    color: var(--heading) !important;
+}
+
+[data-theme="dark"] .uk-text-muted {
+    color: var(--muted-darker) !important;
 }
 
 /* Dark Mode Testimonials & Muted Container Text Contrast */
@@ -996,6 +1018,7 @@ button:focus-visible,
 /* Image wrapper: Apply mask and round the top, but force the bottom corners to stay square */
 .uk-card.uk-border-rounded-large.uk-overflow-hidden>.uk-card-media-top {
     -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
     border-radius: inherit;
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
@@ -1009,7 +1032,7 @@ button:focus-visible,
 /* Experience Grid Global Typography, Spacing, & Accents */
 #experience-grid h3 {
     font-size: 1rem !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     margin-top: 0 !important;
     margin-bottom: 10px !important;
 }
@@ -1023,20 +1046,66 @@ button:focus-visible,
     padding-left: 15px;
 }
 
+/* Reset for mobile testimonials nested inside experience grid */
+#experience-grid .uk-background-muted p {
+    border-left: none !important;
+    padding-left: 0 !important;
+}
+
+#experience-grid .uk-background-muted p.fs-14 {
+    font-size: .95rem !important;
+    line-height: 1.4 !important;
+}
+
+#experience-grid .uk-background-muted p.uk-margin-small-bottom {
+    margin-bottom: 10px !important;
+}
+
+#experience-grid .uk-background-muted p.uk-margin-small-top {
+    margin-top: 10px !important;
+}
+
 /* Sidebar Navigation Hover & Active States */
-#work-history-nav>li {
-    padding: 4px 16px !important;
+#work-history-nav a,
+#work-history-nav>li>a {
+    display: block !important;
+    margin-left: -16px;
+    padding: 8px 16px !important;
     border-radius: 6px;
     transition: background-color 0.2s ease-in-out;
 }
 
-#work-history-nav>li:hover {
-    background-color: #f8f8f8 !important;
+#work-history-nav a:hover,
+#work-history-nav>li>a:hover {
+    background-color: var(--nav-hover-bg) !important;
     text-decoration: none;
 }
 
-#work-history-nav>li.uk-active {
-    background-color: #eeeeee !important;
+/* Work History Scrollspy Active State */
+#work-history-nav > li.uk-active a {
+    background-color: var(--nav-active-bg) !important;
+}
+
+/* Dark Mode Work History Nav Text Contrast */
+[data-theme="dark"] #work-history-nav a .uk-text-emphasis {
+    color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] #work-history-nav a .uk-text-muted,
+[data-theme="dark"] #work-history-nav a .fs-12 {
+    color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] #work-history-nav a:hover .uk-text-emphasis,
+[data-theme="dark"] #work-history-nav > li.uk-active a .uk-text-emphasis {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] #work-history-nav a:hover .uk-text-muted,
+[data-theme="dark"] #work-history-nav > li.uk-active a .uk-text-muted,
+[data-theme="dark"] #work-history-nav a:hover .fs-12,
+[data-theme="dark"] #work-history-nav > li.uk-active a .fs-12 {
+    color: #e0e0e0 !important;
 }
 
 .job-heading {
@@ -1049,4 +1118,48 @@ button:focus-visible,
     justify-content: flex-end;
     padding-bottom: 5px;
     margin-top: 0 !important;
+}
+
+/* Capabilities Filter Hover & Active States */
+#capabilities-nav > li:not(.uk-nav-header) > a {
+    margin-left: -16px; /* Pushes the background box right to align with the grid gutter above */
+    padding: 12px 16px !important; /* Matches the internal padding of the Work History links */
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    display: block;
+    color: var(--text);
+}
+
+#capabilities-nav > li:not(.uk-nav-header) > a:hover {
+    background-color: var(--nav-hover-bg) !important;
+    color: var(--heading) !important;
+    text-decoration: none;
+}
+
+#capabilities-nav > li.uk-active > a {
+    background-color: var(--nav-active-bg) !important;
+    color: var(--heading) !important;
+}
+
+[data-theme="dark"] #capabilities-nav > li:not(.uk-nav-header) > a {
+    color: #a8a8a8 !important;
+}
+
+[data-theme="dark"] #capabilities-nav > li:not(.uk-nav-header) > a:hover,
+[data-theme="dark"] #capabilities-nav > li.uk-active > a {
+    color: #ffffff !important;
+}
+
+/* Hide Work History active highlight when a capability filter is selected */
+body.capability-filter-active #work-history-nav > li.uk-active a {
+    background-color: transparent !important;
+}
+
+[data-theme="dark"] body.capability-filter-active #work-history-nav > li.uk-active a .uk-text-emphasis {
+    color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] body.capability-filter-active #work-history-nav > li.uk-active a .uk-text-muted,
+[data-theme="dark"] body.capability-filter-active #work-history-nav > li.uk-active a .fs-12 {
+    color: #a0a0a0 !important;
 }
