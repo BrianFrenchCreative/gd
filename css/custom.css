@@ -1082,7 +1082,7 @@ button:focus-visible,
 }
 
 /* Work History Scrollspy Active State */
-#work-history-nav > li.uk-active a {
+#work-history-nav>li.uk-active a {
     background-color: var(--nav-active-bg) !important;
 }
 
@@ -1097,14 +1097,14 @@ button:focus-visible,
 }
 
 [data-theme="dark"] #work-history-nav a:hover .uk-text-emphasis,
-[data-theme="dark"] #work-history-nav > li.uk-active a .uk-text-emphasis {
+[data-theme="dark"] #work-history-nav>li.uk-active a .uk-text-emphasis {
     color: #ffffff !important;
 }
 
 [data-theme="dark"] #work-history-nav a:hover .uk-text-muted,
-[data-theme="dark"] #work-history-nav > li.uk-active a .uk-text-muted,
+[data-theme="dark"] #work-history-nav>li.uk-active a .uk-text-muted,
 [data-theme="dark"] #work-history-nav a:hover .fs-12,
-[data-theme="dark"] #work-history-nav > li.uk-active a .fs-12 {
+[data-theme="dark"] #work-history-nav>li.uk-active a .fs-12 {
     color: #e0e0e0 !important;
 }
 
@@ -1112,54 +1112,80 @@ button:focus-visible,
     position: sticky;
     top: 70px;
     z-index: 10;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     padding-bottom: 5px;
     margin-top: 0 !important;
 }
 
 /* Capabilities Filter Hover & Active States */
-#capabilities-nav > li:not(.uk-nav-header) > a {
-    margin-left: -16px; /* Pushes the background box right to align with the grid gutter above */
-    padding: 12px 16px !important; /* Matches the internal padding of the Work History links */
+#capabilities-nav>li:not(.uk-nav-header)>a {
+    margin-left: -16px;
+    /* Pushes the background box right to align with the grid gutter above */
+    padding: 12px 16px !important;
+    /* Matches the internal padding of the Work History links */
     border-radius: 6px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     display: block;
     color: var(--text);
 }
 
-#capabilities-nav > li:not(.uk-nav-header) > a:hover {
+#capabilities-nav>li:not(.uk-nav-header)>a:hover {
     background-color: var(--nav-hover-bg) !important;
     color: var(--heading) !important;
     text-decoration: none;
 }
 
-#capabilities-nav > li.uk-active > a {
+#capabilities-nav>li.uk-active>a {
     background-color: var(--nav-active-bg) !important;
     color: var(--heading) !important;
 }
 
-[data-theme="dark"] #capabilities-nav > li:not(.uk-nav-header) > a {
+[data-theme="dark"] #capabilities-nav>li:not(.uk-nav-header)>a {
     color: #a8a8a8 !important;
 }
 
-[data-theme="dark"] #capabilities-nav > li:not(.uk-nav-header) > a:hover,
-[data-theme="dark"] #capabilities-nav > li.uk-active > a {
+[data-theme="dark"] #capabilities-nav>li:not(.uk-nav-header)>a:hover,
+[data-theme="dark"] #capabilities-nav>li.uk-active>a {
     color: #ffffff !important;
 }
 
 /* Hide Work History active highlight when a capability filter is selected */
-body.capability-filter-active #work-history-nav > li.uk-active a {
+body.capability-filter-active #work-history-nav>li.uk-active a {
     background-color: transparent !important;
 }
 
-[data-theme="dark"] body.capability-filter-active #work-history-nav > li.uk-active a .uk-text-emphasis {
+[data-theme="dark"] body.capability-filter-active #work-history-nav>li.uk-active a .uk-text-emphasis {
     color: #f0f0f0 !important;
 }
 
-[data-theme="dark"] body.capability-filter-active #work-history-nav > li.uk-active a .uk-text-muted,
-[data-theme="dark"] body.capability-filter-active #work-history-nav > li.uk-active a .fs-12 {
+[data-theme="dark"] body.capability-filter-active #work-history-nav>li.uk-active a .uk-text-muted,
+[data-theme="dark"] body.capability-filter-active #work-history-nav>li.uk-active a .fs-12 {
     color: #a0a0a0 !important;
+}
+
+/* Prevent text from bleeding through sticky headers */
+.job-sticky-header {
+    z-index: 980 !important;
+    background-color: #ffffff;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    height: 120px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Add a subtle shadow ONLY when the header hits the sticky threshold */
+.job-sticky-header.uk-active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode support */
+[data-theme="dark"] .job-sticky-header {
+    background-color: #1c1c1c;
+    /* Matches dark mode background */
+}
+
+[data-theme="dark"] .job-sticky-header.uk-active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }

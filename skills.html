@@ -12,10 +12,9 @@ active_page: skills
             <div class="uk-grid uk-grid-divider" uk-grid>
 
                 <!-- Left Sticky Navigation & Filter Controls -->
-                <div class="uk-width-1-3 uk-width-1-4@l uk-visible@s"
+                <div class="uk-width-1-3 uk-width-1-4@s uk-visible@s"
                     uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
-                    <div class="uk-margin-top" uk-sticky="end: true; offset:100"
-                        uk-scrollspy-class="uk-animation-scale-up">
+                    <div uk-sticky="end: true; offset: 110" uk-scrollspy-class="uk-animation-scale-up">
 
                         <!-- Filter Menu 1: Work Experience (Scrollspy Anchor Nav) -->
                         <ul id="work-history-nav" class="uk-nav uk-nav-default"
@@ -77,7 +76,7 @@ active_page: skills
                 </div>
 
                 <!-- Right Content & Filterable List -->
-                <div class="uk-width-2-5@l"
+                <div class="uk-width-2-5@s"
                     uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
 
                     <div class="uk-container uk-margin-bottom">
@@ -101,12 +100,12 @@ active_page: skills
                                  ============================================== -->
                             <li id="freelance"
                                 style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
-                            <li class="job-heading uk-background-default uk-margin-remove-top">
+                            <li class="job-heading job-sticky-header uk-background-default uk-margin-remove-top"
+                                uk-sticky="offset: 40">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Independent Contractor &amp; Freelance
                                     Designer</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
                                     style="border:none; padding-left:0;">Jun 2024 &mdash; Present</p>
-                                <hr class="uk-margin-small-top">
                             </li>
                             <li class="uk-margin-medium-bottom">
                                 <div class="uk-text-muted uk-text-italic uk-margin-small-bottom">Utilizing 20 years of
@@ -169,27 +168,17 @@ active_page: skills
                                     strict alignment with campaign KPIs.</p>
                             </li>
 
-                            <!-- Freelance Testimonial (Mobile) -->
-                            <div class="uk-hidden uk-margin-medium-top uk-margin-large-bottom">
-                                <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact
-                                </div>
-                                <div class="uk-background-muted uk-padding-small uk-border-rounded">
-                                    <p class="fs-14 uk-text-italic">"I am currently gathering a few words from my recent
-                                        freelance partners. Stay tuned!"</p>
-                                </div>
-                            </div>
-
                             <!-- ==============================================
                                  CREATIVE DIRECTOR • 5W INSIGHTS 
                                  ============================================== -->
                             <li id="5w-creative"
                                 style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
-                            <li class="job-heading uk-background-default">
+                            <li class="job-heading job-sticky-header uk-background-default uk-margin-remove-top"
+                                uk-sticky="offset: 40">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Creative Director</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
                                     style="border:none; padding-left:0;">5W Insights &bull; Sep 2013 &mdash; Jun 2024
                                 </p>
-                                <hr class="uk-margin-small-top">
                             </li>
                             <li class="uk-margin-medium-bottom">
                                 <div class="uk-text-muted uk-text-italic uk-margin-small-bottom">Sole creative lead
@@ -331,7 +320,7 @@ active_page: skills
                             <div class="uk-hidden@l uk-margin-medium-top uk-margin-large-bottom">
                                 <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact
                                 </div>
-                                <div class="uk-background-muted uk-padding-small uk-border-rounded">
+                                <div class="uk-background-muted uk-padding uk-border-rounded-large">
                                     <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is truly an
                                         outstanding employee in every way including his great attitude, dedication,
                                         willingness to do whatever is required to get the job done, his intelligence and
@@ -356,12 +345,12 @@ active_page: skills
                                  RICHMOND SUBURBAN NEWSPAPERS 
                                  ============================================== -->
                             <li id="rsn" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
-                            <li class="job-heading uk-background-default">
+                            <li class="job-heading job-sticky-header uk-background-default uk-margin-remove-top"
+                                uk-sticky="offset: 40">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Design &amp; Production Manager</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
                                     style="border:none; padding-left:0;">Richmond Suburban Newspapers &bull; Jan 2007
                                     &mdash; Sep 2013</p>
-                                <hr class="uk-margin-small-top">
                             </li>
                             <li class="uk-margin-medium-bottom">
                                 <div class="uk-text-muted uk-text-italic uk-margin-small-bottom">Managed high-volume
@@ -401,7 +390,7 @@ active_page: skills
                             <div class="uk-hidden@l uk-margin-medium-top uk-margin-large-bottom">
                                 <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact
                                 </div>
-                                <div class="uk-background-muted uk-padding-small uk-border-rounded">
+                                <div class="uk-background-muted uk-padding uk-border-rounded-large">
                                     <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is a brilliant
                                         designer also skilled with trouble shooting production issues quickly and
                                         efficiently. His professional manner is greatly appreciated in the work place
@@ -422,13 +411,13 @@ active_page: skills
                                  ============================================== -->
                             <li id="powhatan" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;">
                             </li>
-                            <li class="job-heading uk-background-default">
+                            <li class="job-heading job-sticky-header uk-background-default uk-margin-remove-top"
+                                uk-sticky="offset: 40">
                                 <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Graphic Designer &amp; Production
                                     Manager</h2>
                                 <p class="fs-14 uk-text-muted uk-margin-remove-top"
                                     style="border:none; padding-left:0;">Powhatan Today Newspaper &bull; Jun 2005
                                     &mdash; Jan 2007</p>
-                                <hr class="uk-margin-small-top">
                             </li>
                             <li class="uk-margin-medium-bottom">
                                 <div class="uk-text-muted uk-text-italic uk-margin-small-bottom">Directed visual design
@@ -450,16 +439,6 @@ active_page: skills
                                     deadlines.</p>
                             </li>
 
-                            <!-- Powhatan Testimonial (Mobile) -->
-                            <div class="uk-hidden uk-margin-medium-top uk-margin-large-bottom">
-                                <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact
-                                </div>
-                                <div class="uk-background-muted uk-padding-small uk-border-rounded">
-                                    <p class="fs-14 uk-text-italic">"Archival feedback from my time directing the
-                                        Powhatan Today visual layout is coming soon!"</p>
-                                </div>
-                            </div>
-
                         </ul>
                     </div>
 
@@ -468,23 +447,16 @@ active_page: skills
                 </div>
 
                 <!-- Right Column: Social Proof / Quotes -->
-                <div class="uk-width-expand@l uk-visible@l"
+                <div class="uk-width-expand uk-visible@s"
                     uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 400">
-                    <div class="uk-margin-top" uk-sticky="end: true; offset: 150">
-                        <div class="fs-12 fw-700 uk-text-primary uk-margin-xlarge-top uk-margin-small-bottom">Feedback
-                            &amp; Impact</div>
-
-                        <!-- Freelance Quote (Placeholder) -->
-                        <div id="quote-freelance" class="job-quote" style="display: none;">
-                            <div class="uk-background-muted uk-padding-small uk-border-rounded">
-                                <p class="fs-14 uk-text-italic">"I am currently gathering a few words from my recent
-                                    freelance partners. Stay tuned!"</p>
-                            </div>
-                        </div>
+                    <div uk-sticky="end: true; offset: 110">
+                        <!-- Freelance Quote (Empty) -->
+                        <div id="quote-freelance" class="job-quote" style="display: none;"></div>
 
                         <!-- 5W Insights Quote -->
                         <div id="quote-5w-creative" class="job-quote" style="display: none;">
-                            <div class="uk-background-muted uk-padding-small uk-border-rounded">
+                            <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact</div>
+                            <div class="uk-background-muted uk-padding uk-border-rounded-large">
                                 <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is truly an outstanding
                                     employee in every way including his great attitude, dedication, willingness to do
                                     whatever is required to get the job done, his intelligence and his expertise.</p>
@@ -505,7 +477,8 @@ active_page: skills
 
                         <!-- RSN Quote -->
                         <div id="quote-rsn" class="job-quote" style="display: none;">
-                            <div class="uk-background-muted uk-padding-small uk-border-rounded">
+                            <div class="fs-12 fw-700 uk-text-primary uk-margin-small-bottom">Feedback &amp; Impact</div>
+                            <div class="uk-background-muted uk-padding uk-border-rounded-large">
                                 <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is a brilliant designer
                                     also skilled with trouble shooting production issues quickly and efficiently. His
                                     professional manner is greatly appreciated in the work place and he is always
@@ -521,13 +494,8 @@ active_page: skills
                             </div>
                         </div>
 
-                        <!-- Powhatan Quote (Placeholder) -->
-                        <div id="quote-powhatan" class="job-quote" style="display: none;">
-                            <div class="uk-background-muted uk-padding-small uk-border-rounded">
-                                <p class="fs-14 uk-text-italic">"Archival feedback from my time directing the Powhatan
-                                    Today visual layout is coming soon!"</p>
-                            </div>
-                        </div>
+                        <!-- Powhatan Quote (Empty) -->
+                        <div id="quote-powhatan" class="job-quote" style="display: none;"></div>
                     </div>
                 </div>
             </div>
