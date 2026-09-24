@@ -132,18 +132,18 @@
     --muted-darker: rgb(102, 102, 102);
     --text: #424242;
     --heading: #1a1a1a;
-    --background: #fafafa;
-    --background-default: #ffffff;
+    --background: #f9fafb;
+    --background-default: #f9fafb;
     --other: #eeeeee;
     --border-color: rgba(197, 197, 197, 0.5);
     --dropdown-bg: #ffffff;
-    --dropdown-hover: #f8f8f8;
-    --dropdown-active: #eeeeee;
+    --dropdown-hover: #e5e7eb;
+    --dropdown-active: #d1d5db;
     --card-bg: rgba(167, 167, 167, 0.1);
     --card-hover-shadow: rgba(0, 0, 0, 0.10);
     --card-hover-border: rgba(121, 121, 121, 0.1);
     --focus-color: #333;
-    --nav-hover-bg: #f8f8f8;
+    --nav-hover-bg: #e5e7eb;
     --nav-active-bg: #eeeeee;
 }
 
@@ -189,6 +189,23 @@ body {
     background-color: var(--background-default);
 }
 
+/* Light Theme UIkit Surface & Contrast Overrides */
+html:not([data-theme="dark"]) .uk-background-muted {
+    background-color: #f3f4f6 !important;
+}
+
+html:not([data-theme="dark"]) .uk-text-muted {
+    color: #4b5563 !important;
+}
+
+/* Light Theme Border Overrides */
+html:not([data-theme="dark"]) hr,
+html:not([data-theme="dark"]) .uk-hr,
+html:not([data-theme="dark"]) [class*="uk-border-"],
+html:not([data-theme="dark"]) [class*="uk-card-default"] {
+    border-color: #e5e7eb !important;
+}
+
 html {
     font-size: 16px;
     line-height: 25px;
@@ -221,8 +238,9 @@ blockquote footer {
 }
 
 h1 {
-    font-size: 2.4rem;
-    line-height: 1.1;
+    font-size: clamp(3.75rem, 12vw, 13rem);
+    letter-spacing: -1px;
+    line-height: 0.8;
     margin-bottom: 1rem;
     letter-spacing: -1px
 }
@@ -713,13 +731,28 @@ hr,
     padding-right: .25em
 }
 
-/* 1. Force UIkit's sliding dropbar to use background-default and sit safely above the shadow */
-.uk-navbar-dropbar {
-    background-color: var(--background-default) !important;
-    z-index: 10 !important;
+/* 1. Header wrapper global top positioning stacking context */
+header .uk-position-top {
+    z-index: 9999 !important;
 }
 
-/* 2. The decoupled backdrop: locked to the viewport to prevent scrollbars */
+/* 2. Force UIkit's sliding dropbar to use background-default and sit safely above the backdrop */
+.uk-navbar-dropbar {
+    background-color: var(--background-default) !important;
+    z-index: 9998 !important;
+}
+
+/* 3. Ensure the navbar container and dropdown menu sit above the sliding dropbar background */
+.uk-navbar-container {
+    position: relative;
+    z-index: 9999 !important;
+}
+
+.uk-navbar-dropdown {
+    z-index: 10000 !important;
+}
+
+/* 4. The decoupled backdrop: locked to the viewport to prevent scrollbars */
 .mega-menu-backdrop {
     position: fixed;
     top: 81px;
@@ -729,15 +762,15 @@ hr,
     bottom: 0;
     /* Anchoring to 0 prevents any height-based scrollbars */
     background-color: rgba(0, 0, 0, 0.6);
-    z-index: 5;
-    /* Sits below the white dropbar (10) but above the page */
+    z-index: 9997 !important;
+    /* Sits below the white dropbar (9998) but above the page */
     opacity: 0;
     pointer-events: none;
     /* Ensures clicks pass through to the page below */
     transition: opacity 0.3s ease-out;
 }
 
-/* 3. Modern CSS: Fades in the backdrop ONLY when a menu item is open */
+/* 5. Modern CSS: Fades in the backdrop ONLY when a menu item is open */
 .uk-navbar-container:has(.uk-open)+.mega-menu-backdrop {
     opacity: 1;
 }
@@ -756,12 +789,20 @@ hr,
 }
 
 .uk-navbar-dropdown-nav>li>a:hover {
-    background-color: var(--dropdown-hover) !important;
+    background-color: #e5e7eb !important;
+    color: #000000 !important;
     text-decoration: none;
 }
 
 .uk-navbar-dropdown-nav>li.uk-active>a {
-    background-color: var(--dropdown-active) !important;
+    background-color: #d1d5db !important;
+    color: #000000 !important;
+}
+
+.uk-navbar-dropdown-nav>li>a:hover .uk-text-muted,
+.uk-navbar-dropdown-nav>li.uk-active>a .uk-text-muted {
+    color: #4b5563 !important;
+    /* Tailwind gray-600 for sharp, readable subtext contrast */
 }
 
 .uk-navbar-dropdown-nav .uk-text-emphasis {
@@ -779,9 +820,9 @@ hr,
     color: #000000 !important;
 }
 
-.uk-navbar-dropdown-nav>li>a:hover .uk-text-muted,
-.uk-navbar-dropdown-nav>li>a:hover .fs-12 {
-    color: #333333 !important;
+.uk-navbar-dropdown-nav>li>a:hover .fs-12,
+.uk-navbar-dropdown-nav>li.uk-active>a .fs-12 {
+    color: #4b5563 !important;
 }
 
 /* Mobile Dropdown Max Height for scrolling on small screens */
@@ -932,6 +973,16 @@ hr,
     color: #b0b0b0 !important;
 }
 
+[data-theme="dark"] .uk-navbar-dropdown-nav>li>a:hover {
+    background-color: var(--dropdown-hover) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .uk-navbar-dropdown-nav>li.uk-active>a {
+    background-color: var(--dropdown-active) !important;
+    color: #ffffff !important;
+}
+
 [data-theme="dark"] .uk-navbar-dropdown-nav>li>a:hover .uk-text-emphasis,
 [data-theme="dark"] .uk-navbar-dropdown-nav>li.uk-active>a .uk-text-emphasis {
     color: #ffffff !important;
@@ -1065,10 +1116,6 @@ button:focus-visible,
     margin-top: 10px !important;
 }
 
-#experience-grid li {
-    margin-bottom: 45px;
-}
-
 /* Sidebar Navigation Hover & Active States */
 #work-history-nav a,
 #work-history-nav>li>a {
@@ -1162,3 +1209,150 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 [data-theme="dark"] .job-sticky-header.uk-active {
     box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
 }
+
+[data-theme="dark"] .uk-accordion-title {
+    color: #d1d5db !important;
+    /* Tailwind gray-300 for slightly higher hierarchy on titles */
+}
+
+.uk-accordion-default> :nth-child(n+2) {
+    margin-top: 12px;
+}
+
+.uk-accordion-default .uk-accordion-content {
+    margin-top: 10px;
+}
+
+.uk-list>*> :last-child {
+    margin-bottom: 30px;
+}
+
+/* Base placeholder background colors for hero banners to prevent light/grey flash during image load */
+.uk-light > .uk-background-cover {
+    background-color: #0e0e10;
+}
+
+.uk-dark > .uk-background-cover {
+    background-color: #f3f4f6;
+}
+
+.hero-blur-overlay {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(0, 0, 0, 0.45);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transition: background-color 0.3s ease;
+}
+
+:root:not([data-theme="dark"]) .uk-dark .hero-blur-overlay {
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+[data-theme="dark"] .hero-blur-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] .uk-dark .hero-blur-overlay {
+    background-color: rgba(18, 18, 18, 0.8) !important;
+}
+
+[data-theme="dark"] .uk-dark h1,
+[data-theme="dark"] .uk-dark .uk-container h1 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .uk-dark h2,
+[data-theme="dark"] .uk-dark .uk-container h2 {
+    color: #e5e7eb !important;
+}
+
+/* Adaptive Frosted Glass for Sticky Navbars */
+.nav-frost {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .nav-frost {
+    background: rgba(20, 20, 20, 0.75);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-gpu-lock {
+    z-index: 9999 !important;
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+    will-change: background-color, backdrop-filter, -webkit-backdrop-filter, box-shadow;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Force transparent navbar to respect uk-light on dark hero images */
+.uk-light .uk-navbar-nav > li > a,
+.uk-light .theme-toggle-btn {
+    color: #a0a0a0 !important; /* Matches dark mode --muted-darker */
+}
+
+.uk-light .uk-navbar-nav > li > a:hover,
+.uk-light .uk-navbar-nav > li.uk-active > a,
+.uk-light .uk-navbar-toggle,
+.uk-light .uk-navbar-toggle:hover,
+.uk-light .uk-navbar-toggle[aria-expanded="true"],
+.uk-light .theme-toggle-btn:hover,
+.uk-light .uk-logo,
+.uk-light .uk-logo .uk-text-muted {
+    color: #ffffff !important; /* Matches dark mode heading text */
+}
+
+.uk-light .theme-toggle-btn {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Force transparent navbar to respect uk-dark on light hero images (Light Theme) */
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav > li > a,
+:root:not([data-theme="dark"]) .uk-dark .theme-toggle-btn {
+    color: #4b5563 !important;
+}
+
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav > li > a:hover,
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav > li.uk-active > a,
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-toggle,
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-toggle:hover,
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-toggle[aria-expanded="true"],
+:root:not([data-theme="dark"]) .uk-dark .theme-toggle-btn:hover,
+:root:not([data-theme="dark"]) .uk-dark .uk-logo,
+:root:not([data-theme="dark"]) .uk-dark .uk-logo .uk-text-muted {
+    color: #111827 !important;
+}
+
+:root:not([data-theme="dark"]) .uk-dark .theme-toggle-btn {
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Force transparent navbar on darkened hero images in Dark Theme */
+[data-theme="dark"] .uk-dark .uk-navbar-nav > li > a,
+[data-theme="dark"] .uk-dark .theme-toggle-btn {
+    color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .uk-dark .uk-navbar-nav > li > a:hover,
+[data-theme="dark"] .uk-dark .uk-navbar-nav > li.uk-active > a,
+[data-theme="dark"] .uk-dark .uk-navbar-toggle,
+[data-theme="dark"] .uk-dark .uk-navbar-toggle:hover,
+[data-theme="dark"] .uk-dark .uk-navbar-toggle[aria-expanded="true"],
+[data-theme="dark"] .uk-dark .theme-toggle-btn:hover,
+[data-theme="dark"] .uk-dark .uk-logo,
+[data-theme="dark"] .uk-dark .uk-logo .uk-text-muted {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .uk-dark .theme-toggle-btn {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Force global header above everything when sticky */
+.glass-gpu-lock.uk-active { z-index: 9999 !important; }
+
+/* Force side navigation below the header when sticky */
+.uk-width-3-5 .uk-margin-top[uk-sticky].uk-active { z-index: 10 !important; }

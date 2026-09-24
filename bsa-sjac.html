@@ -2,9 +2,34 @@
 layout: default
 title: Boy Scouts of America
 active_page: bsa
+hero_theme: light
+hero_image: img/bsa/bsa-home-cover.webp
 ---
 
 <main class="">
+
+    <div class="uk-dark">
+        <div class="uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle"
+            style="background-color: #f3f4f6; background-image: url(img/bsa/bsa-home-cover.webp);"
+            uk-height-viewport="offset-top: true">
+
+            <div class="uk-position-cover hero-blur-overlay"></div>
+
+            <div class="uk-container uk-container-large uk-margin-top uk-margin-bottom uk-text-center@s uk-position-relative"
+                uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
+                <div>
+                    <h1 class="fw-600 uk-margin-bottom" style="font-size: clamp(5rem, 7vw, 9rem)">Boy Scouts of
+                        America</h1>
+                </div>
+                <div>
+                    <h2 class="fw-500 uk-margin-top" style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)">Fundraising
+                        Appeal &amp; Direct Mail
+                        Campaign</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <div class="uk-section">
         <div class="uk-container uk-container-large">
@@ -13,7 +38,7 @@ active_page: bsa
                 <!-- left sticky nav -->
                 <div class="uk-width-3-5 uk-width-1-4@s uk-width-1-5@m uk-visible@s"
                     uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
-                    <div class="uk-margin-top" uk-sticky="end: true; offset:150"
+                    <div class="uk-margin-top" uk-sticky="end: true; offset: 150; z-index: 10"
                         uk-scrollspy-class="uk-animation-scale-up">
                         <ul id="site-nav" class=" uk-nav uk-nav-default uk-margin-xlarge-top"
                             uk-scrollspy-nav="closest: li; scroll: true">
@@ -30,28 +55,7 @@ active_page: bsa
                 <div class="uk-width-1-1 uk-width-expand@s uk-width-3-5@m"
                     uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
 
-                    <div class="uk-container">
-                        <div uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
-                            <div>
-                                <h1 class="fw-600 uk-margin-small-bottom"
-                                    style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">Boy Scouts of
-                                    America</h1>
-                            </div>
-                            <div>
-                                <h2 class="fw-500 uk-margin-small-top uk-margin-remove-bottom"
-                                    style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)">Fundraising Appeal - Direct Mail
-                                </h2>
-                            </div>
-                        </div>
-
-                        <!-- banner -->
-                        <div id="about" class="uk-margin-top uk-margin-large-bottom">
-                            <div class="uk-border-rounded-large uk-overflow-hidden uk-box-shadow-small">
-                                <img src="img/bsa/5W_BSA-SJAC_Common_20150407-1_Page_1.webp" alt="Campaign Banner"
-                                    class="uk-width-1-1" />
-                            </div>
-                        </div>
-
+                    <div class="uk-container" id="about">
                         <!-- section heading -->
                         <p class="fs-24 fw-800">I. About the Project</p>
                         <hr />

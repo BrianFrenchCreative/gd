@@ -8,6 +8,9 @@
     <meta name="robots" content="noindex">
     <!-- Use Liquid tags to dynamically pull the page title -->
     <title>Brian French • {{ page.title }}</title>
+    {% if page.hero_image %}
+    <link rel="preload" as="image" href="{{ page.hero_image }}" fetchpriority="high">
+    {% endif %}
     <script>
         (function () {
             var savedTheme = localStorage.getItem('theme');
@@ -16,10 +19,10 @@
             document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
-    <link rel="stylesheet" href="css/uikit.css?v=3.25.25" />
+    <link rel="stylesheet" href="css/uikit.css?v=3.25.23" />
     <link rel="stylesheet" href="css/custom.css?v={{ site.time | date: '%s' }}" />
-    <script src="js/uikit.min.js?v=3.25.25"></script>
-    <script src="js/uikit-icons.min.js?v=3.25.25"></script>
+    <script src="js/uikit.min.js?v=3.25.23"></script>
+    <script src="js/uikit-icons.min.js?v=3.25.23"></script>
     <script src="js/custom.js?v={{ site.time | date: '%s' }}"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

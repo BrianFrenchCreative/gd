@@ -7,473 +7,441 @@ active_page: experience
 <main class="">
 
     <!-- Main Content -->
-    <div class="uk-section" uk-filter="target: .js-filter; animation: false">
+    <!-- Main Content -->
+    <div class="uk-section" uk-filter="target: .capability-list > li; animation: false">
         <div class="uk-container uk-container-large">
-            <div class="uk-grid uk-grid-divider" uk-grid>
 
-                <!-- Left Sticky Navigation & Filter Controls -->
-                <div class="uk-width-2-5 uk-width-1-4@m uk-visible@s"
-                    uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
-                    <div uk-sticky="end: true; offset: 110" uk-scrollspy-class="uk-animation-scale-up">
-
-                        <!-- Filter Menu 1: Work Experience (Scrollspy Anchor Nav) -->
-                        <ul id="work-history-nav" class="uk-nav uk-nav-default"
-                            uk-scrollspy-nav="closest: li; scroll: true">
-                            <li class="uk-nav-header fs-12 fw-700 uk-text-muted">Employment History</li>
-
-                            <li class="uk-margin-small-top">
-                                <a href="#freelance" class="uk-display-block">
-                                    <div class="fw-500 uk-text-emphasis" style="line-height: 1.3">Independent Contractor
-                                        &amp; Freelance Designer</div>
-                                    <div class="fs-12 uk-text-muted">Jun 2024 &mdash; Present</div>
-                                </a>
-                            </li>
-
-                            <li class="uk-margin-small-top">
-                                <a href="#5w-creative" class="uk-display-block">
-                                    <div class="fw-500 uk-text-emphasis" style="line-height: 1.3">Creative Director
-                                    </div>
-                                    <div class="fs-12 uk-text-muted">5W Insights</div>
-                                    <div class="fs-12 uk-text-muted">Sep 2013 &mdash; Jun 2024</div>
-                                </a>
-                            </li>
-
-                            <li class="uk-margin-small-top">
-                                <a href="#rsn" class="uk-display-block">
-                                    <div class="fw-500 uk-text-emphasis" style="line-height: 1.3">Design &amp;
-                                        Production Manager</div>
-                                    <div class="fs-12 uk-text-muted">Richmond Suburban Newspapers</div>
-                                    <div class="fs-12 uk-text-muted">Jan 2007 &mdash; Sep 2013</div>
-                                </a>
-                            </li>
-
-                            <li class="uk-margin-small-top">
-                                <a href="#powhatan" class="uk-display-block">
-                                    <div class="fw-500 uk-text-emphasis" style="line-height: 1.3">Graphic Designer &amp;
-                                        Production Manager</div>
-                                    <div class="fs-12 uk-text-muted">Powhatan Today Newspaper</div>
-                                    <div class="fs-12 uk-text-muted">Jun 2005 &mdash; Jan 2007</div>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <!-- Filter Menu 2: Capabilities Dropdown -->
-                        <div class="uk-margin-large-top">
-                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-small-bottom"
-                                style="letter-spacing: 0.5px;">Capabilities</div>
-                            <button
-                                class="uk-button uk-button-default uk-width-1-1 uk-text-left uk-flex uk-flex-between uk-flex-middle uk-border-rounded"
-                                type="button" style="text-transform: none; border-color: rgba(150,150,150,0.3);">
-                                <span class="fw-500 uk-text-emphasis">Filter projects...</span>
-                                <span uk-icon="icon: chevron-down"></span>
-                            </button>
-                            <div uk-dropdown="mode: click; pos: bottom-justify; offset: 5; boundary: !.uk-width-1-4@l"
-                                class="uk-padding-remove uk-border-rounded-medium uk-box-shadow-medium">
-                                <ul id="capabilities-nav" class="uk-nav uk-dropdown-nav uk-padding-small">
-                                    <li id="clear-filters" class="uk-active uk-margin-small-bottom" uk-filter-control><a
-                                            href="#">Show All</a></li>
-                                    <li uk-filter-control=".tag-direct"><a href="#">Direct Response &amp;
-                                            Omnichannel</a></li>
-                                    <li uk-filter-control=".tag-digital"><a href="#">Digital, Web &amp; Email</a></li>
-                                    <li uk-filter-control=".tag-print"><a href="#">Print, Prepress &amp; VDP</a></li>
-                                    <li uk-filter-control=".tag-brand"><a href="#">Brand Systems &amp; Identity</a></li>
-                                    <li uk-filter-control=".tag-event"><a href="#">Event &amp; Experiential</a></li>
-                                    <li uk-filter-control=".tag-workflow"><a href="#">Workflow &amp; Team Leadership</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="uk-container uk-container-large uk-section-large uk-text-center@s">
+                <div>
+                    <h1 class="fw-700 uk-margin-remove-bottom">Professional
+                        Experience</h1>
+                    <h2 id="dynamic-subtitle" class="fw-500 uk-margin-small-top uk-margin-remove-bottom uk-text-muted"
+                        style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)"></h2>
                 </div>
+            </div>
 
-                <!-- Middle Content & Filterable List -->
-                <div class="uk-width-expand uk-width-2-5@m"
-                    uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
+            <div>
+                <!-- Content & Filterable Timeline -->
+                <div uk-scrollspy=" target:> div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right;
+                    delay: 200">
 
-                    <div class="uk-container uk-margin-bottom">
-                        <div>
-                            <h1 class="fw-600 uk-margin-remove-bottom"
-                                style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">Professional
-                                Experience</h1>
-                            <h2 id="dynamic-subtitle"
-                                class="fw-500 uk-margin-small-top uk-margin-remove-bottom uk-text-muted"
-                                style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)"></h2>
-                        </div>
-                    </div>
-
-                    <div class="uk-container" uk-height-viewport="expand:true">
-                        <ul id="experience-grid" class="js-filter uk-list uk-list-large"
-                            uk-scrollspy="target: > li; cls: uk-animation-fade slow-fade; delay: 75; repeat: true">
+                    <div class="uk-container uk-container-small" uk-height-viewport="expand:true">
+                        <ul id="experience-grid" class="uk-list">
 
                             <!-- ==============================================
                                  INDEPENDENT CONTRACTOR & FREELANCE DESIGNER 
                                  ============================================== -->
-                            <li id="freelance"
-                                style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
-                            <li class="job-heading job-sticky-header uk-background-default uk-margin-remove-top"
-                                uk-sticky="offset: 40">
-                                <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Independent Contractor &amp; Freelance
-                                    Designer</h2>
-                                <p class="fs-14 uk-text-muted uk-margin-remove-top"
-                                    style="border:none; padding-left:0;">Jun 2024 &mdash; Present</p>
-                            </li>
-                            <li class="uk-margin-medium-bottom">
-                                <div class="uk-text-muted uk-text-italic uk-margin-small-bottom">Utilizing 20 years of
-                                    design experience to serve
-                                    as an agile creative partner, providing organizations with senior-level
-                                    multichannel execution on a contract basis.</div>
-                            </li>
+                            <li id="freelance">
+                                <div class="uk-grid uk-grid-divider uk-margin-large-bottom" uk-grid>
+                                    <div class="uk-width-2-5@m uk-text-right@m">
+                                        <span class="uk-background-muted uk-border-pill fs-12 fw-600 uk-text-muted"
+                                            style="padding: 4px 12px;">Jun 2024 &mdash; Present</span>
+                                    </div>
+                                    <div class="uk-width-expand@m">
+                                        <h2 class="fs-20 fw-700 uk-margin-remove-bottom uk-margin-remove-top">
+                                            Independent Contractor &amp;
+                                            Freelance Designer</h2>
+                                        <div class="fs-12 uk-text-muted uk-text-italic uk-margin-top uk-margin-bottom">
+                                            Utilizing 20 years of
+                                            design experience to serve as an agile creative partner, providing
+                                            organizations with senior-level
+                                            multichannel execution on a contract basis.</div>
 
-                            <li class="tag-brand tag-freelance">
-                                <h3>Identity Optimization &amp; Logo Vectorization</h3>
-                                <p>Re-engineered raw client concepts and unpolished sketches into crisp,
-                                    production-ready vector logo systems and brand marks engineered for digital and
-                                    physical scalability.</p>
-                            </li>
+                                        <ul class="uk-list fs-14 uk-accordion-default" uk-accordion>
+                                            <li class="tag-brand tag-freelance">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Identity Optimization
+                                                    &amp;
+                                                    Logo Vectorization <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Re-engineered raw client
+                                                    concepts
+                                                    and
+                                                    unpolished sketches into crisp, production-ready vector logo
+                                                    systems
+                                                    and brand marks engineered for
+                                                    digital and physical scalability.
+                                                </div>
+                                            </li>
 
-                            <li class="tag-event tag-freelance">
-                                <h3>Chicago Auto Show Architectural Spatial Design</h3>
-                                <p>Developed multi-scale architectural graphics, industrial textures, wayfinding, and
-                                    spatial design concepts for major exhibitions, including "Chi-Town Alley" and the
-                                    "Overlanding Chicago" activation zones for the 2026 Chicago Auto Show.</p>
-                            </li>
+                                            <li class="tag-event tag-freelance">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Chicago Auto Show
+                                                    Architectural
+                                                    Spatial Design <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Developed multi-scale
+                                                    architectural
+                                                    graphics, industrial textures,
+                                                    wayfinding, and
+                                                    spatial design concepts for major exhibitions, including "Chi-Town
+                                                    Alley" and the
+                                                    "Overlanding Chicago" activation zones for the 2026 Chicago Auto
+                                                    Show.</div>
+                                            </li>
 
-                            <li class="tag-event tag-freelance">
-                                <h3>Structural Wayfinding Assets</h3>
-                                <p>Designed and refreshed structural wayfinding graphics, signage, and environmental
-                                    visual touchpoints for the 2025 Central Florida Auto Show.</p>
-                            </li>
+                                            <li class="tag-event tag-freelance">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Structural Wayfinding
+                                                    Assets <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Designed and refreshed
+                                                    structural wayfinding graphics, signage, and environmental visual
+                                                    touchpoints for the 2025 Central Florida Auto Show.</div>
+                                            </li>
 
-                            <li class="tag-digital tag-freelance">
-                                <h3>Digital Accessibility &amp; Interface Adaptation</h3>
-                                <p>Executed ongoing website updates and front-end interface improvements, applying
-                                    user-centric UI/UX design principles and foundational WCAG accessibility standards
-                                    (legibility, color contrast) for screen assets.</p>
-                            </li>
+                                            <li class="tag-digital tag-freelance">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Digital Accessibility
+                                                    &amp; Interface Adaptation <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Executed ongoing website updates
+                                                    and front-end interface improvements, applying user-centric UI/UX
+                                                    design principles and foundational WCAG accessibility standards
+                                                    (legibility, color contrast) for screen assets.</div>
+                                            </li>
 
-                            <li class="tag-workflow tag-freelance">
-                                <h3>AI Workflow Integration</h3>
-                                <p>Integrated Agentic AI development environments (Antigravity IDE, LLMs and generative
-                                    design tools) into daily workflows, accelerating rapid prototyping,
-                                    copy iteration and refinement, front-end execution, and cross-channel asset
-                                    production.
-                                </p>
-                            </li>
+                                            <li class="tag-workflow tag-freelance">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>AI Workflow Integration
+                                                    <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Integrated Agentic AI
+                                                    development environments (Antigravity IDE, LLMs and generative
+                                                    design tools) into daily workflows, accelerating rapid prototyping,
+                                                    copy iteration and refinement, front-end execution, and
+                                                    cross-channel
+                                                    asset production.</div>
+                                            </li>
 
-                            <li class="tag-print tag-freelance">
-                                <h3>Large-Format Vector Mechanical Engineering</h3>
-                                <p>Engineered precise vector mechanicals for large-format physical production and
-                                    exhibits, utilizing Adobe Illustrator to spec out complex structural configurations
-                                    including SEG fabric displays and BeMatrix panel systems.</p>
-                            </li>
+                                            <li class="tag-print tag-freelance">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Large-Format Vector
+                                                    Mechanical Engineering <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Engineered precise vector
+                                                    mechanicals for large-format physical production and exhibits,
+                                                    utilizing Adobe Illustrator to spec out complex structural
+                                                    configurations including SEG fabric displays and BeMatrix panel
+                                                    systems.</div>
+                                            </li>
 
-                            <li class="tag-digital tag-freelance">
-                                <h3>Modern Workflow Migration (Figma Integration)</h3>
-                                <p>Modernized digital layout workflows by migrating visual assets and adopting Figma for
-                                    UI component design, responsive frameworks, and collaborative design handoffs.</p>
-                            </li>
+                                            <li class="tag-digital tag-freelance">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Modern Workflow
+                                                    Migration (Figma Integration) <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Modernized digital layout
+                                                    workflows by migrating visual assets and adopting Figma for UI
+                                                    component design, responsive frameworks, and collaborative design
+                                                    handoffs.</div>
+                                            </li>
 
-                            <li class="tag-workflow tag-freelance tag-5w">
-                                <h3>Cross-Functional &amp; Remote Collaboration</h3>
-                                <p>Managed concurrent project deadlines across cross-functional account teams, external
-                                    vendors, and clients utilizing project management tools (Wrike, Toggl) to ensure
-                                    strict alignment with campaign KPIs.</p>
+                                            <li class="tag-workflow tag-freelance tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Cross-Functional &amp;
+                                                    Remote Collaboration <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Managed concurrent project
+                                                    deadlines across cross-functional account teams, external vendors,
+                                                    and clients utilizing project management tools (Wrike, Toggl) to
+                                                    ensure strict alignment with campaign KPIs.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
 
                             <!-- ==============================================
                                  CREATIVE DIRECTOR • 5W INSIGHTS 
                                  ============================================== -->
-                            <li id="5w-creative"
-                                style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
-                            <li class="job-heading job-sticky-header uk-background-default uk-margin-remove-top"
-                                uk-sticky="offset: 40">
-                                <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Creative Director</h2>
-                                <p class="fs-14 uk-text-muted uk-margin-remove-top"
-                                    style="border:none; padding-left:0;">5W Insights &bull; Sep 2013 &mdash; Jun 2024
-                                </p>
-                            </li>
-                            <li class="uk-margin-medium-bottom">
-                                <div class="uk-text-muted uk-text-italic uk-margin-small-bottom">Sole creative lead
-                                    responsible for design strategy
-                                    and execution across print, digital, and direct response channels.</div>
-                            </li>
+                            <li id="5w-creative">
+                                <div class="uk-grid uk-grid-divider uk-margin-large-bottom" uk-grid>
+                                    <div class="uk-width-2-5@m uk-text-right@m">
+                                        <span class="uk-background-muted uk-border-pill fs-12 fw-600 uk-text-muted"
+                                            style="padding: 4px 12px;">Sep 2013 &mdash; Jun 2024</span>
+                                    </div>
+                                    <div class="uk-width-expand@m">
+                                        <h2 class="fs-20 fw-700 uk-margin-remove-bottom uk-margin-remove-top">Creative
+                                            Director</h2>
+                                        <div class="fs-14 fw-600 uk-text-muted uk-margin-small-bottom">5W Insights</div>
+                                        <div class="fs-12 uk-text-muted uk-text-italic uk-margin-top uk-margin-bottom">
+                                            Sole creative lead
+                                            responsible for design strategy and execution across print, digital, and
+                                            direct response channels.</div>
 
-                            <!-- Category 1 -->
-                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-medium-top uk-margin-small-bottom"
-                                style="letter-spacing: 0.5px;">Campaign Impact &amp; ROI</div>
+                                        <ul class="uk-list fs-14 uk-accordion-default" uk-accordion>
 
-                            <li class="tag-direct tag-5w">
-                                <h3>36% Membership Acquisition Growth</h3>
-                                <p>Drove a 36% membership acquisition increase for AAA Carolinas by designing and
-                                    executing iterative, localized, and highly tailored print and digital campaign
-                                    variations across web, email, and direct mail—helping them become one of the
-                                    fastest-growing AAA clubs in the U.S.</p>
-                            </li>
+                                            <li class="tag-direct tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>36% Membership
+                                                    Acquisition Growth <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Drove a 36% membership
+                                                    acquisition increase for AAA Carolinas by designing and executing
+                                                    iterative, localized, and highly tailored print and digital campaign
+                                                    variations across web, email, and direct mail—helping them become
+                                                    one
+                                                    of the fastest-growing AAA clubs in the U.S.</div>
+                                            </li>
 
-                            <li class="tag-direct tag-5w">
-                                <h3>26.1% Fundraising Appeal ROI</h3>
-                                <p>Designed and refined high-performing, data-driven multivariate mail packages for a
-                                    fundraising appeal that delivered a 26.1% ROI for the Boy Scouts of America.</p>
-                            </li>
+                                            <li class="tag-direct tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>26.1% Fundraising
+                                                    Appeal ROI <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Designed and refined
+                                                    high-performing, data-driven multivariate mail packages for a
+                                                    fundraising appeal that delivered a 26.1% ROI for the Boy Scouts of
+                                                    America.</div>
+                                            </li>
 
-                            <li class="tag-direct tag-5w">
-                                <h3>B2B Lead Generation (1,000+ Qualified Leads)</h3>
-                                <p>Developed an intuitive, user-centered omnichannel survey campaign for Mack Trucks
-                                    that generated over 1,000 qualified leads (with 15% requesting direct follow-up),
-                                    combining hands-on front-end web design and coding with strict brand governance.</p>
-                            </li>
+                                            <li class="tag-direct tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>B2B Lead Generation
+                                                    (1,000+ Qualified Leads) <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Developed an intuitive,
+                                                    user-centered omnichannel survey campaign for Mack Trucks that
+                                                    generated over 1,000 qualified leads (with 15% requesting direct
+                                                    follow-up), combining hands-on front-end web design and coding with
+                                                    strict brand governance.</div>
+                                            </li>
 
-                            <!-- Category 2 -->
-                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-medium-top uk-margin-small-bottom"
-                                style="letter-spacing: 0.5px;">Digital Experience &amp; Production</div>
 
-                            <li class="tag-digital tag-5w">
-                                <h3>Corporate Website Redesigns (7 Major Iterations)</h3>
-                                <p>Managed the end-to-end design, UI/UX, and front-end implementation (HTML/CSS, UIkit
-                                    framework) for 7 major corporate website iterations and numerous client landing
-                                    pages, ensuring responsive layouts, fast load speeds, and modern visual design.</p>
-                            </li>
+                                            <li class="tag-digital tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Corporate Website
+                                                    Redesigns (7 Major Iterations) <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Managed the end-to-end design,
+                                                    UI/UX, and front-end implementation (HTML/CSS, UIkit framework) for
+                                                    7 major corporate website iterations and numerous client landing
+                                                    pages, ensuring responsive layouts, fast load speeds, and modern
+                                                    visual design.</div>
+                                            </li>
 
-                            <li class="tag-digital tag-5w">
-                                <h3>Multichannel Digital Ad &amp; Social Media Production</h3>
-                                <p>Executed and adapted high-performing creative across digital channels, designing
-                                    digital display ads (Meta, Google, LinkedIn) and SMS/MMS marketing assets to drive
-                                    direct response and audience engagement.</p>
-                            </li>
+                                            <li class="tag-digital tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Multichannel Digital Ad
+                                                    &amp; Social Media Production <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Executed and adapted
+                                                    high-performing creative across digital channels, designing digital
+                                                    display ads (Meta, Google, LinkedIn) and SMS/MMS marketing assets
+                                                    to drive direct response and audience engagement.</div>
+                                            </li>
 
-                            <li class="tag-brand tag-5w">
-                                <h3>Scalable Design Templates &amp; Asset Libraries</h3>
-                                <p>Developed standardized design templates, component libraries, and structured file
-                                    systems for eBooks, whitepapers, infographics, and social media assets, accelerating
-                                    production cycles and eliminating layout discrepancies.</p>
-                            </li>
+                                            <li class="tag-brand tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Scalable Design
+                                                    Templates &amp; Asset Libraries <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Developed standardized design
+                                                    templates, component libraries, and structured file systems for
+                                                    eBooks, whitepapers, infographics, and social media assets,
+                                                    accelerating production cycles and eliminating layout
+                                                    discrepancies.</div>
+                                            </li>
 
-                            <li class="tag-workflow tag-5w">
-                                <h3>Executive Summary Data Visualization</h3>
-                                <p>Translated complex campaign performance data, sales flows, and segmentation metrics
-                                    into clear, engaging visual narratives for executive summaries and leadership
-                                    presentations.</p>
-                            </li>
+                                            <li class="tag-workflow tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Executive Summary Data
+                                                    Visualization <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Translated complex campaign
+                                                    performance data, sales flows, and segmentation metrics into clear,
+                                                    engaging visual narratives for executive summaries and leadership
+                                                    presentations.</div>
+                                            </li>
 
-                            <!-- Category 3 -->
-                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-medium-top uk-margin-small-bottom"
-                                style="letter-spacing: 0.5px;">Brand Architecture &amp; Stewardship</div>
 
-                            <li class="tag-brand tag-5w">
-                                <h3>5W Insights Corporate Brand Overhaul</h3>
-                                <p>Led the internal rebrand for 5W Insights, establishing a modular geometric monogram
-                                    and scalable brand identity system, and rolling it out across web, collateral,
-                                    tradeshows, and social media.</p>
-                            </li>
+                                            <li class="tag-brand tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>5W Insights Corporate
+                                                    Brand Overhaul <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Led the internal rebrand for 5W
+                                                    Insights, establishing a modular geometric monogram and scalable
+                                                    brand identity system, and rolling it out across web, collateral,
+                                                    tradeshows, and social media.</div>
+                                            </li>
 
-                            <li class="tag-brand tag-5w">
-                                <h3>Corporate Brand Stewardship &amp; Governance</h3>
-                                <p>Enforced and maintained strict brand guidelines for national corporate and healthcare
-                                    clients (including BlueChoice HealthPlan SC, Mack Trucks, Assurant, and AAA),
-                                    ensuring visual consistency across all channels without compromising campaign
-                                    performance.</p>
-                            </li>
+                                            <li class="tag-brand tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Corporate Brand
+                                                    Stewardship &amp; Governance <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Enforced and maintained strict
+                                                    brand guidelines for national corporate and healthcare clients
+                                                    (including BlueChoice HealthPlan SC, Mack Trucks, Assurant, and
+                                                    AAA),
+                                                    ensuring visual consistency across all channels without compromising
+                                                    campaign performance.</div>
+                                            </li>
 
-                            <!-- Category 4 -->
-                            <div class="fs-12 fw-700 uk-text-muted uk-text-uppercase uk-margin-medium-top uk-margin-small-bottom"
-                                style="letter-spacing: 0.5px;">Experiential &amp; Event Design</div>
+                                            <li class="tag-event tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Omnichannel Event
+                                                    Campaign Integration <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Built integrated visual systems
+                                                    for physical conference environments, linking event booths,
+                                                    mobile/tablet lead-capture landing pages, print collateral, and
+                                                    attendee badges into a unified brand experience.</div>
+                                            </li>
 
-                            <li class="tag-event tag-5w">
-                                <h3>Omnichannel Event Campaign Integration</h3>
-                                <p>Built integrated visual systems for physical conference environments, linking event
-                                    booths, mobile/tablet lead-capture landing pages, print collateral, and attendee
-                                    badges into a unified brand experience.</p>
-                            </li>
+                                            <li class="tag-event tag-5w">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Corporate Trade Show
+                                                    Booths &amp; Environmental Graphics <span
+                                                        uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Conceptualized and produced
+                                                    corporate trade show booth backdrops, modular displays, large-scale
+                                                    banners, podium wraps, signage, and promotional collateral for
+                                                    national industry conferences.</div>
+                                            </li>
+                                        </ul>
 
-                            <li class="tag-event tag-5w">
-                                <h3>Corporate Trade Show Booths &amp; Environmental Graphics</h3>
-                                <p>Conceptualized and produced corporate trade show booth backdrops, modular displays,
-                                    large-scale banners, podium wraps, signage, and promotional collateral for national
-                                    industry conferences.</p>
-                            </li>
-
-                            <!-- 5W Insights Testimonial (Mobile) -->
-                            <div class="uk-hidden@l uk-margin-medium-top uk-margin-large-bottom">
-                                <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback &amp; Impact
-                                </div>
-                                <div class="uk-background-muted uk-padding uk-border-rounded-large">
-                                    <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is truly an
-                                        outstanding employee in every way including his great attitude, dedication,
-                                        willingness to do whatever is required to get the job done, his intelligence and
-                                        his expertise.</p>
-                                    <p class="fs-14 uk-text-italic uk-margin-small-bottom">He is an outstanding Creative
-                                        Director and is skilled at all aspects of content development and implementation
-                                        to include strategy development, graphic design, copywriting, production,
-                                        campaign management, reporting and project management.</p>
-                                    <p class="fs-14 uk-text-italic uk-margin-small-top">He is the equivalent of a team
-                                        of skilled professionals that can conceptualize, design, develop, implement, QC
-                                        and execute complex campaigns across all channels, including Facebook,
-                                        Instagram, SMS text, search, display, mobile, email, website and direct mail."
-                                    </p>
-                                    <div class="uk-margin-small-top">
-                                        <div class="fw-700 fs-14 uk-text-emphasis">Jerry Montgomery</div>
-                                        <div class="fs-12 uk-text-muted">CEO, 5W Insights</div>
+                                        <!-- 5W Insights Testimonial -->
+                                        <div class="uk-margin-medium-top">
+                                            <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback
+                                                &amp; Impact
+                                            </div>
+                                            <div class="uk-background-muted uk-padding uk-border-rounded-large">
+                                                <p class="uk-margin-small-bottom">"Brian is truly
+                                                    an
+                                                    outstanding employee in every way including his great attitude,
+                                                    dedication,
+                                                    willingness to do whatever is required to get the job done, his
+                                                    intelligence and
+                                                    his expertise.</p>
+                                                <p class="uk-margin-small-bottom">He is an
+                                                    outstanding Creative
+                                                    Director and is skilled at all aspects of content development and
+                                                    implementation
+                                                    to include strategy development, graphic design, copywriting,
+                                                    production,
+                                                    campaign management, reporting and project management.</p>
+                                                <p class="uk-margin-small-top">He is the equivalent
+                                                    of a team
+                                                    of skilled professionals that can conceptualize, design, develop,
+                                                    implement, QC
+                                                    and execute complex campaigns across all channels, including
+                                                    Facebook,
+                                                    Instagram, SMS text, search, display, mobile, email, website and
+                                                    direct mail."
+                                                </p>
+                                                <div class="uk-margin-small-top">
+                                                    <div class="fw-700 fs-12 uk-text-emphasis">Jerry Montgomery</div>
+                                                    <div class="fs-10">CEO, 5W Insights</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </li>
 
                             <!-- ==============================================
                                  RICHMOND SUBURBAN NEWSPAPERS 
                                  ============================================== -->
-                            <li id="rsn" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;"></li>
-                            <li class="job-heading job-sticky-header uk-background-default uk-margin-remove-top"
-                                uk-sticky="offset: 40">
-                                <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Design &amp; Production Manager</h2>
-                                <p class="fs-14 uk-text-muted uk-margin-remove-top"
-                                    style="border:none; padding-left:0;">Richmond Suburban Newspapers &bull; Jan 2007
-                                    &mdash; Sep 2013</p>
-                            </li>
-                            <li class="uk-margin-medium-bottom">
-                                <div class="uk-text-muted uk-text-italic uk-margin-small-bottom">Managed high-volume
-                                    page layout and typography for
-                                    a weekly publication group under strict, recurring deadlines.</div>
-                            </li>
+                            <li id="rsn">
+                                <div class="uk-grid uk-grid-divider uk-margin-large-bottom" uk-grid>
+                                    <div class="uk-width-2-5@m uk-text-right@m">
+                                        <span class="uk-background-muted uk-border-pill fs-12 fw-600 uk-text-muted"
+                                            style="padding: 4px 12px;">Jan 2007 &mdash; Sep 2013</span>
+                                    </div>
+                                    <div class="uk-width-expand@m">
+                                        <h2 class="fs-20 fw-700 uk-margin-remove-bottom uk-margin-remove-top">Design
+                                            &amp; Production Manager
+                                        </h2>
+                                        <div class="fs-14 fw-600 uk-text-muted uk-margin-small-bottom">Richmond Suburban
+                                            Newspapers</div>
+                                        <div class="fs-12 uk-text-muted uk-text-italic uk-margin-top uk-margin-bottom">
+                                            Managed high-volume
+                                            page layout and typography for a weekly publication group under strict,
+                                            recurring deadlines.</div>
 
-                            <li class="tag-print tag-rsn">
-                                <h3>High-Volume Newspaper Production (1,200+ Editions)</h3>
-                                <p>Directed complex layout, typography, and prepress production workflows for 6 weekly
-                                    publication lines, successfully delivering over 1,200 print editions on strict
-                                    recurring deadlines.</p>
-                            </li>
+                                        <ul class="uk-list fs-14 uk-accordion-default" uk-accordion>
+                                            <li class="tag-print tag-rsn">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>High-Volume Newspaper
+                                                    Production (1,200+ Editions) <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Directed complex layout,
+                                                    typography, and prepress production workflows for 6 weekly
+                                                    publication lines, successfully delivering over 1,200 print editions
+                                                    on strict recurring deadlines.</div>
+                                            </li>
 
-                            <li class="tag-workflow tag-rsn">
-                                <h3>Standard Operating Procedures (SOPs) &amp; Prepress Checklists</h3>
-                                <p>Designed and implemented standardized SOPs, page-tracking checklists, and layout
-                                    templates that eliminated recurring formatting errors and streamlined weekly
-                                    publishing deadlines across 6 newspapers.</p>
-                            </li>
+                                            <li class="tag-workflow tag-rsn">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Standard Operating
+                                                    Procedures (SOPs) &amp; Prepress Checklists <span
+                                                        uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Designed and implemented
+                                                    standardized SOPs, page-tracking checklists, and layout templates
+                                                    that eliminated recurring formatting errors and streamlined weekly
+                                                    publishing deadlines across 6 newspapers.</div>
+                                            </li>
 
-                            <li class="tag-digital tag-rsn">
-                                <h3>Digital Transition &amp; Newspaper Websites</h3>
-                                <p>Led a publication group's digital expansion by designing and coding their first
-                                    mobile-responsive websites and HTML newsletters, adapting print brand identities for
-                                    digital channels.</p>
-                            </li>
+                                            <li class="tag-digital tag-rsn">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Digital Transition &amp;
+                                                    Newspaper Websites <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Led a publication group's
+                                                    digital
+                                                    expansion by designing and coding their first mobile-responsive
+                                                    websites and HTML newsletters, adapting print brand identities for
+                                                    digital channels.</div>
+                                            </li>
 
-                            <li class="tag-workflow tag-rsn">
-                                <h3>Team Mentorship &amp; Software Instruction</h3>
-                                <p>Trained and mentored junior editorial and design staff on Adobe Creative Suite best
-                                    practices (InDesign, Photoshop, Illustrator), teaching layout composition,
-                                    typography, and efficient file setup.</p>
-                            </li>
+                                            <li class="tag-workflow tag-rsn">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>Team Mentorship &amp;
+                                                    Software Instruction <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Trained and mentored junior
+                                                    editorial and design staff on Adobe Creative Suite best practices
+                                                    (InDesign, Photoshop, Illustrator), teaching layout composition,
+                                                    typography, and efficient file setup.</div>
+                                            </li>
+                                        </ul>
 
-                            <!-- RSN Testimonial (Mobile) -->
-                            <div class="uk-hidden@l uk-margin-medium-top uk-margin-large-bottom">
-                                <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback &amp; Impact
-                                </div>
-                                <div class="uk-background-muted uk-padding uk-border-rounded-large">
-                                    <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is a brilliant
-                                        designer also skilled with trouble shooting production issues quickly and
-                                        efficiently. His professional manner is greatly appreciated in the work place
-                                        and he is always considered the 'Go To' man.</p>
-                                    <p class="fs-14 uk-text-italic uk-margin-small-top">Brian's skill at working
-                                        productively in a high stress, deadline pending situation is unmatched. He is a
-                                        true ASSET."</p>
-                                    <div class="uk-margin-small-top">
-                                        <div class="fw-700 fs-14 uk-text-emphasis">Carol Taylor</div>
-                                        <div class="fs-12 uk-text-muted">Advertising Account Representative, Richmond
-                                            Suburban News</div>
+                                        <!-- RSN Testimonial -->
+                                        <div class="uk-margin-medium-top">
+                                            <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback
+                                                &amp; Impact
+                                            </div>
+                                            <div class="uk-background-muted uk-padding uk-border-rounded-large">
+                                                <p class="uk-margin-small-bottom">"Brian is a
+                                                    brilliant
+                                                    designer also skilled with trouble shooting production issues
+                                                    quickly and
+                                                    efficiently. His professional manner is greatly appreciated in the
+                                                    work place
+                                                    and he is always considered the 'Go To' man.</p>
+                                                <p class="uk-margin-small-top">Brian's skill at
+                                                    working
+                                                    productively in a high stress, deadline pending situation is
+                                                    unmatched. He is a
+                                                    true ASSET."</p>
+                                                <div class="uk-margin-small-top">
+                                                    <div class="fw-700 fs-12 uk-text-emphasis">Carol Taylor</div>
+                                                    <div class="fs-10">Advertising Account Representative,
+                                                        Richmond
+                                                        Suburban News</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </li>
 
                             <!-- ==============================================
                                  POWHATAN TODAY NEWSPAPER 
                                  ============================================== -->
-                            <li id="powhatan" style="height: 0; margin: 0; padding: 0; border: none; overflow: hidden;">
-                            </li>
-                            <li class="job-heading job-sticky-header uk-background-default uk-margin-remove-top"
-                                uk-sticky="offset: 40">
-                                <h2 class="fs-20 fw-700 uk-margin-remove-bottom">Graphic Designer &amp; Production
-                                    Manager</h2>
-                                <p class="fs-14 uk-text-muted uk-margin-remove-top"
-                                    style="border:none; padding-left:0;">Powhatan Today Newspaper &bull; Jun 2005
-                                    &mdash; Jan 2007</p>
-                            </li>
-                            <li class="uk-margin-medium-bottom">
-                                <div class="uk-text-muted uk-text-italic uk-margin-small-bottom">Directed visual design
-                                    and page layout for a
-                                    weekly community newspaper in a high-volume print environment.</div>
-                            </li>
+                            <li id="powhatan">
+                                <div class="uk-grid uk-grid-divider uk-margin-large-bottom" uk-grid>
+                                    <div class="uk-width-2-5@m uk-text-right@m">
+                                        <span class="uk-background-muted uk-border-pill fs-12 fw-600 uk-text-muted"
+                                            style="padding: 4px 12px;">Jun 2005 &mdash; Jan 2007</span>
+                                    </div>
+                                    <div class="uk-width-expand@m">
+                                        <h2 class="fs-20 fw-700 uk-margin-remove-bottom uk-margin-remove-top">Graphic
+                                            Designer &amp;
+                                            Production Manager</h2>
+                                        <div class="fs-14 fw-600 uk-text-muted uk-margin-small-bottom">Powhatan Today
+                                            Newspaper</div>
+                                        <div class="fs-12 uk-text-muted uk-text-italic uk-margin-top uk-margin-bottom">
+                                            Directed visual design
+                                            and page layout for a weekly community newspaper in a high-volume print
+                                            environment.</div>
 
-                            <li class="tag-print tag-powhatan">
-                                <h3>VPA Award-Winning Layouts &amp; Advertising</h3>
-                                <p>Applied foundational visual design, typography, and composition principles to
-                                    engineer Virginia Press Association award-winning editorial layouts and commercial
-                                    print advertising.</p>
-                            </li>
+                                        <ul class="uk-list fs-14 uk-accordion-default" uk-accordion>
+                                            <li class="tag-print tag-powhatan">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>VPA Award-Winning
+                                                    Layouts
+                                                    &amp; Advertising <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Applied foundational visual
+                                                    design, typography, and composition principles to engineer Virginia
+                                                    Press Association award-winning editorial layouts and commercial
+                                                    print advertising.</div>
+                                            </li>
 
-                            <li class="tag-print tag-powhatan">
-                                <h3>End-to-End Mechanical Prep &amp; Plate Imaging</h3>
-                                <p>Managed weekly page layout assembly, designed local advertising, toned press images,
-                                    and prepared production-ready, plate-ready prepress files under tight publication
-                                    deadlines.</p>
+                                            <li class="tag-print tag-powhatan">
+                                                <a class="uk-accordion-title fs-12 fw-600" href>End-to-End Mechanical
+                                                    Prep &amp; Plate Imaging <span uk-accordion-icon></span></a>
+                                                <div class="uk-accordion-content fs-12">Managed weekly page layout
+                                                    assembly, designed local advertising, toned press images, and
+                                                    prepared production-ready, plate-ready prepress files under tight
+                                                    publication deadlines.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </li>
 
                         </ul>
                     </div>
 
-                    <!-- Mobile Scroll Buffer to ensure final sticky header clears -->
-                    <div class="uk-hidden@l" style="height: 30vh;"></div>
-                </div>
-
-                <!-- Right Column: Social Proof / Quotes -->
-                <div class="uk-width-expand uk-visible@m"
-                    uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 400">
-                    <div uk-sticky="end: true; offset: 110">
-                        <!-- Freelance Quote (Empty) -->
-                        <div id="quote-freelance" class="job-quote" style="display: none;"></div>
-
-                        <!-- 5W Insights Quote -->
-                        <div id="quote-5w-creative" class="job-quote" style="display: none;">
-                            <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback &amp; Impact</div>
-                            <div class="uk-background-muted uk-padding uk-border-rounded-large">
-                                <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is truly an outstanding
-                                    employee in every way including his great attitude, dedication, willingness to do
-                                    whatever is required to get the job done, his intelligence and his expertise.</p>
-                                <p class="fs-14 uk-text-italic uk-margin-small-bottom">He is an outstanding Creative
-                                    Director and is skilled at all aspects of content development and implementation to
-                                    include strategy development, graphic design, copywriting, production, campaign
-                                    management, reporting and project management.</p>
-                                <p class="fs-14 uk-text-italic uk-margin-small-top">He is the equivalent of a team of
-                                    skilled professionals that can conceptualize, design, develop, implement, QC and
-                                    execute complex campaigns across all channels, including Facebook, Instagram, SMS
-                                    text, search, display, mobile, email, website and direct mail."</p>
-                                <div class="uk-margin-small-top">
-                                    <div class="fw-700 fs-14 uk-text-emphasis">Jerry Montgomery</div>
-                                    <div class="fs-12 uk-text-muted">CEO, 5W Insights</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- RSN Quote -->
-                        <div id="quote-rsn" class="job-quote" style="display: none;">
-                            <div class="fs-12 fw-700 uk-text-muted uk-margin-small-bottom">Feedback &amp; Impact</div>
-                            <div class="uk-background-muted uk-padding uk-border-rounded-large">
-                                <p class="fs-14 uk-text-italic uk-margin-small-bottom">"Brian is a brilliant designer
-                                    also skilled with trouble shooting production issues quickly and efficiently. His
-                                    professional manner is greatly appreciated in the work place and he is always
-                                    considered the 'Go To' man.</p>
-                                <p class="fs-14 uk-text-italic uk-margin-small-top">Brian's skill at working
-                                    productively in a high stress, deadline pending situation is unmatched. He is a true
-                                    ASSET."</p>
-                                <div class="uk-margin-small-top">
-                                    <div class="fw-700 fs-14 uk-text-emphasis">Carol Taylor</div>
-                                    <div class="fs-12 uk-text-muted">Advertising Account Representative, Richmond
-                                        Suburban News</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Powhatan Quote (Empty) -->
-                        <div id="quote-powhatan" class="job-quote" style="display: none;"></div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -482,45 +450,12 @@ active_page: experience
     <!-- Enhanced Script: Handles filter resets AND dynamic subtitles -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const workNavLinks = document.querySelectorAll('#work-history-nav a[href^="#"]');
             const clearFilterBtn = document.querySelector('#clear-filters a');
             const capNavLinks = document.querySelectorAll('#capabilities-nav [uk-filter-control] a');
             const dynamicSubtitle = document.getElementById('dynamic-subtitle');
-            const filterWrapper = document.querySelector('[uk-filter]');
+            const filterDropdownBtnText = document.querySelector('#capabilities-nav')?.closest('div')?.parentElement?.querySelector('button span.fw-500');
 
-            let pendingScrollTarget = null;
-
-            const filterDropdownBtnText = document.querySelector('#capabilities-nav')?.closest('.uk-margin-large-top')?.querySelector('button span.fw-500');
-
-            // 1. Sync Work History clicks to reset the capability filter
-            workNavLinks.forEach(link => {
-                link.addEventListener('click', function (e) {
-                    if (clearFilterBtn && !clearFilterBtn.parentElement.classList.contains('uk-active')) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        pendingScrollTarget = this.getAttribute('href');
-                        document.body.classList.remove('capability-filter-active');
-                        clearFilterBtn.click();
-                        if (filterDropdownBtnText) filterDropdownBtnText.innerText = 'Filter projects...';
-                    }
-                });
-            });
-
-            // 2. Wait for UIkit to finish expanding the list before scrolling
-            if (filterWrapper) {
-                UIkit.util.on(filterWrapper, 'afterFilter', function () {
-                    if (pendingScrollTarget) {
-                        const targetEl = document.querySelector(pendingScrollTarget);
-                        if (targetEl) {
-                            const topOffset = targetEl.getBoundingClientRect().top + window.pageYOffset - 120;
-                            window.scrollTo({ top: topOffset, behavior: 'smooth' });
-                        }
-                        pendingScrollTarget = null;
-                    }
-                });
-            }
-
-            // 3. Dynamically update the subtitle based on the active capability filter
+            // Dynamically update the subtitle based on the active capability filter
             if (capNavLinks && dynamicSubtitle) {
                 capNavLinks.forEach(link => {
                     link.addEventListener('click', function () {
@@ -536,45 +471,6 @@ active_page: experience
                         }
                     });
                 });
-            }
-
-            // 4. Sync right-hand quotes with active scrollspy nav
-            const workNavItems = document.querySelectorAll('#work-history-nav > li:not(.uk-nav-header)');
-            const quotes = document.querySelectorAll('.job-quote');
-
-            if (workNavItems.length > 0 && quotes.length > 0) {
-                const quoteObserver = new MutationObserver((mutations) => {
-                    mutations.forEach((mutation) => {
-                        if (mutation.target.classList.contains('uk-active')) {
-                            const link = mutation.target.querySelector('a');
-                            if (link) {
-                                const targetId = link.getAttribute('href').substring(1);
-                                quotes.forEach(q => {
-                                    q.style.display = 'none';
-                                    q.classList.remove('uk-animation-fade');
-                                });
-                                const activeQuote = document.getElementById('quote-' + targetId);
-                                if (activeQuote) {
-                                    activeQuote.style.display = 'block';
-                                    // Slight delay to ensure display:block renders before animation triggers
-                                    setTimeout(() => activeQuote.classList.add('uk-animation-fade'), 10);
-                                }
-                            }
-                        }
-                    });
-                });
-
-                workNavItems.forEach(item => {
-                    quoteObserver.observe(item, { attributes: true, attributeFilter: ['class'] });
-                });
-
-                // Trigger initially for the first active item
-                const initialActive = document.querySelector('#work-history-nav > li.uk-active a');
-                if (initialActive) {
-                    const initialId = initialActive.getAttribute('href').substring(1);
-                    const initialQuote = document.getElementById('quote-' + initialId);
-                    if (initialQuote) initialQuote.style.display = 'block';
-                }
             }
         });
     </script>

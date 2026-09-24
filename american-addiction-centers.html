@@ -2,14 +2,39 @@
 layout: default
 title: American Addiction Centers
 active_page: aac
+hero_theme: dark
+hero_image: img/aac/5W_AAC_home-cover.webp
 ---
 
 
 <main class="">
 
+    <div class="uk-light">
+        <div class="uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle"
+            style="background-color: #0e0e10; background-image: url(img/aac/5W_AAC_home-cover.webp);"
+            uk-height-viewport="offset-top: true">
+
+            <div class="uk-position-cover hero-blur-overlay"></div>
+
+            <div class="uk-container uk-container-large uk-margin-top uk-margin-bottom uk-text-center@s uk-position-relative"
+                uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
+                <div>
+                    <h1 class="fw-600 uk-margin-bottom" style="font-size: clamp(5rem, 7vw, 9rem)">American
+                        Addiction Centers</h1>
+                </div>
+                <div>
+                    <h2 class="fw-500 uk-margin-top" style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)">Lead Gen: eBook
+                        campaign &amp;
+                        landing page</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <div class="uk-section">
         <div class="uk-container uk-container-large">
+
             <div class="uk-grid uk-grid-divider" uk-grid>
 
                 <!-- left -->
@@ -17,7 +42,7 @@ active_page: aac
                     uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
 
                     <!-- sticky nav (hidden for mobile) -->
-                    <div class="uk-margin-top" uk-sticky="end: true; offset:150"
+                    <div class="uk-margin-top" uk-sticky="end: true; offset: 150; z-index: 10"
                         uk-scrollspy-class="uk-animation-scale-up">
                         <ul id="site-nav" class=" uk-nav uk-nav-default uk-margin-xlarge-top"
                             uk-scrollspy-nav="closest: li; scroll: true">
@@ -36,32 +61,6 @@ active_page: aac
                     uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
 
                     <div class="uk-container">
-                        <div uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
-                            <div>
-                                <h1 class="fw-600 uk-margin-small-bottom"
-                                    style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">American
-                                    Addiction Centers</h1>
-                            </div>
-                            <div>
-                                <h2 class="fw-500 uk-margin-small-top uk-margin-remove-bottom"
-                                    style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)">Lead Gen: eBook campaign &amp;
-                                    landing page</h2>
-                            </div>
-                        </div>
-
-                        <!-- banner -->
-                        <div id="about" class="uk-margin-top">
-                            <div
-                                class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large uk-border-rounded-large">
-                                <div class="uk-background-top-center uk-background-cover uk-panel uk-flex uk-flex-top uk-flex-center "
-                                    style="background-image: url(img/aac/5W_AAC_Knight-and-Demons_M_20210319-6.webp);"
-                                    uk-height-viewport="offset-top: true; offset-bottom: 50;min:300"
-                                    uk-img="loading: eager">
-                                </div>
-                            </div>
-                        </div>
-
-
                         <!-- section heading -->
                         <p class="fs-24 fw-800">I. About the Project</p>
                         <hr />

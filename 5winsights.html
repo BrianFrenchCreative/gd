@@ -2,9 +2,31 @@
 layout: default
 title: 5W Insights
 active_page: 5w
+hero_theme: dark
+hero_image: img/5winsights/5w_home-cover.webp
 ---
 
 <main class="">
+
+    <div class="uk-light">
+        <div class="uk-background-cover uk-panel uk-flex uk-flex-center uk-flex-middle"
+            style="background-color: #0e0e10; background-image: url(img/5winsights/5w_home-cover.webp);"
+            uk-height-viewport="offset-top: true">
+
+            <div class="uk-position-cover hero-blur-overlay"></div>
+
+            <div class="uk-container uk-container-large uk-margin-top uk-margin-bottom uk-text-center@s uk-position-relative"
+                uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
+                <div>
+                    <h1 class="fw-600 uk-margin-bottom" style="font-size: clamp(5rem, 7vw, 9rem)">5W Insights</h1>
+                </div>
+                <div>
+                    <h2 class="fw-500 uk-margin-top" style="font-size: clamp(1.06rem, 3.5vw, 1.33rem)">Implementing a
+                        Scalable Brand Identity</h2>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <div class="uk-section">
@@ -16,7 +38,7 @@ active_page: 5w
                     uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200">
 
                     <!-- sticky nav (hidden for mobile) -->
-                    <div class="uk-margin-top" uk-sticky="end: true; offset:150"
+                    <div class="uk-margin-top" uk-sticky="end: true; offset: 150; z-index: 10"
                         uk-scrollspy-class="uk-animation-scale-up">
                         <ul id="site-nav" class=" uk-nav uk-nav-default uk-margin-xlarge-top"
                             uk-scrollspy-nav="closest: li; scroll: true">
@@ -35,28 +57,7 @@ active_page: 5w
                 <div class="uk-width-1-1 uk-width-expand@s uk-width-3-5@m"
                     uk-scrollspy="target: > div > div; cls: uk-animation-slide-bottom-small uk-animation-slide-right; delay: 200">
 
-                    <div class="uk-container">
-                        <div uk-scrollspy="target:div;delay:75;repeat: true;cls:uk-animation-slide-bottom-small">
-                            <div>
-                                <h1 class="fw-600 uk-margin-small-bottom"
-                                    style="font-size: clamp(1.75rem, 3.5vw, 3rem); letter-spacing: -1px">5W Insights:
-                                    Implementing a Scalable Brand Identity</h1>
-                            </div>
-                        </div>
-
-                        <!-- banner -->
-                        <div id="about">
-                            <div
-                                class="uk-container uk-container-expand uk-padding-remove uk-overflow-hidden uk-height-max-large">
-                                <div class="uk-background-top-center uk-background-cover uk-panel uk-flex uk-flex-top uk-flex-center uk-border-rounded-large"
-                                    style="background-image: url(img/5winsights/conference-backdrop-mockup.webp);"
-                                    uk-height-viewport="offset-top: true; offset-bottom: 50;min:300"
-                                    uk-img="loading: eager">
-                                </div>
-                            </div>
-                        </div>
-
-
+                    <div class="uk-container" id="about">
                         <!-- section heading -->
                         <p class="fs-24 fw-800">I. About the Project</p>
                         <hr />
@@ -507,7 +508,7 @@ active_page: 5w
 
                                 <!-- Mobile Comparison -->
                                 <div class="uk-grid uk-margin uk-margin-large-bottom" uk-grid>
-                                    <div class="uk-width-4-5 uk-width-3-5@s uk-margin-auto">
+                                    <div class="uk-width-5-6 uk-width-4-5@m uk-margin-auto">
                                         <div class="">
                                             <div class="uk-grid uk-child-width-1-2 margin-auto uk-text-center uk-border-rounded-large"
                                                 uk-grid>
