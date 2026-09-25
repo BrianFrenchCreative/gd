@@ -92,5 +92,18 @@
                 colorSchemeQuery.addListener(handleSystemThemeChange);
             }
         }
+
+        // Ensure sticky navbar returns cleanly to its unscrolled state when scrolled back to top
+        window.addEventListener('scroll', function () {
+            if (window.scrollY <= 0) {
+                var headerStickyEl = document.querySelector('header [uk-sticky]');
+                if (headerStickyEl && window.UIkit && window.UIkit.sticky) {
+                    var stickyInst = window.UIkit.sticky(headerStickyEl);
+                    if (stickyInst && stickyInst.isFixed) {
+                        stickyInst.hide();
+                    }
+                }
+            }
+        }, { passive: true });
     });
 })();
