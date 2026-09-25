@@ -1267,6 +1267,88 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
     color: #e5e7eb !important;
 }
 
+/* Constrain Case Study Promos on Ultrawide Displays */
+#samples {
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Case Study Promo Banners */
+.case-study-promo {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Background image smooth scale up on enter / scale down on leave */
+.promo-bg {
+    transform: scale(1);
+    transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+.promo-inview .promo-bg {
+    transform: scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .promo-bg {
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+.case-study-promo .promo-title {
+    transition: transform 0.3s ease;
+}
+
+.case-study-promo:hover .promo-title {
+    transform: translateY(-4px);
+}
+
+.case-study-promo .hero-blur-overlay {
+    transition: background-color 0.4s ease;
+}
+
+/* Subtle brightening on hover */
+.uk-light .case-study-promo:hover .hero-blur-overlay {
+    background-color: rgba(0, 0, 0, 0.32);
+}
+
+:root:not([data-theme="dark"]) .uk-dark .case-study-promo:hover .hero-blur-overlay {
+    background-color: rgba(255, 255, 255, 0.40);
+}
+
+[data-theme="dark"] .uk-dark .case-study-promo:hover .hero-blur-overlay {
+    background-color: rgba(18, 18, 18, 0.68) !important;
+}
+
+/* Heading & Subtitle contrast */
+.uk-light .case-study-promo h2 {
+    color: #ffffff !important;
+}
+
+:root:not([data-theme="dark"]) .uk-dark .case-study-promo h2 {
+    color: #111827 !important;
+}
+
+[data-theme="dark"] .uk-dark .case-study-promo h2 {
+    color: #ffffff !important;
+}
+
+.uk-light .case-study-promo .promo-subtitle {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+:root:not([data-theme="dark"]) .uk-dark .case-study-promo .promo-subtitle {
+    color: #4b5563 !important;
+}
+
+[data-theme="dark"] .uk-dark .case-study-promo .promo-subtitle {
+    color: #d1d5db !important;
+}
+
 /* Adaptive Frosted Glass for Sticky Navbars */
 .nav-frost {
     background: rgba(255, 255, 255, 0.75);
