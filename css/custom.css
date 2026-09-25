@@ -1228,11 +1228,11 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 }
 
 /* Base placeholder background colors for hero banners to prevent light/grey flash during image load */
-.uk-light > .uk-background-cover {
+.uk-light>.uk-background-cover {
     background-color: #0e0e10;
 }
 
-.uk-dark > .uk-background-cover {
+.uk-dark>.uk-background-cover {
     background-color: #f3f4f6;
 }
 
@@ -1240,7 +1240,7 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     background-color: rgba(0, 0, 0, 0.45);
-    transform: translateZ(0);
+    transform: scale(1);
     backface-visibility: hidden;
     transition: background-color 0.3s ease;
 }
@@ -1289,7 +1289,7 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 }
 
 .promo-inview .promo-bg {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1300,6 +1300,8 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 }
 
 .case-study-promo .promo-title {
+    line-height: 0.95;
+    letter-spacing: -1px;
     transition: transform 0.3s ease;
 }
 
@@ -1371,20 +1373,22 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 }
 
 /* Force transparent navbar to respect uk-light on dark hero images */
-.uk-light .uk-navbar-nav > li > a,
+.uk-light .uk-navbar-nav>li>a,
 .uk-light .theme-toggle-btn {
-    color: #a0a0a0 !important; /* Matches dark mode --muted-darker */
+    color: #a0a0a0 !important;
+    /* Matches dark mode --muted-darker */
 }
 
-.uk-light .uk-navbar-nav > li > a:hover,
-.uk-light .uk-navbar-nav > li.uk-active > a,
+.uk-light .uk-navbar-nav>li>a:hover,
+.uk-light .uk-navbar-nav>li.uk-active>a,
 .uk-light .uk-navbar-toggle,
 .uk-light .uk-navbar-toggle:hover,
 .uk-light .uk-navbar-toggle[aria-expanded="true"],
 .uk-light .theme-toggle-btn:hover,
 .uk-light .uk-logo,
 .uk-light .uk-logo .uk-text-muted {
-    color: #ffffff !important; /* Matches dark mode heading text */
+    color: #ffffff !important;
+    /* Matches dark mode heading text */
 }
 
 .uk-light .theme-toggle-btn {
@@ -1392,13 +1396,13 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 }
 
 /* Force transparent navbar to respect uk-dark on light hero images (Light Theme) */
-:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav > li > a,
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav>li>a,
 :root:not([data-theme="dark"]) .uk-dark .theme-toggle-btn {
     color: #4b5563 !important;
 }
 
-:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav > li > a:hover,
-:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav > li.uk-active > a,
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav>li>a:hover,
+:root:not([data-theme="dark"]) .uk-dark .uk-navbar-nav>li.uk-active>a,
 :root:not([data-theme="dark"]) .uk-dark .uk-navbar-toggle,
 :root:not([data-theme="dark"]) .uk-dark .uk-navbar-toggle:hover,
 :root:not([data-theme="dark"]) .uk-dark .uk-navbar-toggle[aria-expanded="true"],
@@ -1413,13 +1417,13 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 }
 
 /* Force transparent navbar on darkened hero images in Dark Theme */
-[data-theme="dark"] .uk-dark .uk-navbar-nav > li > a,
+[data-theme="dark"] .uk-dark .uk-navbar-nav>li>a,
 [data-theme="dark"] .uk-dark .theme-toggle-btn {
     color: #a0a0a0 !important;
 }
 
-[data-theme="dark"] .uk-dark .uk-navbar-nav > li > a:hover,
-[data-theme="dark"] .uk-dark .uk-navbar-nav > li.uk-active > a,
+[data-theme="dark"] .uk-dark .uk-navbar-nav>li>a:hover,
+[data-theme="dark"] .uk-dark .uk-navbar-nav>li.uk-active>a,
 [data-theme="dark"] .uk-dark .uk-navbar-toggle,
 [data-theme="dark"] .uk-dark .uk-navbar-toggle:hover,
 [data-theme="dark"] .uk-dark .uk-navbar-toggle[aria-expanded="true"],
@@ -1434,7 +1438,11 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 }
 
 /* Force global header above everything when sticky */
-.glass-gpu-lock.uk-active { z-index: 9999 !important; }
+.glass-gpu-lock.uk-active {
+    z-index: 9999 !important;
+}
 
 /* Force side navigation below the header when sticky */
-.uk-width-3-5 .uk-margin-top[uk-sticky].uk-active { z-index: 10 !important; }
+.uk-width-3-5 .uk-margin-top[uk-sticky].uk-active {
+    z-index: 10 !important;
+}
