@@ -55,7 +55,9 @@
         var heroTheme = document.documentElement.getAttribute('data-hero-theme');
         var color;
 
-        if (heroTheme === 'dark' && window.scrollY < 80) {
+        if (document.documentElement.classList.contains('uk-lightbox-page')) {
+            color = '#000000';
+        } else if (heroTheme === 'dark' && window.scrollY < 80) {
             color = '#0e0e10';
         } else {
             color = currentTheme === 'dark' ? '#1c1c1e' : '#f9fafb';
@@ -142,5 +144,17 @@
                 }
             }
         }, { passive: true });
+
+        // Sync mobile status bar theme-color when UIkit lightboxes or modals open and close
+        document.addEventListener('shown', function (e) {
+            if (e.target && e.target.classList && (e.target.classList.contains('uk-lightbox') || e.target.classList.contains('uk-modal'))) {
+                updateThemeColor();
+            }
+        });
+        document.addEventListener('hidden', function (e) {
+            if (e.target && e.target.classList && (e.target.classList.contains('uk-lightbox') || e.target.classList.contains('uk-modal'))) {
+                updateThemeColor();
+            }
+        });
     });
 })();

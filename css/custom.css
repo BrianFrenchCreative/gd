@@ -1446,3 +1446,9 @@ body.capability-filter-active #work-history-nav>li.uk-active a {
 .uk-width-3-5 .uk-margin-top[uk-sticky].uk-active {
     z-index: 10 !important;
 }
+
+/* Force full-screen Lightbox and Modals above header and dropdown menus */
+.uk-lightbox,
+.uk-modal {
+    z-index: 20000 !important;
+}
