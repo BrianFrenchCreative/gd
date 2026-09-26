@@ -1,12 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"{% if page.hero_theme %} data-hero-theme="{{ page.hero_theme }}"{% endif %}>
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+    {% if page.hero_theme == 'dark' %}
+    <meta name="theme-color" content="#0e0e10" />
+    {% elsif page.hero_theme == 'light' %}
+    <meta name="theme-color" content="#f9fafb" />
+    {% else %}
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f9fafb" />
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1c1e" />
+    {% endif %}
     <meta name="robots" content="noindex">
     <!-- Use Liquid tags to dynamically pull the page title -->
     <title>Brian French • {{ page.title }}</title>
@@ -19,6 +25,15 @@
             var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             var theme = savedTheme === 'dark' || (!savedTheme && prefersDark) ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', theme);
+            {% unless page.hero_theme == 'dark' %}
+            var metaColor = theme === 'dark' ? '#1c1c1e' : '#f9fafb';
+            var existingMetas = document.querySelectorAll('meta[name="theme-color"]');
+            if (existingMetas.length) {
+                existingMetas[0].removeAttribute('media');
+                existingMetas[0].setAttribute('content', metaColor);
+                for (var i = 1; i < existingMetas.length; i++) existingMetas[i].remove();
+            }
+            {% endunless %}
         })();
     </script>
     <link rel="stylesheet" href="css/uikit.css?v=3.25.23" />

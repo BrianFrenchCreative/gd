@@ -46,6 +46,37 @@
     }
 
     /**
+     * Dynamically update the mobile status bar theme-color meta tag.
+     * Respects dark hero banners when unscrolled, and mirrors the active theme.
+     * @param {'light' | 'dark'} [theme]
+     */
+    function updateThemeColor(theme) {
+        var currentTheme = theme || document.documentElement.getAttribute('data-theme') || 'light';
+        var heroTheme = document.documentElement.getAttribute('data-hero-theme');
+        var color;
+
+        if (heroTheme === 'dark' && window.scrollY < 80) {
+            color = '#0e0e10';
+        } else {
+            color = currentTheme === 'dark' ? '#1c1c1e' : '#f9fafb';
+        }
+
+        var metas = document.querySelectorAll('meta[name="theme-color"]');
+        if (metas.length) {
+            metas[0].removeAttribute('media');
+            metas[0].setAttribute('content', color);
+            for (var i = 1; i < metas.length; i++) {
+                metas[i].remove();
+            }
+        } else {
+            var newMeta = document.createElement('meta');
+            newMeta.setAttribute('name', 'theme-color');
+            newMeta.setAttribute('content', color);
+            document.head.appendChild(newMeta);
+        }
+    }
+
+    /**
      * Apply the theme to the document and optionally persist to localStorage.
      * @param {'light' | 'dark'} theme
      * @param {boolean} [persist=false]
@@ -56,6 +87,7 @@
             localStorage.setItem(STORAGE_KEY, theme);
         }
         updateToggleButtons(theme);
+        updateThemeColor(theme);
     }
 
     // Apply preferred theme immediately upon script evaluation
@@ -66,6 +98,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         var toggleBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile, .theme-toggle-btn');
         updateToggleButtons(document.documentElement.getAttribute('data-theme') || initialTheme);
+        updateThemeColor(document.documentElement.getAttribute('data-theme') || initialTheme);
 
         toggleBtns.forEach(function (btn) {
             btn.addEventListener('click', function (e) {
@@ -94,7 +127,11 @@
         }
 
         // Ensure sticky navbar returns cleanly to its unscrolled state when scrolled back to top
+        // and sync theme-color on hero pages
         window.addEventListener('scroll', function () {
+            if (document.documentElement.getAttribute('data-hero-theme') === 'dark') {
+                updateThemeColor();
+            }
             if (window.scrollY <= 0) {
                 var headerStickyEl = document.querySelector('header [uk-sticky]');
                 if (headerStickyEl && window.UIkit && window.UIkit.sticky) {
