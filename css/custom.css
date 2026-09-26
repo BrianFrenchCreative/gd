@@ -240,7 +240,7 @@ blockquote footer {
 h1 {
     font-size: clamp(3.75rem, 12vw, 13rem);
     letter-spacing: -1px;
-    line-height: 0.8;
+    line-height: 0.925;
     margin-bottom: 1rem;
     letter-spacing: -1px
 }
