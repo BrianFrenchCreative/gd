@@ -1,0 +1,106 @@
+/* 1. Strip UIkit bounding boxes globally for the floating editorial look */
+main .uk-border-rounded-medium,
+main .uk-background-muted,
+main .uk-inline,
+main .uk-card {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* 2. Cinematic image shadows (Subtle for Light Mode) */
+main img {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    transform: translateZ(0);
+}
+
+
+
+/* 3. Dark Mode Specific Overrides */
+[data-theme="dark"] main {
+    background-color: #1a1a1a !important;
+    color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] main h1,
+[data-theme="dark"] main h2,
+[data-theme="dark"] main h3,
+[data-theme="dark"] main h4,
+[data-theme="dark"] main h5,
+[data-theme="dark"] main h6 {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] main .uk-text-muted {
+    color: #a0a0a0 !important;
+}
+
+/* 4. Deepen the image shadows for Dark Mode */
+[data-theme="dark"] main img {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* 5. Ensure navbar and logo respect Light / Dark Mode across all states */
+:root:not([data-theme="dark"]) .uk-logo,
+:root:not([data-theme="dark"]) .uk-logo .uk-text-muted,
+:root:not([data-theme="dark"]) .uk-dark .uk-logo,
+:root:not([data-theme="dark"]) .uk-dark .uk-logo .uk-text-muted,
+:root:not([data-theme="dark"]) .nav-frost .uk-logo,
+:root:not([data-theme="dark"]) .nav-frost .uk-logo .uk-text-muted {
+    color: #1a1a1a !important;
+}
+
+[data-theme="dark"] .uk-logo,
+[data-theme="dark"] .uk-logo .uk-text-muted {
+    color: #ffffff !important;
+}
+
+/* 6. Scroll Cue Styles */
+.scroll-cue {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.scroll-cue:hover {
+    transform: translateY(3px);
+}
+
+.scroll-cue:hover .uk-text-muted {
+    color: #1a1a1a !important;
+}
+
+[data-theme="dark"] .scroll-cue:hover .uk-text-muted {
+    color: #ffffff !important;
+}
+
+@keyframes gentleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+.scroll-cue-arrow {
+    animation: gentleBounce 2s ease-in-out infinite;
+}
+
+/* 7. Unified Scroll Cue Container */
+.scroll-cue-container {
+    position: absolute;
+    bottom: 36px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+@media (max-width: 640px) {
+    .scroll-cue-container {
+        bottom: 20px;
+    }
+}
